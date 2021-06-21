@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.Game Prototype 5 (1).iml
+/contentModel.xml
+# Datasource local storage ignored files
+/../../../../../../../../:\Cloud\Project\Unity\Game Prototype 5 (1)\.idea\.idea.Game Prototype 5 (1)\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
