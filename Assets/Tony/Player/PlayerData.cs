@@ -45,17 +45,19 @@ public class PlayerData : MonoBehaviour{
 			return _hunger;
 		}
 	}
+	
+	
 	public float Hygiene
 	{
 		set
 		{
 			_hygiene = math.clamp(value, 0, _maxHygiene);
-			UICtrl.Instance.HygieneBar.Value = _hunger / _maxHygiene;
+			UICtrl.Instance.HygieneBar.Value = _hygiene / _maxHygiene;
 		}
 		get
 		{
-			Debug.Log("Get Hunger:" + _hunger);
-			return _hunger;
+			Debug.Log("Get Hunger:" + _hygiene);
+			return _hygiene;
 		}
 	}
 
@@ -128,6 +130,12 @@ public class PlayerData : MonoBehaviour{
 	public void AddItem(ItemInfo info){ //添加道具入口
 		ItemList.Add(info);             //數據添加
 		UICtrl.Instance.UpDateBagItem(ItemList);//通知UI刷新畫面
+	}
+
+	public void RemoveItem(ItemInfo info){
+		if(!ItemList.Contains(info))return;
+		ItemList.Remove(info);
+		UICtrl.Instance.UpDateBagItem(ItemList);
 	}
 	
 	#endregion

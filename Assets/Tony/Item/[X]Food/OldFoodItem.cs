@@ -3,12 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoodItem : Item{
+public class OldFoodItem : Item{
 
 	//public int healthPoints;
 	public int hungerPoints;
+	public ItemInfo Info;
+			
 	public override void OnClick(){
-		PlayerData.Instance.Hunger += hungerPoints;
+		UICtrl.Instance.PopupInfoSetup(new PopupInfoData("吃下或放进背包","背包","吃",
+			() => {
+				PlayerData.Instance.AddItem(Info);
+			},
+			() => {
+				PlayerData.Instance.Hunger += hungerPoints;
+			}
+		));
 		Destroy(gameObject);
 	}
 
@@ -18,8 +27,6 @@ public class FoodItem : Item{
 	
 	#region ColorChange
 	public Material _m;
-	public Material _m2;
-	public Material _m1;
 
 	private void AwakeColorChange(){
 		_m = GetComponent<MeshRenderer>().material;

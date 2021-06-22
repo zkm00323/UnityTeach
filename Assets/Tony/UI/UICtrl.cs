@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UICtrl : MonoBehaviour
 {
@@ -26,10 +27,12 @@ public class UICtrl : MonoBehaviour
 	public Zoomer Inventory;
 	public GameObject ItemUI_O;
 	public Transform Bag_T;
+	public Text Desc;
 	private void UpdateInventory(){
 		if(Input.GetKeyDown(InventoryKey)){ //Input開關背包UI
 			if(Inventory.gameObject.activeSelf){
 				Inventory.ZoomOut();
+				ItemUICtrl.Selecting.UnSelect();
 			}
 			else{
 				Inventory.ZoomIn();
@@ -48,9 +51,54 @@ public class UICtrl : MonoBehaviour
 			o.GetComponent<ItemUICtrl>().Setup(info);
 			ItemUIList.Add(o);
 		}
+
+		Desc.text = "";
 	}
 
 	#endregion
+
+	#region PopupInfo
+
+	public Zoomer PopupInfoZoomer;
+	public Text PopupInfoDesc;
+	public Text PopupInfoTrueText;
+	public Button PopupInfoTrueButton;
+	public Text PopupInfoFalseText;
+	public Button PopupInfoFalseButton;
+	public void PopupInfoSetup(PopupInfoData data){
+		PopupInfoDesc.text = data.Desc;
+		PopupInfoTrueText.text = data.TrueText;
+		PopupInfoFalseText.text = data.FalseText;
 		
+		PopupInfoTrueButton.onClick.AddListener(()=> {
+			data.TrueAction.Invoke();
+			PopupInfoZoomer.ZoomOut();
+		});
+		
+		PopupInfoFalseButton.onClick.AddListener(()=> {
+			data.FalseAction.Invoke();
+			PopupInfoZoomer.ZoomOut();
+		});
+		
+		PopupInfoZoomer.ZoomIn();
+	}
+
+	#endregion
+}
+
+public class PopupInfoData{
+	public string Desc;
+	public string TrueText;
+	public string FalseText;
+	public Action TrueAction;
+	public Action FalseAction;
+
+	public PopupInfoData(string desc,string trueText,string falseText,Action trueAction,Action falseAction){
+		Desc = desc;
+		TrueText = trueText;
+		FalseText = falseText;
+		TrueAction = trueAction;
+		FalseAction = falseAction;
+	}
 }
 
