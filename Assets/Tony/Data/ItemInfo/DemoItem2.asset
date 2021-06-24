@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba3c929e7ab9494aabcd7c783d48891, type: 3}
   m_Name: DemoItem2
   m_EditorClassIdentifier: 
+  ID: 2
   Name: Sconnd
   Desc: zxc
+  Price: 2
   ItemColor: {r: 0.9706241, g: 1, b: 0, a: 1}
   M: {fileID: 2100000, guid: b8936077856dc4d448761528316283f2, type: 2}

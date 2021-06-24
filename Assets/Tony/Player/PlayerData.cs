@@ -122,19 +122,34 @@ public class PlayerData : MonoBehaviour{
 
 	#region Inventory
 
-	private List<ItemInfo> ItemList = new List<ItemInfo>();//背包數據存放點
+	private List<ItemDate> ItemList = new List<ItemDate>();//背包數據存放點
 
 	void StartInventory(){
 	}
 
-	public void AddItem(ItemInfo info){ //添加道具入口
-		ItemList.Add(info);             //數據添加
+	public void AddItem(ItemDate data){ //添加道具入口
+		var index = ItemList.FindIndex(x => x.Info.ID == data.Info.ID);
+		if(index==-1){
+			ItemList.Add(data);   
+		}else{
+			ItemList[index].Count += 1;
+		}
+		//數據添加
 		UICtrl.Instance.UpDateBagItem(ItemList);//通知UI刷新畫面
 	}
 
-	public void RemoveItem(ItemInfo info){
-		if(!ItemList.Contains(info))return;
-		ItemList.Remove(info);
+	public void RemoveItem(ItemInfo data){
+		var index = ItemList.FindIndex(x => x.Info.ID == data.ID);
+		if(index==-1){
+			Debug.LogWarning("找不到你要刪除的東西(ID):"+data.ID);
+			return;
+		}
+		
+		ItemList[index].Count -= 1;
+		if(ItemList[index].Count <= 0){//--ItemList[index].Count <= 0
+			ItemList.RemoveAt(index);
+		}
+	
 		UICtrl.Instance.UpDateBagItem(ItemList);
 	}
 	

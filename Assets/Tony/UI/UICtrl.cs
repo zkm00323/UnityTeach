@@ -32,7 +32,8 @@ public class UICtrl : MonoBehaviour
 		if(Input.GetKeyDown(InventoryKey)){ //Input開關背包UI
 			if(Inventory.gameObject.activeSelf){
 				Inventory.ZoomOut();
-				ItemUICtrl.Selecting.UnSelect();
+				if(ItemUICtrl.Selecting!=null)
+					ItemUICtrl.Selecting.UnSelect();
 			}
 			else{
 				Inventory.ZoomIn();
@@ -41,7 +42,7 @@ public class UICtrl : MonoBehaviour
 	}
 
 	public List<GameObject> ItemUIList = new List<GameObject>();//生成的ItemUI記錄在這
-	public void UpDateBagItem(List<ItemInfo> ItemList){
+	public void UpDateBagItem(List<ItemDate> ItemList){
 		foreach(var o in ItemUIList){  //先刪除原本生成的ItemUI
 			Destroy(o);
 		}
@@ -65,22 +66,31 @@ public class UICtrl : MonoBehaviour
 	public Button PopupInfoTrueButton;
 	public Text PopupInfoFalseText;
 	public Button PopupInfoFalseButton;
+
+	private PopupInfoData Data;
 	public void PopupInfoSetup(PopupInfoData data){
+		Data = data;
 		PopupInfoDesc.text = data.Desc;
 		PopupInfoTrueText.text = data.TrueText;
 		PopupInfoFalseText.text = data.FalseText;
 		
-		PopupInfoTrueButton.onClick.AddListener(()=> {
-			data.TrueAction.Invoke();
-			PopupInfoZoomer.ZoomOut();
-		});
+		PopupInfoTrueButton.onClick.RemoveListener(TrueAction);
+		PopupInfoFalseButton.onClick.RemoveListener(FalseAction);
 		
-		PopupInfoFalseButton.onClick.AddListener(()=> {
-			data.FalseAction.Invoke();
-			PopupInfoZoomer.ZoomOut();
-		});
+		PopupInfoTrueButton.onClick.AddListener(TrueAction);
+		PopupInfoFalseButton.onClick.AddListener(FalseAction);
 		
 		PopupInfoZoomer.ZoomIn();
+	}
+
+	public void TrueAction(){
+		Data.TrueAction.Invoke();
+		PopupInfoZoomer.ZoomOut();
+	}
+	
+	public void FalseAction(){
+		Data.FalseAction.Invoke();
+		PopupInfoZoomer.ZoomOut();
 	}
 
 	#endregion

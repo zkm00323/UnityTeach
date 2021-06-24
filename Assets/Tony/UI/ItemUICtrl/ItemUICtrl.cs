@@ -10,15 +10,17 @@ public class ItemUICtrl : MonoBehaviour /*,IPointerClickHandler, IPointerEnterHa
     public static ItemUICtrl Selecting = null;
     
     public Text ItemName;
+    public Text ItemCount;
     public Image ItemColor;
     public GameObject SelectionOutline;
 
-    private ItemInfo Info;
-    public void Setup(ItemInfo info){
-        ItemName.text = info.Name;
-        ItemColor.color = info.ItemColor;
+    private ItemDate Data;
+    public void Setup(ItemDate data){
+        ItemName.text = data.Info.Name;
+        ItemCount.text = "["+data.Count+"]";
+        ItemColor.color = data.Info.ItemColor;
 
-        Info = info;
+        Data = data;
     }
     
 
@@ -40,10 +42,10 @@ public class ItemUICtrl : MonoBehaviour /*,IPointerClickHandler, IPointerEnterHa
     public void B_OnClick()
     { //change to OnPointerEnter?
         if (Selecting != null) Selecting.UnSelect();
-        UICtrl.Instance.Desc.text = Info.Desc;
+        UICtrl.Instance.Desc.text = Data.Info.Desc;
         SelectionOutline.SetActive(true);
         Selecting = this;
-        Info.OnClick();
+        Data.Info.OnClick();
     }
 
     public void UnSelect()

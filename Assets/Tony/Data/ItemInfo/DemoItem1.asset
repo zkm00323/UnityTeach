@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba3c929e7ab9494aabcd7c783d48891, type: 3}
   m_Name: DemoItem1
   m_EditorClassIdentifier: 
+  ID: 1
   Name: First
   Desc: xxxxx
+  Price: 1
   ItemColor: {r: 0.0519588, g: 1, b: 0, a: 1}
   M: {fileID: 2100000, guid: 2bd0e7a355b62504bb756a397f542ef0, type: 2}

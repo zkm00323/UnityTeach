@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a728460950f14174487fa3922b368250, type: 3}
   m_Name: GoldApple
   m_EditorClassIdentifier: 
+  ID: 3
   Name: "\u91D1\u82F9\u679C"
   Desc: "\u5403\u6211\u9971\u4E09\u5929"
+  Price: 999
   ItemColor: {r: 1, g: 0.79260254, b: 0, a: 1}
   M: {fileID: 2100000, guid: 169949321542c294e85270f1adeee6ce, type: 2}
   hungerPoints: 100
