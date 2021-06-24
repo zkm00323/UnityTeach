@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class ItemUICtrl : MonoBehaviour{
+public class ItemUICtrl : MonoBehaviour /*,IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler*/
+{
 
     public static ItemUICtrl Selecting = null;
     
     public Text ItemName;
     public Image ItemColor;
-    public GameObject Select;
+    public GameObject SelectionOutline;
 
     private ItemInfo Info;
     public void Setup(ItemInfo info){
@@ -19,16 +21,34 @@ public class ItemUICtrl : MonoBehaviour{
         Info = info;
     }
     
-    public void B_OnClick(){
-        if(Selecting != null) Selecting.UnSelect();
+
+    /*public void OnPointerEnter(PointerEventData eventData)
+    {
+        SelectionOutline.SetActive(true)
+
+    }
+    public void OnPointerClick()
+      {Selecting = this;
+        Info.OnClick(); 
+        UICtrl.Instance.Desc.text=Info.Desc; }
+    public void onPointerExit()
+    { */
+    
+      
+
+
+    public void B_OnClick()
+    { //change to OnPointerEnter?
+        if (Selecting != null) Selecting.UnSelect();
         UICtrl.Instance.Desc.text = Info.Desc;
-        Select.SetActive(true);
+        SelectionOutline.SetActive(true);
         Selecting = this;
         Info.OnClick();
     }
 
-    public void UnSelect(){
-        Select.SetActive(false);
+    public void UnSelect()
+    {
+        SelectionOutline.SetActive(false);
         UICtrl.Instance.Desc.text = "";
     }
     

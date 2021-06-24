@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703663272238963278}
   m_Layer: 5
-  m_Name: Select
+  m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: {fileID: 3757866885233679699}
   ItemColor: {fileID: 4928926276410115630}
-  Select: {fileID: 1329172877610510784}
+  SelectionOutline: {fileID: 1329172877610510784}
 --- !u!114 &2568583278008832857
 MonoBehaviour:
   m_ObjectHideFlags: 0

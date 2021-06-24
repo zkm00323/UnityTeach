@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 2813780373872823976}
   - component: {fileID: 2813780373872823979}
   - component: {fileID: 2813780373872823978}
-  - component: {fileID: 2813780373872823981}
   - component: {fileID: 2813780373872823980}
+  - component: {fileID: 4938479345585594865}
+  - component: {fileID: 3495377666369486428}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -83,20 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2813780373872823981
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2813780373872823983}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2813780373872823980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,5 +100,41 @@ MonoBehaviour:
   _maxHealth: 100
   _hunger: 0
   _maxHunger: 100
+  _hygiene: 0
+  _maxHygiene: 100
   _healthDownValue: 1
   _healthDownSpeed: 5
+  _hungerDownSpeed: 3
+  _HygieneDownSpeed: 3
+--- !u!114 &4938479345585594865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2813780373872823983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f87f4730a30274793e3117127ee189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 5
+  _gravity: 9.81
+--- !u!143 &3495377666369486428
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2813780373872823983}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}

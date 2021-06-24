@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public abstract class Item : MonoBehaviour ,IPointerClickHandler,IPointerEnterHandler,IPointerExitHandler{
+public abstract class ItemMono : MonoBehaviour ,IPointerClickHandler,IPointerEnterHandler,IPointerExitHandler{
 	
 	public void OnPointerClick(PointerEventData eventData){
 		OnClick();
