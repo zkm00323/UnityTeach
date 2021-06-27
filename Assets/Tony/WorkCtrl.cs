@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WorkCtrl : MonoBehaviour{
     public WorkWindowUICtrl UI;
-    public WorkInfo Info;
+    public WorkInfoSO Info;
     private void Update(){
         UpdateUI();
     }

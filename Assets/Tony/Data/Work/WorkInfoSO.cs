@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "MySO/WorkInfo")]
-public class WorkInfo : ScriptableObject{
+public class WorkInfoSO : ScriptableObject{
 	public string Name;
 	
 	public int OpenTime;
@@ -28,11 +28,11 @@ public struct RankInfo{
 }
 
 public class WorkData{
-	public WorkInfo Info;
+	public WorkInfoSO Info;
 	public float TotalWorkHour;
 	public int RankIndex;
 
-	public WorkData(WorkInfo info, float totalWorkHour,int rankIndex){
+	public WorkData(WorkInfoSO info, float totalWorkHour,int rankIndex){
 		Info = info;
 		TotalWorkHour = totalWorkHour;
 		RankIndex = rankIndex;

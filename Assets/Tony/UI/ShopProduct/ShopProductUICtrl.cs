@@ -10,8 +10,8 @@ public class ShopProductUICtrl : MonoBehaviour{
     //public Button Buy;
     
 
-    private ItemInfo Info;
-    public void Setup(ItemInfo info){
+    private ItemInfoSO Info;
+    public void Setup(ItemInfoSO info){
         Info = info;
         Name.text = info.Name;
         Color.color = info.ItemColor;

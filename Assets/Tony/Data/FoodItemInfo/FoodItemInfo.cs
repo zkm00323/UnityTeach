@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "MySO/FoodItemInfo")]
-public class FoodItemInfo : ItemInfo{//道具相關所有數據
+public class FoodItemInfo : ItemInfoSO{//道具相關所有數據
 	
 	public int hungerPoints;
 	

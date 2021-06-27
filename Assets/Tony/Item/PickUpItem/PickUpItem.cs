@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PickUpItem : ItemMono{
 
-	public ItemInfo ItemName;//道具數據
+	public ItemInfoSO ItemName;//道具數據
 	
 	private void Awake(){
 		GetComponent<MeshRenderer>().material = ItemName.M;//通過道具數據改變自身外形

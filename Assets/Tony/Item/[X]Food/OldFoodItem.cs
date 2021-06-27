@@ -7,7 +7,7 @@ public class OldFoodItem : ItemMono{
 
 	//public int healthPoints;
 	public int hungerPoints;
-	public ItemInfo Info;
+	public ItemInfoSO Info;
 			
 	public override void OnClick(){
 		UICtrl.Instance.PopupInfoSetup(new PopupInfoData("吃下或放进背包","背包","吃",

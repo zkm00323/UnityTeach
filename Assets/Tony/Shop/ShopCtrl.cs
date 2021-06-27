@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class ShopCtrl : MonoBehaviour {
+public class ShopCtrl : MonoBehaviour, IPointerClickHandler{
 
 	#region Unity
 	
@@ -12,8 +14,9 @@ public class ShopCtrl : MonoBehaviour {
 		AwakeData();
 	}
 
-	private void Update(){
-		UpdateUI();
+    private void Update()
+    {
+		
 	}
 
 	#endregion
@@ -25,8 +28,10 @@ public class ShopCtrl : MonoBehaviour {
 	public GameObject ShopProductUI_O;
 	public Transform Shop_T;
 	
+	
+	
 	[SerializeField]
-	private List<ItemInfo> ShopProductList;//商店數據存放點
+	private List<ItemInfoSO> ShopProductList;//商店數據存放點
 
 	void AwakeData(){
 		foreach(var info in ShopProductList){  //再讀取ItemList生成新的ItemUI
@@ -34,7 +39,7 @@ public class ShopCtrl : MonoBehaviour {
 			shopItem.GetComponent<ShopProductUICtrl>().Setup(info);
 		}
 	}
-	public void PlayerBuy(ItemInfo info){
+	public void PlayerBuy(ItemInfoSO info){
 		if (PlayerMoney.playerMoney.SubtractMoney(info.Price)){
 			PlayerData.Instance.AddItem(info.GetData);
 			UICtrl.Instance.PopupInfoSetup(new PopupInfoData("購買 "+info.Name+" 成功!","好的","關閉", () => { },() => { }));
@@ -61,11 +66,12 @@ public class ShopCtrl : MonoBehaviour {
 	#endregion
 	
 	#region UI
-	public KeyCode ShopKey;
+	//public KeyCode ShopKey;
 	
 	public Zoomer Zoomer;
+	public Button leaveButton;
 
-	private void UpdateUI(){
+	/*private void UpdateUI(){ //改成遇到npc彈出商店??? 
 		if(Input.GetKeyDown(ShopKey)){ //Input開關背包UI
 			if(Zoomer.gameObject.activeSelf){
 				Zoomer.ZoomOut();
@@ -76,7 +82,39 @@ public class ShopCtrl : MonoBehaviour {
 				Zoomer.ZoomIn();
 			}
 		}
+	}*/
+
+	public void OnPointerClick(PointerEventData pointerEventData)
+	{
+		if (Zoomer.gameObject.activeSelf)
+		{
+			Zoomer.ZoomOut();
+			if (ItemUICtrl.Selecting != null)
+				ItemUICtrl.Selecting.UnSelect();
+		}
+		else
+		{
+			Zoomer.ZoomIn();
+		}
 	}
-	
+	public void LeaveShop() //close shop panel
+    {
+		if (Zoomer.gameObject.activeSelf)
+		{
+			Zoomer.ZoomOut();
+			if (ItemUICtrl.Selecting != null)
+				ItemUICtrl.Selecting.UnSelect();
+		}
+	}
+
+
+
+/*private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag== "Player")
+        {
+            SceneManager.LoadScene("Shop Scene");
+        }
+    }*/	
 	#endregion
 }

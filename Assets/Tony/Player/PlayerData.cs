@@ -138,7 +138,7 @@ public class PlayerData : MonoBehaviour{
 		UICtrl.Instance.UpDateBagItem(ItemList);//通知UI刷新畫面
 	}
 
-	public void RemoveItem(ItemInfo data){
+	public void RemoveItem(ItemInfoSO data){
 		var index = ItemList.FindIndex(x => x.Info.ID == data.ID);
 		if(index==-1){
 			Debug.LogWarning("找不到你要刪除的東西(ID):"+data.ID);
