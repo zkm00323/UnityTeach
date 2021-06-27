@@ -27,7 +27,7 @@ public class PlayerData : MonoBehaviour{
 			UICtrl.Instance.HealthBar.Value = _health/_maxHealth;
 		}
 		get{
-			Debug.Log("Get Health:"+_health);
+			
 			return _health;
 		}
 	}
@@ -41,7 +41,7 @@ public class PlayerData : MonoBehaviour{
 		}
 		get
 		{
-			Debug.Log("Get Hunger:" + _hunger);
+			
 			return _hunger;
 		}
 	}
@@ -56,7 +56,7 @@ public class PlayerData : MonoBehaviour{
 		}
 		get
 		{
-			Debug.Log("Get Hunger:" + _hygiene);
+			
 			return _hygiene;
 		}
 	}
@@ -122,12 +122,12 @@ public class PlayerData : MonoBehaviour{
 
 	#region Inventory
 
-	private List<ItemDate> ItemList = new List<ItemDate>();//背包數據存放點
+	private List<ItemData> ItemList = new List<ItemData>();//背包數據存放點
 
 	void StartInventory(){
 	}
 
-	public void AddItem(ItemDate data){ //添加道具入口
+	public void AddItem(ItemData data){ //添加道具入口
 		var index = ItemList.FindIndex(x => x.Info.ID == data.Info.ID);
 		if(index==-1){
 			ItemList.Add(data);   

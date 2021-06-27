@@ -8,6 +8,7 @@ public class ShopProductUICtrl : MonoBehaviour{
     public Image Color;
     public Text Cost;
     //public Button Buy;
+    
 
     private ItemInfo Info;
     public void Setup(ItemInfo info){
@@ -17,7 +18,9 @@ public class ShopProductUICtrl : MonoBehaviour{
         Cost.text = info.Price;
     }
 
-    public void B_Click(){
-        PlayerData.Instance.AddItem(Info.GetDate);
+    //Check purchaseable
+
+    public void Buy_Button(){
+        PlayerData.Instance.AddItem(Info.GetData);
     }
 }

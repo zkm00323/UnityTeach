@@ -14,8 +14,8 @@ public class ItemUICtrl : MonoBehaviour /*,IPointerClickHandler, IPointerEnterHa
     public Image ItemColor;
     public GameObject SelectionOutline;
 
-    private ItemDate Data;
-    public void Setup(ItemDate data){
+    private ItemData Data;
+    public void Setup(ItemData data){
         ItemName.text = data.Info.Name;
         ItemCount.text = "["+data.Count+"]";
         ItemColor.color = data.Info.ItemColor;

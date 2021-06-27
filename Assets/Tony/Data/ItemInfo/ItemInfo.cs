@@ -19,14 +19,14 @@ public class ItemInfo : ScriptableObject{//道具相關所有數據
     public virtual void OnClick(){
     }
 
-    public ItemDate GetDate => new ItemDate(this);
+    public ItemData GetData => new ItemData(this);
 }
 
-public class ItemDate{
+public class ItemData{
     public ItemInfo Info;
     public int Count = 1;
 
-    public ItemDate(ItemInfo info){
+    public ItemData(ItemInfo info){
         Debug.Log("!!!"+Count);
         Info = info;
     }

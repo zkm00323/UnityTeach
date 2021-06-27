@@ -15,6 +15,6 @@ MonoBehaviour:
   ID: 1
   Name: First
   Desc: xxxxx
-  Price: 1
+  Price: 10
   ItemColor: {r: 0.0519588, g: 1, b: 0, a: 1}
   M: {fileID: 2100000, guid: 2bd0e7a355b62504bb756a397f542ef0, type: 2}

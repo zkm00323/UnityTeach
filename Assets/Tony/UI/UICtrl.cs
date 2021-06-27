@@ -42,7 +42,7 @@ public class UICtrl : MonoBehaviour
 	}
 
 	public List<GameObject> ItemUIList = new List<GameObject>();//生成的ItemUI記錄在這
-	public void UpDateBagItem(List<ItemDate> ItemList){
+	public void UpDateBagItem(List<ItemData> ItemList){
 		foreach(var o in ItemUIList){  //先刪除原本生成的ItemUI
 			Destroy(o);
 		}

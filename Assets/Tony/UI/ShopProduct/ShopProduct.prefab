@@ -452,7 +452,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6085570833963863054}
         m_TargetAssemblyTypeName: ShopProductUICtrl, Assembly-CSharp
-        m_MethodName: B_Click
+        m_MethodName: Buy_Button
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
