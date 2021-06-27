@@ -15,6 +15,6 @@ MonoBehaviour:
   ID: 2
   Name: Sconnd
   Desc: zxc
-  Price: 5
+  Price: 15
   ItemColor: {r: 0.9706241, g: 1, b: 0, a: 1}
   M: {fileID: 2100000, guid: b8936077856dc4d448761528316283f2, type: 2}

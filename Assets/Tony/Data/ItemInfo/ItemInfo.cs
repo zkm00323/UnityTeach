@@ -10,7 +10,7 @@ public class ItemInfo : ScriptableObject{//道具相關所有數據
     public int ID;
     public string Name;
     public string Desc;
-    public string Price;
+    public int Price;
     
     //顯示面
     public Color ItemColor;

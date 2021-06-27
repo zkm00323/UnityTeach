@@ -15,12 +15,13 @@ public class ShopProductUICtrl : MonoBehaviour{
         Info = info;
         Name.text = info.Name;
         Color.color = info.ItemColor;
-        Cost.text = info.Price;
+        Cost.text = info.Price+"";
     }
 
     //Check purchaseable
 
     public void Buy_Button(){
-        PlayerData.Instance.AddItem(Info.GetData);
+        GameCtrl.Instance.Shop.PlayerBuy(Info);
+
     }
 }

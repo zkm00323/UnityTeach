@@ -6,10 +6,12 @@ using UnityEngine.UI;
 
 public class PlayerMoney : MonoBehaviour
 {
+    public static PlayerMoney playerMoney;
+    
     public float money;
     public Text moneyText; //reference to the UI money display
-    void Start()
-    {
+    void Start(){
+        playerMoney = this;
         money = 5;
         moneyText.text = "coins: "+ money.ToString();
     }
@@ -26,17 +28,15 @@ public class PlayerMoney : MonoBehaviour
         moneyText.text = "coins: " + money.ToString();
 
     }
-    public void SubtractMoney(int moneyToSubtract)
+    public bool SubtractMoney(int moneyToSubtract)
     {
-        if (money - moneyToSubtract < 0)
-        {
+        if (money - moneyToSubtract < 0) {
             Debug.Log("not enough money!!");
+            return false;
         }
-        else
-        {
-            money = +moneyToSubtract;
-            moneyText.text = "coins: " + money.ToString();
+        money -= moneyToSubtract;
+        moneyText.text = "coins: " + money.ToString();
 
-        }
+        return true;
     }
 }

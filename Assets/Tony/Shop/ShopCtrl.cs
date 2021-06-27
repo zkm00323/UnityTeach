@@ -6,7 +6,8 @@ using UnityEngine;
 public class ShopCtrl : MonoBehaviour {
 
 	#region Unity
-	public static PlayerMoney playerMoney;
+	
+
 	private void Awake(){
 		AwakeData();
 	}
@@ -33,9 +34,16 @@ public class ShopCtrl : MonoBehaviour {
 			shopItem.GetComponent<ShopProductUICtrl>().Setup(info);
 		}
 	}
-	public void CheckWallet()
-    {
-		foreach(var info in ShopProductList)
+	public void PlayerBuy(ItemInfo info){
+		if (PlayerMoney.playerMoney.SubtractMoney(info.Price)){
+			PlayerData.Instance.AddItem(info.GetData);
+			UICtrl.Instance.PopupInfoSetup(new PopupInfoData("購買 "+info.Name+" 成功!","好的","關閉", () => { },() => { }));
+		}
+		else{
+			UICtrl.Instance.PopupInfoSetup(new PopupInfoData("你沒有足夠的金錢購買 "+info.Name,"好的","關閉", () => { },() => { }));
+		}
+		
+		/*foreach(var info in ShopProductList)
         {
 			int price = int.Parse(info.Price); //convert price string to int
 			if (playerMoney.money >= price)
@@ -47,7 +55,7 @@ public class ShopCtrl : MonoBehaviour {
             {
 				Debug.Log("Not enough coins!!");
             }
-        }
+        }*/
     }
 
 	#endregion
@@ -57,8 +65,6 @@ public class ShopCtrl : MonoBehaviour {
 	
 	public Zoomer Zoomer;
 
-	
-	
 	private void UpdateUI(){
 		if(Input.GetKeyDown(ShopKey)){ //Input開關背包UI
 			if(Zoomer.gameObject.activeSelf){
