@@ -14,6 +14,8 @@ public class WorkInfoSO : ScriptableObject{
 	public int MaxWorkHour;
 
 	public RankInfo[] RankList;
+
+	public WorkData GetData => new WorkData(this, 0, 0);
 }
 
 [Serializable]

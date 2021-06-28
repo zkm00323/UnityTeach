@@ -39,6 +39,7 @@ public class WorkCtrl : MonoBehaviour, IPointerClickHandler{
         }
         else
         {
+            UI.Setup(JobSO.GetData);
             Zoomer.ZoomIn();
         }
     }
