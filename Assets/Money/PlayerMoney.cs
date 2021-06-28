@@ -12,7 +12,7 @@ public class PlayerMoney : MonoBehaviour
     public Text moneyText; //reference to the UI money display
     void Start(){
         playerMoney = this;
-        money = 5;
+        money = 15;
         moneyText.text = "coins: "+ money.ToString();
     }
 

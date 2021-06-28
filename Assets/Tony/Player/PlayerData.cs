@@ -152,6 +152,17 @@ public class PlayerData : MonoBehaviour{
 	
 		UICtrl.Instance.UpDateBagItem(ItemList);
 	}
-	
+
 	#endregion
+
+	#region PlayerSkills 技能屬性
+	public int prestigePoint;
+	public int pursuasionSkill;
+	public int intelligence;
+	public int cookingSkill;
+	public int stamina;
+	public int agility;
+	public int charisma;
+
+    #endregion
 }

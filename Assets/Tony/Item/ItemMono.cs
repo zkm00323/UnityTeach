@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 
 public abstract class ItemMono : MonoBehaviour ,IPointerClickHandler,IPointerEnterHandler,IPointerExitHandler{
 	
+	public Material _originalMaterial;
+	public Material _highlightMaterial;
+
 	public void OnPointerClick(PointerEventData eventData){
 		OnClick();
 	}

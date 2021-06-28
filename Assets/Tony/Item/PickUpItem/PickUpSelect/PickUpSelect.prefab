@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f097c16946dd24ab06d0148e55284e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Info: {fileID: 11400000, guid: c676d952036fc014d87de74b3857bc3c, type: 2}
+  ItemName: {fileID: 11400000, guid: c676d952036fc014d87de74b3857bc3c, type: 2}
+  _originalMaterial: {fileID: 2100000, guid: 5a3f24abbd5627d4094e8775ce8c30bd, type: 2}
+  _highlightMaterial: {fileID: 2100000, guid: 3c767cf4904b0624c90ccbd4f3a46517, type: 2}
 --- !u!1001 &3630872757085142057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20,6 +22,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1113747442478431240, guid: 849e729f5ddeb0048af0fdebb3c1eb33, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 1113747442478431240, guid: 849e729f5ddeb0048af0fdebb3c1eb33, type: 3}
       propertyPath: m_Name
       value: PickUpSelect
@@ -34,7 +40,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1113747442478431241, guid: 849e729f5ddeb0048af0fdebb3c1eb33, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.91
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: 1113747442478431241, guid: 849e729f5ddeb0048af0fdebb3c1eb33, type: 3}
       propertyPath: m_LocalPosition.z
@@ -68,6 +74,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1113747442478431244, guid: 849e729f5ddeb0048af0fdebb3c1eb33, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0da22a351019d4976982b74a76f7d328, type: 2}
     - target: {fileID: 1113747442478431246, guid: 849e729f5ddeb0048af0fdebb3c1eb33, type: 3}
       propertyPath: Info
       value: 
