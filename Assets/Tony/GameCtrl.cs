@@ -7,6 +7,7 @@ public class GameCtrl : MonoBehaviour {
 
 	public ShopCtrl Shop;
 	public WorkCtrl Work;
+	public PlayerSkillsCtrl playerSkill; //not working in inspector???
 	private void Awake(){
 		Instance = this;
 	}

@@ -15,6 +15,10 @@ public class WorkInfoSO : ScriptableObject{
 
 	public RankInfo[] RankList;
 
+	
+
+
+
 	public WorkData GetData => new WorkData(this, 0, 0);
 }
 
@@ -27,9 +31,17 @@ public struct RankInfo{
 	public int HungryCost;
 	public int EnergyCost;
 	public int HygieneCost;
+
+	[Header("Impact on Skills/Hr")]
+	public int peopleSkillUp;
+	public int brainPowerUp;
+	public int staminaUp;
+	public int charismaUp;
+	public int cookingSkillUp;
 }
 
-public class WorkData{
+public class WorkData{ //I FORGOT WHAT THIS IS FOR
+
 	public WorkInfoSO Info;
 	public float TotalWorkHour;
 	public int RankIndex;
