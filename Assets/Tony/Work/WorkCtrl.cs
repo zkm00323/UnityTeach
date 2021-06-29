@@ -63,7 +63,7 @@ public class WorkCtrl : MonoBehaviour, IPointerClickHandler{
         data.TotalWorkHour += (float)workHour;
         print(info.Salary);
          print(workHour);
-        PlayerMoney.playerMoney.AddMoney((int)Math.Floor( info.Salary*workHour));
+        PlayerMoney.playerMoney.AddMoney((int)Math.Floor( info.Salary*(workHour+1)));
         PlayerData.Instance.Hunger -= info.HungryCost *(float)workHour;
         PlayerData.Instance.Hygiene -= info.HygieneCost *(float)workHour;
         //todo Energy
