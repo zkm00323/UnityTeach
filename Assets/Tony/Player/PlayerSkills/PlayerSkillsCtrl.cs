@@ -13,7 +13,7 @@ public class PlayerSkillsCtrl : MonoBehaviour
     public int charismaPoint=0;
     public int cookingSkillPoint=0;
     public string[] prestigeRank;
-    public int socialRankPoints=0;
+    public float socialScore=0; //can be negative
 
     #region UI
     public Zoomer Zoomer;

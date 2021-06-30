@@ -58,9 +58,30 @@ public class UICtrl : MonoBehaviour
 
 	#endregion
 
-	#region PopupInfo
+	#region HouseDecoratingUI
+	public List<GameObject> PlaceableItemUIList = new List<GameObject>();//生成的ItemUI記錄在這
 
-	public Zoomer PopupInfoZoomer;
+	public void UpdateHouseStorage(List<ItemData> PlaceableItemList)
+    {
+			foreach (var o in PlaceableItemUIList)
+			{  //先刪除原本生成的ItemUI
+				Destroy(o);
+			}
+			foreach (var info in PlaceableItemList)
+        {//if tag== placeable
+		 //var o = Instantiate(FurnitureUI_O, Furniture_T);
+			//o.GetComponent<ItemUICtrl>().Setup(info);
+			//
+        }
+    }
+
+
+
+    #endregion
+
+    #region PopupInfo
+
+    public Zoomer PopupInfoZoomer;
 	public Text PopupInfoDesc;
 	public Text PopupInfoTrueText;
 	public Button PopupInfoTrueButton;

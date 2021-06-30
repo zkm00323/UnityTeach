@@ -27,6 +27,7 @@ public struct RankInfo{
 	public string Name;
 	public int Salary;
 	public int WorkHourNeed;
+	public float MinSocialScore;
 
 	public int HungryCost;
 	public int EnergyCost;

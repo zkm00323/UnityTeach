@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "MySO/HygieneItemInfo")]
 
-public class HygieneItemInfo : ItemInfoSO
+public class HygieneItemInfoSO : ItemInfoSO
 {
     public int hygienePoints;
 

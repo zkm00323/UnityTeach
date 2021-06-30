@@ -14,7 +14,7 @@ public class PlayerSkillsUI : MonoBehaviour
     [SerializeField] private TMP_Text charismaPoint;
     [SerializeField] private TMP_Text cookingSkillPoint;
     [SerializeField] private TMP_Text prestigeRank;
-    [SerializeField] private TMP_Text socialRankPoints;
+    [SerializeField] private TMP_Text socialScore;
 
     //private PlayerSkillsCtrl playerSkills;
 
@@ -39,7 +39,7 @@ public class PlayerSkillsUI : MonoBehaviour
         staminaPoint.text = "Stamina: "+playerSkills.staminaPoint.ToString();
         charismaPoint.text = "Charisma: "+playerSkills.charismaPoint.ToString();
         cookingSkillPoint.text = "Cooking: "+playerSkills.cookingSkillPoint.ToString();
-        socialRankPoints.text = "Social Rank Score: "+playerSkills.socialRankPoints.ToString();
+        socialScore.text = "Social Rank Score: "+playerSkills.socialScore.ToString();
 
     }
 
