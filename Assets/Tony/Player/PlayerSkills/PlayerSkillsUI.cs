@@ -38,8 +38,8 @@ public class PlayerSkillsUI : MonoBehaviour
         brainPowerPoint.text = "Brain power: "+ playerSkills.brainPowerPoint.ToString();
         staminaPoint.text = "Stamina: "+playerSkills.staminaPoint.ToString();
         charismaPoint.text = "Charisma: "+playerSkills.charismaPoint.ToString();
-        cookingSkillPoint.text = "Cooking: "+playerSkills.cookingSkillPoint.ToString();
-        socialScore.text = "Social Rank Score: "+playerSkills.socialScore.ToString();
+        if(cookingSkillPoint!=null)cookingSkillPoint.text = "Cooking: "+playerSkills.cookingSkillPoint.ToString();
+        if(socialScore!=null)socialScore.text = "Social Rank Score: "+playerSkills.socialScore.ToString();
 
     }
 

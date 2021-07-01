@@ -4,10 +4,17 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class PlayerData : MonoBehaviour{
+public class PlayerData{
 
-	public static PlayerData Instance;
+	private static PlayerData _Instance;
 
+	public static PlayerData Instance{
+		get{
+			if(_Instance == null) _Instance = new PlayerData();
+			return _Instance;
+		}
+	}
+	
 	[SerializeField]
 	private float _health;
 	[SerializeField]
@@ -61,23 +68,16 @@ public class PlayerData : MonoBehaviour{
 		}
 	}
 
-	private void Start(){
+	private PlayerData(){
 		Health = _maxHealth;
-		print(Health);
-
 		Hunger = _maxHunger;
-		print(Hunger);
-
 		Hygiene = _maxHygiene;
-		print(Hygiene);
-		
-		Instance = this;
 
 		StartInventory();
 		//StartPlaceableInventory();
 	}
 
-	private void Update(){
+	public void Update(){
 		UpdateHealthDown();
 		UpdateHungerDown();
 		UpdateHygieneDown();
@@ -123,30 +123,8 @@ public class PlayerData : MonoBehaviour{
 
 	#region Inventory
 
-	private List<ItemData> ItemList = new List<ItemData>();//背包數據存放點
-
-	private List<ItemData> PlaceableItemList = new List<ItemData>(); //For placeable items eg 家具存放
-
-	void StartPlaceableInventory()
-    {
-
-    }
-	public void AddPlaceableItem(ItemData data)//添加道具入口
-	{
-		var index = PlaceableItemList.FindIndex(x => x.Info.ID == data.Info.ID);
-		if (index == -1)
-        {
-			PlaceableItemList.Add(data);
-
-        }
-		else
-        {
-			PlaceableItemList[index].Count += 1;
-        }
-		UICtrl.Instance.UpdateHouseStorage(PlaceableItemList); // Signal UI to display placeable items
-	}
-
-
+	public List<ItemData> ItemList = new List<ItemData>();//背包數據存放點
+	
 	void StartInventory(){
 	}
 

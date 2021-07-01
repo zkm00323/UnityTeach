@@ -46,10 +46,17 @@ public class UICtrl : MonoBehaviour
 		foreach(var o in ItemUIList){  //先刪除原本生成的ItemUI
 			Destroy(o);
 		}
-		
-		foreach(var info in ItemList){  //再讀取ItemList生成新的ItemUI
+		ItemUIList.Clear();
+		foreach(var data in ItemList){  //再讀取ItemList生成新的ItemUI
 			var o = Instantiate(ItemUI_O, Bag_T);
-			o.GetComponent<ItemUICtrl>().Setup(info);
+			var ctrl = o.GetComponent<ItemUICtrl>();
+			ctrl.Setup(data, () => {
+				if (ItemUICtrl.Selecting != null) ItemUICtrl.Selecting.UnSelect();
+				Instance.Desc.text = data.Info.Desc;
+				ctrl.SelectionOutline.SetActive(true);
+				ItemUICtrl.Selecting = ctrl;
+				data.Info.OnClick();
+			});
 			ItemUIList.Add(o);
 		}
 

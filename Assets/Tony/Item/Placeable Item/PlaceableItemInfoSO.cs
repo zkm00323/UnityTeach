@@ -4,18 +4,11 @@ using UnityEngine;
 
 
 [CreateAssetMenu(menuName = "MySO/PlaceableItemInfo")]
+public class PlaceableItemInfoSO : ItemInfoSO{
+	public GameObject Object;
+	public PlaceableItemType Type;
+}
 
-public class PlaceableItemInfoSO : ItemInfoSO
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public enum PlaceableItemType{
+	Chairs,Table
 }

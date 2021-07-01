@@ -16,5 +16,7 @@ MonoBehaviour:
   Name: Table 1
   Desc: 'A small table '
   Price: 50
-  ItemColor: {r: 0, g: 0, b: 0, a: 0}
+  ItemColor: {r: 0, g: 0, b: 0, a: 1}
   M: {fileID: 0}
+  Object: {fileID: 6257578379399625645, guid: 4c4bfd6f90b3c5741b91bafe19eb452c, type: 3}
+  Type: 0

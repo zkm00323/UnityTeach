@@ -74,8 +74,8 @@ public class WorkCtrl : MonoBehaviour, IPointerClickHandler{
     {
         RankInfo info = data.Info.RankList[data.RankIndex];
         playerSkills = FindObjectOfType<PlayerSkillsCtrl>();
-        playerSkills.peopleSkillPoint += info.peopleSkillUp * (int)workHour; //work Hour to int??????
-        playerSkills.brainPowerPoint += info.brainPowerUp * (int) workHour;
+        playerSkills.peopleSkillPoint += (int)(info.peopleSkillUp * workHour); //work Hour to int??????
+        playerSkills.brainPowerPoint += (int)(info.brainPowerUp * workHour);
         playerSkills.staminaPoint += info.staminaUp;
         playerSkills.charismaPoint += info.charismaUp;
         playerSkills.cookingSkillPoint += info.cookingSkillUp;

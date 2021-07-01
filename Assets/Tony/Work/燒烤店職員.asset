@@ -21,6 +21,7 @@ MonoBehaviour:
   - Name: "\u8D85\u7D1A\u6D17\u7897\u5DE5"
     Salary: 13
     WorkHourNeed: 0
+    MinSocialScore: 0
     HungryCost: 5
     EnergyCost: 5
     HygieneCost: 5
@@ -28,10 +29,11 @@ MonoBehaviour:
     brainPowerUp: 0
     staminaUp: 1
     charismaUp: 0
-    cookingSkill: 1
+    cookingSkillUp: 0
   - Name: "\u71D2\u70E4\u54E1"
     Salary: 16
     WorkHourNeed: 16
+    MinSocialScore: 0
     HungryCost: 1
     EnergyCost: 1
     HygieneCost: 1
@@ -39,4 +41,4 @@ MonoBehaviour:
     brainPowerUp: 0
     staminaUp: 2
     charismaUp: 0
-    cookingSkill: 2
+    cookingSkillUp: 0

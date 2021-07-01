@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
+        PlayerData.Instance.Update();
     }
     private void Move()
     {
