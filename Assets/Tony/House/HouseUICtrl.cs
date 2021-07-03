@@ -24,6 +24,12 @@ public class HouseUICtrl : MonoBehaviour{
 		//pause player data// set player to inactive
 
 	}
+	
+	public void Button_Leave()
+	{
+		DoorCtrl.Exit();
+	}
+	
 	void StartUI(){
 		UpDatePlaceableItemData();
 	}

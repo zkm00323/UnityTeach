@@ -25,7 +25,7 @@ public class ShopManager : MonoBehaviour
 
         playerMoney = GameObject.Find("player").GetComponent<PlayerMoney>();
         //playerMoney.money
-        coinUI.text = "Coins: " + playerMoney.money.ToString();
+        coinUI.text = "Coins: " + PlayerMoney.playerMoney.money.ToString();
         LoadPanels();
     }
 

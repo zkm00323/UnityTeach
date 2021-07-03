@@ -15,11 +15,8 @@ public class WorkInfoSO : ScriptableObject{
 
 	public RankInfo[] RankList;
 
-	
-
-
-
 	public WorkData GetData => new WorkData(this, 0, 0);
+	
 }
 
 [Serializable]
@@ -39,6 +36,7 @@ public struct RankInfo{
 	public int staminaUp;
 	public int charismaUp;
 	public int cookingSkillUp;
+	
 }
 
 public class WorkData{ //I FORGOT WHAT THIS IS FOR

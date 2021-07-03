@@ -12,7 +12,6 @@ public class PlayerMoney : MonoBehaviour
     public Text moneyText; //reference to the UI money display
     void Start(){
         playerMoney = this;
-        money = 15;
         moneyText.text = "coins: "+ money.ToString();
     }
 
@@ -34,6 +33,7 @@ public class PlayerMoney : MonoBehaviour
             Debug.Log("not enough money!!");
             return false;
         }
+        print("!!!-"+moneyToSubtract);
         money -= moneyToSubtract;
         moneyText.text = "coins: " + money.ToString();
 

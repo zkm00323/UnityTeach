@@ -2317,7 +2317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75dd0ce5ee5a1454bb2098ab61c163c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minuteToRealTime: 1
+  TimeSpeed: 1
 --- !u!1 &715805316
 GameObject:
   m_ObjectHideFlags: 0
@@ -3572,6 +3572,7 @@ MonoBehaviour:
   - {fileID: 715378761}
   - {fileID: 1534466663}
   - {fileID: 241534103}
+  Info: {fileID: 11400000, guid: ece2474f3969bc44cb65a6cd16424210, type: 2}
 --- !u!65 &932546539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6518,8 +6519,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 44ed334f8fbe0ae418dc0d8cec93beb7, type: 2}
-  m_sharedMaterial: {fileID: -5714935212040518964, guid: 44ed334f8fbe0ae418dc0d8cec93beb7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8091,6 +8092,10 @@ PrefabInstance:
     - target: {fileID: 2813780373872823983, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587311765793745646, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
+      propertyPath: money
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 8587311765793745646, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
       propertyPath: moneyText

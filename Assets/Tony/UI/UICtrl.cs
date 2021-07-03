@@ -107,18 +107,20 @@ public class UICtrl : MonoBehaviour
 		
 		PopupInfoTrueButton.onClick.AddListener(TrueAction);
 		PopupInfoFalseButton.onClick.AddListener(FalseAction);
+
+		PopupInfoFalseButton.gameObject.SetActive(!Data.Single);
 		
 		PopupInfoZoomer.ZoomIn();
 	}
 
 	public void TrueAction(){
-		Data.TrueAction.Invoke();
 		PopupInfoZoomer.ZoomOut();
+		Data.TrueAction.Invoke();
 	}
 	
 	public void FalseAction(){
-		Data.FalseAction.Invoke();
 		PopupInfoZoomer.ZoomOut();
+		Data.FalseAction.Invoke();
 	}
 
 	#endregion
@@ -130,13 +132,21 @@ public class PopupInfoData{
 	public string FalseText;
 	public Action TrueAction;
 	public Action FalseAction;
-
+	public bool Single;
+	
 	public PopupInfoData(string desc,string trueText,string falseText,Action trueAction,Action falseAction){
 		Desc = desc;
 		TrueText = trueText;
 		FalseText = falseText;
 		TrueAction = trueAction;
 		FalseAction = falseAction;
+	}
+	
+	public PopupInfoData(string desc,string trueText,Action trueAction){
+		Desc = desc;
+		TrueText = trueText;
+		TrueAction = trueAction;
+		Single = true;
 	}
 }
 

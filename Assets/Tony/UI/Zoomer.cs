@@ -15,11 +15,14 @@ public class Zoomer : MonoBehaviour{
     
     public void ZoomIn(){
         gameObject.SetActive(true);
-        DOTween.To(() => Group.alpha, x => Group.alpha = x, 1, 0.2f);//0.2秒內慢慢把Group.alpha數值變成1
+        T.Kill();
+        T = DOTween.To(() => Group.alpha, x => Group.alpha = x, 1, 0.2f);//0.2秒內慢慢把Group.alpha數值變成1
     }
-    
+
+    private Tweener T;
     public void ZoomOut(){
-        DOTween.To(() => Group.alpha, x => Group.alpha = x, 0, 0.2f).OnComplete(() => {//0.2秒內慢慢把Group.alpha數值變成0,並在完成後關閉自身go
+        T.Kill();
+        T = DOTween.To(() => Group.alpha, x => Group.alpha = x, 0, 0.2f).OnComplete(() => {//0.2秒內慢慢把Group.alpha數值變成0,並在完成後關閉自身go
             gameObject.SetActive(false);
         });
         
