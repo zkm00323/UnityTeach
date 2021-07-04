@@ -10,5 +10,5 @@ public class PlaceableItemInfoSO : ItemInfoSO{
 }
 
 public enum PlaceableItemType{
-	Chairs,Table
+	Chairs,Table, ElectronicAppliances, Lightings, Kitchen, Storageware, Bathroom, Decorations, Miscelleneous
 }

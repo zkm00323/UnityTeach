@@ -14,8 +14,9 @@ public class GameTimeManager : MonoBehaviour{
     public static DateTime Time{ private set; get; }
 
     void Start(){
-        Time = new DateTime(1,1,1,8,40,0);
+        Time = new DateTime(1,1,1,7,00,0);
         StartCoroutine(TimeCtrl());
+        //DontDestroyOnLoad(gameObject);
     }
 
     IEnumerator TimeCtrl(){
@@ -27,6 +28,7 @@ public class GameTimeManager : MonoBehaviour{
         
         Time = newTime;
         OnTimeChanged.Invoke(Time);
+        Debug.Log(Time);
         yield return TimeCtrl();
     }
 }

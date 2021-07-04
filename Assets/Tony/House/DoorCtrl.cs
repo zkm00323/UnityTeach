@@ -17,7 +17,7 @@ public class DoorCtrl : MonoBehaviour{
         UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"Rent:{Info.Rent}\n SocialScoreNeeded:{Info.SocialScoreNeeded}","租房","取消",
             () => {
                 if(PlayerMoney.playerMoney.money < Info.Rent)
-                    UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"沒有足夠的錢承租", "確認", () => { OnLeave();}));
+                    UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"沒有足夠的錢承租", "確認", () => { EndLease();}));
                 else
                     UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"承租成功!", "確認", () => {
                         
@@ -35,14 +35,14 @@ public class DoorCtrl : MonoBehaviour{
 
     void RentForMonth(DateTime data){
         if((GameTimeManager.Time-Info.LastRentTime).Minutes>10){
-            UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"付租金![{Info.Rent}]", "確認","取消", OnPay,OnLeave));
+            UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"付租金![{Info.Rent}]", "確認","取消", OnPay, EndLease));
         }
         
     }
 
     void OnPay(){
         if(PlayerMoney.playerMoney.money < Info.Rent)
-            UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"沒有足夠的錢承租", "確認", OnLeave));
+            UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"沒有足夠的錢承租", "確認", EndLease));
         else{
             Info.PlayerLivesHere = true;
             Info.LastRentTime = GameTimeManager.Time;
@@ -52,7 +52,7 @@ public class DoorCtrl : MonoBehaviour{
 
     }
 
-    void OnLeave(){
+    void EndLease(){
         GameTimeManager.OnTimeChanged -= RentForMonth;
         Info.PlayerLivesHere = false;
         UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"您以結束承租此房!", "確認", () => { }));

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UICtrl : MonoBehaviour
 {
 	public static UICtrl Instance;
+	
 
 	public CustomBarUICtrl HealthBar;
 	public CustomBarUICtrl HungerBar;
@@ -19,6 +20,8 @@ public class UICtrl : MonoBehaviour
 
 	private void Update(){
 		UpdateInventory();
+		//DontDestroyOnLoad(gameObject);
+
 
 	}
 

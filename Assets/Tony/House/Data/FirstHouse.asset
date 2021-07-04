@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FirstHouse
   m_EditorClassIdentifier: 
   PlayerLivesHere: 0
-  Rent: 1000
+  Rent: 500
   Price: 9999999
   SocialScoreNeeded: 0
   comfortLevel: 0

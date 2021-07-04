@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8056845332537926092
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
+  m_Name: Tonemapping
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  mode:
+    m_OverrideState: 1
+    m_Value: 2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,6 +33,8 @@ MonoBehaviour:
   - {fileID: 3194791595226571056}
   - {fileID: 3494735294097927482}
   - {fileID: 7995098974461182825}
+  - {fileID: 3827267905131893989}
+  - {fileID: -8056845332537926092}
 --- !u!114 &3194791595226571056
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -32,11 +51,11 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.93
+    m_Value: 0.63
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.31
+    m_Value: 0.61
     min: 0
   scatter:
     m_OverrideState: 0
@@ -106,6 +125,37 @@ MonoBehaviour:
     m_Value: 4
     min: -100
     max: 100
+--- !u!114 &3827267905131893989
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
+  m_Name: SplitToning
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  shadows:
+    m_OverrideState: 1
+    m_Value: {r: 0.70772517, g: 0.74019146, b: 0.754717, a: 1}
+    hdr: 0
+    showAlpha: 0
+    showEyeDropper: 1
+  highlights:
+    m_OverrideState: 1
+    m_Value: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+    hdr: 0
+    showAlpha: 0
+    showEyeDropper: 1
+  balance:
+    m_OverrideState: 0
+    m_Value: 0
+    min: -100
+    max: 100
 --- !u!114 &7995098974461182825
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -122,7 +172,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
-    m_Value: 29
+    m_Value: 15
     min: -100
     max: 100
   tint:

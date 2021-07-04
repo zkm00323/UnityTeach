@@ -9,12 +9,13 @@ public class TimeUI : MonoBehaviour
 {
     public TextMeshProUGUI timeText;
     
-    private void OnEnable(){
+    private void Start(){
         GameTimeManager.OnTimeChanged += UpdateTime;
+        //DontDestroyOnLoad(gameObject);
     }
 
     private void OnDisable(){
-        GameTimeManager.OnTimeChanged -= UpdateTime;
+        //GameTimeManager.OnTimeChanged -= UpdateTime;
     }
     
     private void UpdateTime(DateTime date){
