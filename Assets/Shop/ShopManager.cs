@@ -15,7 +15,7 @@ public class ShopManager : MonoBehaviour
     public Button[] myPurchaseBtns;
 
     //reference to player money script
-    public PlayerMoney playerMoney;
+    public MoneyUI playerMoney;
 
 
     private void Start()
@@ -23,16 +23,16 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < foodObjectSO.Length; i++) //change shopItemsSO to foodObjectSO? 
             shopPanelsGO[i].SetActive(true);
 
-        playerMoney = GameObject.Find("player").GetComponent<PlayerMoney>();
+        playerMoney = GameObject.Find("player").GetComponent<MoneyUI>();
         //playerMoney.money
-        coinUI.text = "Coins: " + PlayerMoney.playerMoney.money.ToString();
+        coinUI.text = "Coins: " + PlayerData.Instance.money.ToString();
         LoadPanels();
     }
 
     public void AddCoins() //add playerMoney.money
     {
-        playerMoney.money++;
-            coinUI.text = "Coins: " + playerMoney.money.ToString();
+        PlayerData.Instance.money++;
+            coinUI.text = "Coins: " + PlayerData.Instance.money.ToString();
         CheckPurchaseable();
     }
 
@@ -40,7 +40,7 @@ public class ShopManager : MonoBehaviour
     {
         for (int i=0; i < foodObjectSO.Length; i++)
         {
-            if (playerMoney.money >= foodObjectSO[i].price) //change to .price? 
+            if (PlayerData.Instance.money >= foodObjectSO[i].price) //change to .price? 
                 myPurchaseBtns[i].interactable = true;
             else
                 myPurchaseBtns[i].interactable = false;
@@ -58,10 +58,10 @@ public class ShopManager : MonoBehaviour
 
     public void PurchaseItem(int btnNo)
     {
-        if (playerMoney.money >= foodObjectSO[btnNo].price)
+        if (PlayerData.Instance.money >= foodObjectSO[btnNo].price)
         {
-            playerMoney.money = playerMoney.money - foodObjectSO[btnNo].price;
-            coinUI.text = "Coins: " + playerMoney.money.ToString();
+            PlayerData.Instance.money = PlayerData.Instance.money - foodObjectSO[btnNo].price;
+            coinUI.text = "Coins: " + PlayerData.Instance.money.ToString();
             CheckPurchaseable();
         }
     }

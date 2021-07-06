@@ -4,18 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 public class WorkCtrl : MonoBehaviour, IPointerClickHandler{
-    public WorkWindowUICtrl UI;
+    //public WorkWindowUICtrl UI;
     public WorkInfoSO JobSO;
-    public PlayerSkillsCtrl playerSkills;
+    //public PlayerSkillsCtrl playerSkills;
     
     private void Update(){
         
     }
-    
+    public void OnPointerClick(PointerEventData pointerEventData)
+    {
+        UICtrl.Instance.StartWork();
+
+
+    }
     #region UI
     //public KeyCode WorkKey;
-	
-    public Zoomer Zoomer;
+
+    //public Zoomer Zoomer;
 
     /*private void UpdateUI(){
         if(Input.GetKeyDown(WorkKey)){ 
@@ -30,30 +35,11 @@ public class WorkCtrl : MonoBehaviour, IPointerClickHandler{
             }
         }
     }*/
-    public void OnPointerClick(PointerEventData pointerEventData)
-    {
-        if (Zoomer.gameObject.activeSelf)
-        {
-            Zoomer.ZoomOut();
-            if (ItemUICtrl.Selecting != null)
-                ItemUICtrl.Selecting.UnSelect();
-        }
-        else
-        {
-            UI.Setup(JobSO.GetData);
-            Zoomer.ZoomIn();
-        }
 
-    }
 
     public void CloseWorkWindow()
     {
-        if (Zoomer.gameObject.activeSelf)
-        {
-            Zoomer.ZoomOut();
-            if (ItemUICtrl.Selecting != null)
-                ItemUICtrl.Selecting.UnSelect();
-        }
+        UICtrl.Instance.ExitWork();
     }
 
     #endregion
@@ -63,9 +49,9 @@ public class WorkCtrl : MonoBehaviour, IPointerClickHandler{
         data.TotalWorkHour += (float)workHour;
         print(info.Salary);
          print(workHour);
-        PlayerMoney.playerMoney.AddMoney((int)Math.Floor( info.Salary*(workHour+1)));
-        PlayerData.Instance.Hunger -= info.HungryCost *(float)workHour;
-        PlayerData.Instance.Hygiene -= info.HygieneCost *(float)workHour;
+        MoneyUI.playerMoney.AddMoney((int)Math.Floor( info.Salary*(workHour+1)));
+        PlayerData.LIFE.Instance.Hunger -= info.HungryCost *(float)workHour;
+        PlayerData.LIFE.Instance.Hygiene -= info.HygieneCost *(float)workHour;
         //todo Energy
     }
 
@@ -73,11 +59,11 @@ public class WorkCtrl : MonoBehaviour, IPointerClickHandler{
     public void ImpactOnSkillPoints(WorkData data, double workHour) //data from workSO 
     {
         RankInfo info = data.Info.RankList[data.RankIndex];
-        playerSkills = FindObjectOfType<PlayerSkillsCtrl>();
-        playerSkills.peopleSkillPoint += (int)(info.peopleSkillUp * workHour); //work Hour to int??????
-        playerSkills.brainPowerPoint += (int)(info.brainPowerUp * workHour);
-        playerSkills.staminaPoint += info.staminaUp;
-        playerSkills.charismaPoint += info.charismaUp;
-        playerSkills.cookingSkillPoint += info.cookingSkillUp;
+        //playerSkills = FindObjectOfType<PlayerSkillsCtrl>();
+        PlayerData.Skills.Instance.peopleSkillPoint += (int)(info.peopleSkillUp * workHour); //work Hour to int??????
+        PlayerData.Skills.Instance.brainPowerPoint += (int)(info.brainPowerUp * workHour);
+        PlayerData.Skills.Instance.staminaPoint += info.staminaUp;
+        PlayerData.Skills.Instance.charismaPoint += info.charismaUp;
+        PlayerData.Skills.Instance.cookingSkillPoint += info.cookingSkillUp;
     }
 }

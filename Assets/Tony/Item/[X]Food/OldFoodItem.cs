@@ -15,7 +15,7 @@ public class OldFoodItem : ItemMono{
 				PlayerData.Instance.AddItem(Info.GetData);
 			},
 			() => {
-				PlayerData.Instance.Hunger += hungerPoints;
+				PlayerData.LIFE.Instance.Hunger += hungerPoints;
 			}
 		));
 		Destroy(gameObject);

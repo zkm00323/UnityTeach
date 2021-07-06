@@ -21,7 +21,7 @@ public class ShopProductUICtrl : MonoBehaviour{
     //Check purchaseable
 
     public void Buy_Button(){
-        GameCtrl.Instance.Shop.PlayerBuy(Info);
+        UICtrl.Instance.PlayerBuy(Info);
 
     }
 }

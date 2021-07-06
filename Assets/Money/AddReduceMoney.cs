@@ -21,7 +21,7 @@ public class AddReduceMoney : MonoBehaviour
         } */
         if (Input.GetButtonDown("Fire2"))
         {
-            player.GetComponent<PlayerMoney>().SubtractMoney(5);
+            player.GetComponent<MoneyUI>().SubtractMoney(5);
 
         }
     }

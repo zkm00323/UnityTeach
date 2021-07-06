@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class PlayerMoney : MonoBehaviour
+public class MoneyUI : MonoBehaviour
 {
-    public static PlayerMoney playerMoney;
+    public static MoneyUI playerMoney;
     
-    public float money;
+ 
     public Text moneyText; //reference to the UI money display
     void Start(){
         playerMoney = this;
-        moneyText.text = "coins: "+ money.ToString();
+        moneyText.text = "coins: "+ PlayerData.Instance.money.ToString();
     }
 
     // Update is called once per frame
@@ -23,19 +23,19 @@ public class PlayerMoney : MonoBehaviour
 
     public void AddMoney(int moneyToAdd)
     {
-        money += moneyToAdd;
-        moneyText.text = "coins: " + money.ToString();
+        PlayerData.Instance.money += moneyToAdd;
+        moneyText.text = "coins: " + PlayerData.Instance.money.ToString();
 
     }
     public bool SubtractMoney(int moneyToSubtract)
     {
-        if (money - moneyToSubtract < 0) {
+        if (PlayerData.Instance.money - moneyToSubtract < 0) {
             Debug.Log("not enough money!!");
             return false;
         }
         print("!!!-"+moneyToSubtract);
-        money -= moneyToSubtract;
-        moneyText.text = "coins: " + money.ToString();
+        PlayerData.Instance.money -= moneyToSubtract;
+        moneyText.text = "coins: " + PlayerData.Instance.money.ToString();
 
         return true;
     }

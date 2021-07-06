@@ -7,13 +7,7 @@ public class PlayerSkillsCtrl : MonoBehaviour
 
     public PlayerSkillsUI skillUI;
 
-    public int peopleSkillPoint=0;
-    public int brainPowerPoint =0;
-    public int staminaPoint =0;
-    public int charismaPoint=0;
-    public int cookingSkillPoint=0;
-    public string[] prestigeRank;
-    public float socialScore=0; //can be negative
+   
 
     #region UI
     public Zoomer Zoomer;

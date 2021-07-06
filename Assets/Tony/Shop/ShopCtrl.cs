@@ -8,10 +8,16 @@ using UnityEngine.UI;
 public class ShopCtrl : MonoBehaviour, IPointerClickHandler{
 
 	#region Unity
-	
+
+	[SerializeField]
+	private List<ItemInfoSO> ShopProductList;//商店數據存放點
+
+	public void OnPointerClick(PointerEventData pointerEventData){
+		UICtrl.Instance.OPNESHOP(ShopProductList);
+	}
 
 	private void Awake(){
-		AwakeData();
+		//AwakeData();
 	}
 
     private void Update()
@@ -20,11 +26,9 @@ public class ShopCtrl : MonoBehaviour, IPointerClickHandler{
 	}
 
 	#endregion
-	
-	
 
 	#region Data
-
+	/*
 	public GameObject ShopProductUI_O;
 	public Transform Shop_T;
 	
@@ -40,7 +44,7 @@ public class ShopCtrl : MonoBehaviour, IPointerClickHandler{
 		}
 	}
 	public void PlayerBuy(ItemInfoSO info){
-		if (PlayerMoney.playerMoney.SubtractMoney(info.Price)){
+		if (MoneyUI.playerMoney.SubtractMoney(info.Price)){
 			PlayerData.Instance.AddItem(info.GetData);
 			UICtrl.Instance.PopupInfoSetup(new PopupInfoData("購買 "+info.Name+" 成功!","好的","關閉", () => { },() => { }));
 		}
@@ -48,7 +52,7 @@ public class ShopCtrl : MonoBehaviour, IPointerClickHandler{
 			UICtrl.Instance.PopupInfoSetup(new PopupInfoData("你沒有足夠的金錢購買 "+info.Name,"好的","關閉", () => { },() => { }));
 		}
 		
-		/*foreach(var info in ShopProductList)
+		foreach(var info in ShopProductList)
         {
 			int price = int.Parse(info.Price); //convert price string to int
 			if (playerMoney.money >= price)
@@ -60,16 +64,16 @@ public class ShopCtrl : MonoBehaviour, IPointerClickHandler{
             {
 				Debug.Log("Not enough coins!!");
             }
-        }*/
+        }
     }
-
+	*/
 	#endregion
 	
 	#region UI
 	//public KeyCode ShopKey;
 	
-	public Zoomer Zoomer;
-	public Button leaveButton;
+	//public Zoomer Zoomer;
+	//public Button leaveButton;
 
 	/*private void UpdateUI(){ //改成遇到npc彈出商店??? 
 		if(Input.GetKeyDown(ShopKey)){ //Input開關背包UI
@@ -84,19 +88,9 @@ public class ShopCtrl : MonoBehaviour, IPointerClickHandler{
 		}
 	}*/
 
-	public void OnPointerClick(PointerEventData pointerEventData)
-	{
-		if (Zoomer.gameObject.activeSelf)
-		{
-			Zoomer.ZoomOut();
-			if (ItemUICtrl.Selecting != null)
-				ItemUICtrl.Selecting.UnSelect();
-		}
-		else
-		{
-			Zoomer.ZoomIn();
-		}
-	}
+	
+
+	/*
 	public void LeaveShop() //close shop panel
     {
 		if (Zoomer.gameObject.activeSelf)
@@ -106,6 +100,7 @@ public class ShopCtrl : MonoBehaviour, IPointerClickHandler{
 				ItemUICtrl.Selecting.UnSelect();
 		}
 	}
+	*/
 
 
 

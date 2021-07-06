@@ -16,7 +16,6 @@ public class GameTimeManager : MonoBehaviour{
     void Start(){
         Time = new DateTime(1,1,1,7,00,0);
         StartCoroutine(TimeCtrl());
-        //DontDestroyOnLoad(gameObject);
     }
 
     IEnumerator TimeCtrl(){

@@ -16,7 +16,7 @@ public class DoorCtrl : MonoBehaviour{
         }
         UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"Rent:{Info.Rent}\n SocialScoreNeeded:{Info.SocialScoreNeeded}","租房","取消",
             () => {
-                if(PlayerMoney.playerMoney.money < Info.Rent)
+                if(PlayerData.Instance.money < Info.Rent)
                     UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"沒有足夠的錢承租", "確認", () => { EndLease();}));
                 else
                     UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"承租成功!", "確認", () => {
@@ -24,7 +24,7 @@ public class DoorCtrl : MonoBehaviour{
                         Info.PlayerLivesHere = true;
                         Info.LastRentTime = GameTimeManager.Time;
                         GameTimeManager.OnTimeChanged += RentForMonth;
-                        PlayerMoney.playerMoney.SubtractMoney(Info.Rent);
+                        MoneyUI.playerMoney.SubtractMoney(Info.Rent);
                     }));
             },
             () => {
@@ -41,12 +41,12 @@ public class DoorCtrl : MonoBehaviour{
     }
 
     void OnPay(){
-        if(PlayerMoney.playerMoney.money < Info.Rent)
+        if(PlayerData.Instance.money < Info.Rent)
             UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"沒有足夠的錢承租", "確認", EndLease));
         else{
             Info.PlayerLivesHere = true;
             Info.LastRentTime = GameTimeManager.Time;
-            PlayerMoney.playerMoney.SubtractMoney(Info.Rent);
+            MoneyUI.playerMoney.SubtractMoney(Info.Rent);
             UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"承租成功!", "確認", () => {}));
         }
 
@@ -63,7 +63,7 @@ public class DoorCtrl : MonoBehaviour{
             o.SetActive(false);
         }
         
-        SceneManager.LoadSceneAsync(Define.Scene.HOUSE_SCENE, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(Define.Scene.HOUSE_SCENE);
         ActiveDoor = this;
     }
 
@@ -72,6 +72,6 @@ public class DoorCtrl : MonoBehaviour{
             o.SetActive(true);
         }
 
-        SceneManager.UnloadSceneAsync(Define.Scene.HOUSE_SCENE);
+        SceneManager.LoadSceneAsync(Define.Scene.MAIN_SCENE);
     }
 }

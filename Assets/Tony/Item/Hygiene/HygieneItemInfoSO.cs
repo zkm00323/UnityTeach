@@ -10,7 +10,7 @@ public class HygieneItemInfoSO : ItemInfoSO
 
 	public override void OnClick()
 	{
-		PlayerData.Instance.Hygiene += hygienePoints;
+		PlayerData.LIFE.Instance.Hygiene += hygienePoints;
 		//PlayerData.Instance.RemoveItem(this);
 	}
 }

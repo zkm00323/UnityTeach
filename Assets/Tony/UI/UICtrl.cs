@@ -20,8 +20,6 @@ public class UICtrl : MonoBehaviour
 
 	private void Update(){
 		UpdateInventory();
-		//DontDestroyOnLoad(gameObject);
-
 
 	}
 
@@ -127,6 +125,86 @@ public class UICtrl : MonoBehaviour
 	}
 
 	#endregion
+
+	#region Work
+	public Zoomer WorkZoomer;
+	public WorkWindowUICtrl UI;
+	public WorkInfoSO JobSO;
+	public void StartWork()
+    {
+		if (WorkZoomer.gameObject.activeSelf)
+		{
+			WorkZoomer.ZoomOut();
+			if (ItemUICtrl.Selecting != null)
+				ItemUICtrl.Selecting.UnSelect();
+		}
+		else
+		{
+			UI.Setup(JobSO.GetData);
+			WorkZoomer.ZoomIn();
+		}
+	}
+	public void ExitWork()
+    {
+		if (WorkZoomer.gameObject.activeSelf)
+		{
+			WorkZoomer.ZoomOut();
+			if (ItemUICtrl.Selecting != null)
+				ItemUICtrl.Selecting.UnSelect();
+		}
+	}
+
+
+	#endregion
+
+
+	#region SHOP
+
+	public GameObject ShopProductUI_O;
+	public Transform Shop_T;
+
+	public Zoomer SHOPZoomer;
+
+	public void OPNESHOP(List<ItemInfoSO> shopProductList)
+	{
+		foreach (var info in shopProductList)
+		{  //再讀取ItemList生成新的ItemUI
+			var shopItem = Instantiate(ShopProductUI_O, Shop_T);
+			shopItem.GetComponent<ShopProductUICtrl>().Setup(info);
+		}
+
+		if (SHOPZoomer.gameObject.activeSelf)
+		{
+			SHOPZoomer.ZoomOut();
+			if (ItemUICtrl.Selecting != null)
+				ItemUICtrl.Selecting.UnSelect();
+		}
+		else
+		{
+			SHOPZoomer.ZoomIn();
+		}
+	}
+
+	public void BUTTON_LeaveShop() //close shop panel
+	{
+		if (SHOPZoomer.gameObject.activeSelf){
+			SHOPZoomer.ZoomOut();
+			if (ItemUICtrl.Selecting != null)
+				ItemUICtrl.Selecting.UnSelect();
+		}
+	}
+
+	public void PlayerBuy(ItemInfoSO info){
+		if (MoneyUI.playerMoney.SubtractMoney(info.Price)){
+			PlayerData.Instance.AddItem(info.GetData);
+			Instance.PopupInfoSetup(new PopupInfoData("購買 " + info.Name + " 成功!", "好的", "關閉", () => { }, () => { }));
+		}
+		else{
+			Instance.PopupInfoSetup(new PopupInfoData("你沒有足夠的金錢購買 " + info.Name, "好的", "關閉", () => { }, () => { }));
+		}
+	}
+	#endregion
+
 }
 
 public class PopupInfoData{

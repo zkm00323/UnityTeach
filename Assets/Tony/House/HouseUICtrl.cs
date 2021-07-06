@@ -6,11 +6,19 @@ using UnityEngine.UI;
 
 public class HouseUICtrl : MonoBehaviour {
 
+	public static HouseUICtrl INSTANCE;
 	public Transform GenPos;
 	public Button Decorate;
 	public GameObject panels;
 
-	private void Start() {
+	private PlaceableItemType Type = PlaceableItemType.Table;
+
+    private void Awake()
+    {
+		INSTANCE = this;
+
+	}
+    private void Start() {
 
 		panels.gameObject.SetActive(false);
 
@@ -25,18 +33,44 @@ public class HouseUICtrl : MonoBehaviour {
 
 	}
 
-	public void Button_Leave()
-	{
-		DoorCtrl.Exit();
+    public void Button_Leave()
+    {
+        DoorCtrl.Exit();
+    }
+
+	public void Button_SetType(PlaceableItemType type){
+		Type = type;
+		UpDatePlaceableItemUI();
 	}
 
 	void StartUI() {
 		UpDatePlaceableItemData();
+		UpDatePlaceableItemUI();
 	}
 
+	Dictionary<PlaceableItemType, List<ItemData>> PlaceableTypeDic;
 	void UpDatePlaceableItemData() {
 		List<ItemData> placeableItemList = PlayerData.Instance.ItemList.FindAll(x => x.Info is PlaceableItemInfoSO);
-		UpDateBagItem(placeableItemList);
+
+		PlaceableTypeDic = new Dictionary<PlaceableItemType, List<ItemData>>();
+        foreach (var item in placeableItemList){
+			var pitem = item.Info as PlaceableItemInfoSO;
+            if (!PlaceableTypeDic.ContainsKey(pitem.Type)) {
+				PlaceableTypeDic.Add(pitem.Type, new List<ItemData>());
+            }
+			PlaceableTypeDic[pitem.Type].Add(item);
+		}
+
+
+			
+	}
+
+	void UpDatePlaceableItemUI(){
+		if (PlaceableTypeDic.ContainsKey(Type)){
+			UpDateBagItem(PlaceableTypeDic[Type]);
+		}else{
+			UpDateBagItem(new List<ItemData>());
+		}
 	}
 
 	public GameObject ItemUI_O;
@@ -53,7 +87,8 @@ public class HouseUICtrl : MonoBehaviour {
 			ctrl.Setup(data, () => {
 				Instantiate((data.Info as PlaceableItemInfoSO).Object, GenPos);
 				PlayerData.Instance.RemoveItem(data.Info);
-				UpDatePlaceableItemData();
+				StartUI();
+
 			});
 			ItemUIList.Add(o);
 		}

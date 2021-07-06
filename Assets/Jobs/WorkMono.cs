@@ -9,14 +9,14 @@ public class WorkMono : MonoBehaviour
 {
     //public Button[] hours; 
     public GameObject jobPanel;
-    PlayerMoney playerMoney;
+    MoneyUI playerMoney;
     public Work workSO; //the SO
     public PlayerStats playerStats;
     
     // Start is called before the first frame update
     void Start()
     {
-        playerMoney = GameObject.Find("player").GetComponent<PlayerMoney>();
+        playerMoney = GameObject.Find("player").GetComponent<MoneyUI>();
         playerStats = GameObject.Find("player").GetComponent<PlayerStats>();
     }
 

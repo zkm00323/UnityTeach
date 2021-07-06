@@ -10,7 +10,7 @@ public class HygieneItemMono : ItemMono
 
     public override void OnClick()
     {
-        PlayerData.Instance.Hygiene += hygienePoints;
+        PlayerData.LIFE.Instance.Hygiene += hygienePoints;
     }
 
 	private void Awake()

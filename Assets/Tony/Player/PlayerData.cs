@@ -15,65 +15,103 @@ public class PlayerData{
 		}
 	}
 	
-	[SerializeField]
-	private float _health;
-	[SerializeField]
-	private float _maxHealth = 100;
-	[SerializeField]
-	private float _hunger;
-	[SerializeField]
-	private float _maxHunger = 100;
-	[SerializeField]
-	private float _hygiene;
-	[SerializeField]
-	private float _maxHygiene = 100;
+	public class Skills{
+		private static Skills _Instance;
 
-	public float Health{
-		set{
-			_health = math.clamp(value, 0, _maxHealth);
-			UICtrl.Instance.HealthBar.Value = _health/_maxHealth;
+		public static Skills Instance{
+			get{
+				if (_Instance == null) _Instance = new Skills();
+				return _Instance;
+			}
 		}
-		get{
-			
-			return _health;
-		}
+		public int peopleSkillPoint = 0;
+		public int brainPowerPoint = 0;
+		public int staminaPoint = 0;
+		public int charismaPoint = 0;
+		public int cookingSkillPoint = 0;
+		public string[] prestigeRank;
+		public float socialScore = 0; //can be negative
 	}
 
-	public float Hunger
-	{
-		set
+	public class LIFE {
+		private static LIFE _Instance;
+
+		public static LIFE Instance
 		{
-			_hunger = math.clamp(value, 0, _maxHunger);
-			UICtrl.Instance.HungerBar.Value = _hunger / _maxHunger;
+			get
+			{
+				if (_Instance == null){
+					_Instance = new LIFE();
+					_Instance.Health = _Instance._maxHealth;
+					_Instance.Hunger = _Instance._maxHunger;
+					_Instance.Hygiene = _Instance._maxHygiene;
+				}
+				return _Instance;
+			}
 		}
-		get
+
+		[SerializeField]
+		private float _health;
+		[SerializeField]
+		private float _maxHealth = 100;
+		[SerializeField]
+		private float _hunger;
+		[SerializeField]
+		private float _maxHunger = 100;
+		[SerializeField]
+		private float _hygiene;
+		[SerializeField]
+		private float _maxHygiene = 100;
+
+		public float Health
 		{
-			
-			return _hunger;
+			set
+			{
+				_health = math.clamp(value, 0, _maxHealth);
+				UICtrl.Instance.HealthBar.Value = _health / _maxHealth;
+			}
+			get
+			{
+
+				return _health;
+			}
 		}
+
+		public float Hunger
+		{
+			set
+			{
+				_hunger = math.clamp(value, 0, _maxHunger);
+				UICtrl.Instance.HungerBar.Value = _hunger / _maxHunger;
+			}
+			get
+			{
+
+				return _hunger;
+			}
+		}
+
+		public float Hygiene
+		{
+			set
+			{
+				_hygiene = math.clamp(value, 0, _maxHygiene);
+				UICtrl.Instance.HygieneBar.Value = _hygiene / _maxHygiene;
+			}
+			get
+			{
+
+				return _hygiene;
+			}
+		}
+
 	}
-	
-	
-	public float Hygiene
-	{
-		set
-		{
-			_hygiene = math.clamp(value, 0, _maxHygiene);
-			UICtrl.Instance.HygieneBar.Value = _hygiene / _maxHygiene;
-		}
-		get
-		{
-			
-			return _hygiene;
-		}
-	}
+
+	public float money = 2000;
+
 
 	private PlayerData(){
-		Health = _maxHealth;
-		Hunger = _maxHunger;
-		Hygiene = _maxHygiene;
 
-		StartInventory();
 		//StartPlaceableInventory();
 	}
 
@@ -89,9 +127,9 @@ public class PlayerData{
 	private float _healthDownValue = 1;
 	public float _healthDownSpeed = 3f;
 	void UpdateHealthDown(){
-		if (Hunger <=0 || Hygiene <=0)
+		if (LIFE.Instance.Hunger <= 0 || LIFE.Instance.Hygiene <=0)
 		{
-			Health -= _healthDownValue * Time.deltaTime * _healthDownSpeed;
+			LIFE.Instance.Health -= _healthDownValue * Time.deltaTime * _healthDownSpeed;
 		}
 	}
 
@@ -103,7 +141,7 @@ public class PlayerData{
 	public float _hungerDownSpeed = 3f;
 	void UpdateHungerDown()
 	{
-		Hunger -= _hungerDownValue * Time.deltaTime * _hungerDownSpeed;
+		LIFE.Instance.Hunger -= _hungerDownValue * Time.deltaTime * _hungerDownSpeed;
 	}
 
 
@@ -115,7 +153,7 @@ public class PlayerData{
 	public float _HygieneDownSpeed = 3f;
 	void UpdateHygieneDown()
 	{
-		Hygiene -= _HygieneDownValue * Time.deltaTime * _HygieneDownSpeed;
+		LIFE.Instance.Hygiene -= _HygieneDownValue * Time.deltaTime * _HygieneDownSpeed;
 	}
 
 
@@ -125,8 +163,6 @@ public class PlayerData{
 
 	public List<ItemData> ItemList = new List<ItemData>();//背包數據存放點
 	
-	void StartInventory(){
-	}
 
 	public void AddItem(ItemData data){ //添加道具入口
 		var index = ItemList.FindIndex(x => x.Info.ID == data.Info.ID);

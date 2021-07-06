@@ -18,29 +18,45 @@ public class PlayerSkillsUI : MonoBehaviour
 
     //private PlayerSkillsCtrl playerSkills;
 
-   
-
-
-    void Start() //or awake?
-    {
-        SetUp();
+    void Update(){
+        UpdateUI();
     }
 
+    #region UI
+    public Zoomer Zoomer;
+    public KeyCode Key;
+
+    private void UpdateUI()
+    {
+        if (Input.GetKeyDown(Key))
+        {
+            if (Zoomer.gameObject.activeSelf)
+            {
+                Zoomer.ZoomOut();
+                if (ItemUICtrl.Selecting != null)
+                    ItemUICtrl.Selecting.UnSelect();
+            }
+            else
+            {
+                //skillUI.SetUp(new WorkData(Info, 0, 0));
+                Zoomer.ZoomIn();
+                SetUp();
+            }
+        }
+
+
+    }
+    #endregion
     // Update is called once per frame
-    void Update()
-    {
-        SetUp();
-    }
-    public void SetUp()
-    {
-        playerSkills = FindObjectOfType<PlayerSkillsCtrl>();
-        peopleSkillPoint.text = "People Skill: " + playerSkills.peopleSkillPoint.ToString();
-        brainPowerPoint.text = "Brain power: "+ playerSkills.brainPowerPoint.ToString();
-        staminaPoint.text = "Stamina: "+playerSkills.staminaPoint.ToString();
-        charismaPoint.text = "Charisma: "+playerSkills.charismaPoint.ToString();
-        if(cookingSkillPoint!=null)cookingSkillPoint.text = "Cooking: "+playerSkills.cookingSkillPoint.ToString();
-        if(socialScore!=null)socialScore.text = "Social Rank Score: "+playerSkills.socialScore.ToString();
 
+    public void SetUp() {
+        playerSkills = FindObjectOfType<PlayerSkillsCtrl>();
+        peopleSkillPoint.text = "People Skill: " + PlayerData.Skills.Instance.peopleSkillPoint.ToString();
+        brainPowerPoint.text = "Brain power: "+ PlayerData.Skills.Instance.brainPowerPoint.ToString();
+        staminaPoint.text = "Stamina: "+PlayerData.Skills.Instance.staminaPoint.ToString();
+        charismaPoint.text = "Charisma: "+ PlayerData.Skills.Instance.charismaPoint.ToString();
+        if(cookingSkillPoint!=null)cookingSkillPoint.text = "Cooking: "+ PlayerData.Skills.Instance.cookingSkillPoint.ToString();
+        if(socialScore!=null)socialScore.text = "Social Rank Score: "+ PlayerData.Skills.Instance.socialScore.ToString();
     }
 
    

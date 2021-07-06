@@ -6,7 +6,7 @@ using TMPro;
 [CreateAssetMenu]
 public class Work : ScriptableObject
 {
-    PlayerMoney playerMoney;
+    MoneyUI playerMoney;
     //public float hoursWorked;
     public int hourlyWage;
     public float hourlyHungerImpact;
