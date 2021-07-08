@@ -102,7 +102,7 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
-    - _CameraDistanceImpact: 0
+    - _CameraDistanceImpact: 0.21
     - _CelExtraEnabled: 1
     - _CelNumSteps: 2
     - _CelPrimaryMode: 1
@@ -120,7 +120,7 @@ Material:
     - _FlatSpecularEdgeSmoothness: 0.476
     - _FlatSpecularSize: 0.755
     - _Flatness: 1
-    - _FlatnessExtra: 1
+    - _FlatnessExtra: 0.51
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -144,9 +144,9 @@ Material:
     - _ReceiveShadows: 1
     - _RimEnabled: 0
     - _SelfShadingSize: 0.22
-    - _SelfShadingSizeExtra: 0.486
+    - _SelfShadingSizeExtra: 0.41
     - _ShadowEdgeSize: 0
-    - _ShadowEdgeSizeExtra: 0.069
+    - _ShadowEdgeSizeExtra: 0.425
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularEnabled: 0
@@ -157,7 +157,7 @@ Material:
     - _TextureImpact: 1
     - _UnityShadowMode: 2
     - _UnityShadowPower: 0.2
-    - _UnityShadowSharpness: 1.27
+    - _UnityShadowSharpness: 2.5
     - _VertexColorsEnabled: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
@@ -173,7 +173,7 @@ Material:
     - _FlatRimColor: {r: 0.4862745, g: 0.25000918, b: 0.23529412, a: 1}
     - _FlatSpecularColor: {r: 0.83879924, g: 0.83879924, b: 0.3662527, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _OutlineColor: {r: 0.6226415, g: 0.20793873, b: 0.3088861, a: 1}
+    - _OutlineColor: {r: 0.5660378, g: 0.2264151, b: 0.30971882, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _UnityShadowColor: {r: 0.5294118, g: 0.15564708, b: 0.44040805, a: 1}
   m_BuildTextureStacks: []
