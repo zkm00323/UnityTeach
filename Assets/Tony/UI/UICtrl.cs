@@ -129,8 +129,7 @@ public class UICtrl : MonoBehaviour
 	#region Work
 	public Zoomer WorkZoomer;
 	public WorkWindowUICtrl UI;
-	public WorkInfoSO JobSO;
-	public void StartWork()
+	public void StartWork(WorkInfoSO jobSO)
     {
 		if (WorkZoomer.gameObject.activeSelf)
 		{
@@ -140,7 +139,7 @@ public class UICtrl : MonoBehaviour
 		}
 		else
 		{
-			UI.Setup(JobSO.GetData);
+			UI.Setup(jobSO.GetData);
 			WorkZoomer.ZoomIn();
 		}
 	}
@@ -156,8 +155,7 @@ public class UICtrl : MonoBehaviour
 
 
 	#endregion
-
-
+	
 	#region SHOP
 
 	public GameObject ShopProductUI_O;

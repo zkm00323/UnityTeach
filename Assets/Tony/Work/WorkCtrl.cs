@@ -13,7 +13,7 @@ public class WorkCtrl : MonoBehaviour, IPointerClickHandler{
     }
     public void OnPointerClick(PointerEventData pointerEventData)
     {
-        UICtrl.Instance.StartWork();
+        UICtrl.Instance.StartWork(JobSO);
 
 
     }
