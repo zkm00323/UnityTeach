@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class PickUpSelectedItem : PickUpItem
 {
 	public override void OnClick(){
@@ -21,8 +21,29 @@ public class PickUpSelectedItem : PickUpItem
 		AwakeColorChange();
 	}
 
+    #region Save Objects Scene data
+    public void Start()
+    {
+		GameCtrl.SaveEvent += SaveFunction;
+    }
+    public void OnDestroy()
+    {
+		GameCtrl.SaveEvent -= SaveFunction;
+    }
+
+	public void SaveFunction(object sender, EventArgs args)
+    {
+		SavedFoodPosition food = new SavedFoodPosition(); //generate a new food item at the same position??
+		food.PositionX = transform.position.x;
+		food.PositionY = transform.position.y;
+		food.PositionZ = transform.position.z;
+		GameCtrl.Instance.GetListForScene().SavedFood.Add(food);
+
+	}
+	#endregion
+
 	#region ColorChange //see ItemMono for material variables
-	
+
 	private void AwakeColorChange()
 	{
 		_originalMaterial = GetComponent<MeshRenderer>().material;

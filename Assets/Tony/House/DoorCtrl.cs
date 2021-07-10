@@ -74,4 +74,6 @@ public class DoorCtrl : MonoBehaviour{
 
         SceneManager.LoadSceneAsync(Define.Scene.MAIN_SCENE);
     }
+
+   
 }
