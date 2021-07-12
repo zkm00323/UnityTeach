@@ -7,12 +7,12 @@ public class LevelMaster : MonoBehaviour
     public GameObject FoodPrefab;
     void Start()
     {
-        GameCtrl.Instance.InitializeSceneList();
-        GameCtrl.Instance.InitializeSceneList();
+        GameCtrl_.Instance.InitializeSceneList();
+        GameCtrl_.Instance.InitializeSceneList();
 
-        if (GameCtrl.Instance.IsSceneBeingLoaded || GameCtrl.Instance.IsSceneBeingTransitioned)
+        if (GameCtrl_.Instance.IsSceneBeingLoaded || GameCtrl_.Instance.IsSceneBeingTransitioned)
         {
-            SavedDroppableList localList = GameCtrl.Instance.GetListForScene();
+            SavedDroppableList localList = GameCtrl_.Instance.GetListForScene();
 
             if (localList != null)
             {

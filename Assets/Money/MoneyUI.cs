@@ -33,7 +33,6 @@ public class MoneyUI : MonoBehaviour
             Debug.Log("not enough money!!");
             return false;
         }
-        print("!!!-"+moneyToSubtract);
         PlayerData.Instance.money -= moneyToSubtract;
         moneyText.text = "coins: " + PlayerData.Instance.money.ToString();
 

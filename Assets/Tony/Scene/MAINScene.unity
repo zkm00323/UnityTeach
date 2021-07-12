@@ -767,7 +767,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 715378762}
-  - component: {fileID: 715378763}
   m_Layer: 0
   m_Name: GameMasterObject
   m_TagString: Untagged
@@ -792,22 +791,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &715378763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715378761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ead8cef12c002814a99a0e617e5e552a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Shop: {fileID: 750811893}
-  Work: {fileID: 630958779}
-  playerSkill: {fileID: 0}
-  SavedLists: []
 --- !u!1 &750811888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0990a12314f7fe45b8c33a72ee2b300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActiveObjects: []
   Info: {fileID: 11400000, guid: ece2474f3969bc44cb65a6cd16424210, type: 2}
 --- !u!65 &932546539
 BoxCollider:

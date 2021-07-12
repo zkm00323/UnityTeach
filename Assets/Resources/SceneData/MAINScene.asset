@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a7410bc4f5e2c4b9504e9b094f9259, type: 3}
+  m_Name: MAINScene
+  m_EditorClassIdentifier: 
+  ItemDataList:
+  - Pos: {x: -2.8000002, y: 1.91, z: 0}
+    Rot: {x: -0, y: 0, z: 0}
+    Item: {fileID: 11400000, guid: 8626b76cef8c2f3479c3d9e663cd0ce9, type: 2}
+  - Pos: {x: -1.6700001, y: 1.91, z: 0}
+    Rot: {x: -0, y: 0, z: 0}
+    Item: {fileID: 11400000, guid: 6bade2edacbbac145929aee54cda994f, type: 2}
+  - Pos: {x: 3.93, y: 0.79, z: -1.882}
+    Rot: {x: -0, y: 0, z: 0}
+    Item: {fileID: 11400000, guid: 6875fe5c8d45cf946bcc7f24f8ab4f1f, type: 2}
+  - Pos: {x: 2.63, y: 0.79, z: -2.932}
+    Rot: {x: -0, y: 0, z: 0}
+    Item: {fileID: 11400000, guid: 0e0639c94e7c8fe4cbe3fe2cb425e11f, type: 2}
+  - Pos: {x: 3.93, y: 0.79, z: -2.932}
+    Rot: {x: -0, y: 0, z: 0}
+    Item: {fileID: 11400000, guid: 6875fe5c8d45cf946bcc7f24f8ab4f1f, type: 2}

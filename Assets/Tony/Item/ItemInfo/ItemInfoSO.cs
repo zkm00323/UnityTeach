@@ -15,6 +15,7 @@ public class ItemInfoSO : ScriptableObject{//道具相關所有數據
     //顯示面
     public Color ItemColor;
     public Material M;
+    public GameObject Prefeb;
     
     public virtual void OnClick(){
     }
@@ -27,7 +28,6 @@ public class ItemData{
     public int Count = 1;
 
     public ItemData(ItemInfoSO info){
-        Debug.Log("!!!"+Count);
         Info = info;
     }
 }

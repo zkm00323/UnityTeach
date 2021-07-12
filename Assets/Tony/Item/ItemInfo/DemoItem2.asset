@@ -18,3 +18,4 @@ MonoBehaviour:
   Price: 15
   ItemColor: {r: 0.9706241, g: 1, b: 0, a: 1}
   M: {fileID: 2100000, guid: b8936077856dc4d448761528316283f2, type: 2}
+  Prefeb: {fileID: 1113747442478431240, guid: 849e729f5ddeb0048af0fdebb3c1eb33, type: 3}

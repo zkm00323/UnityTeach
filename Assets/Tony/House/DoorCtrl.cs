@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class DoorCtrl : MonoBehaviour{
 
     private static DoorCtrl ActiveDoor;
-    public GameObject[] ActiveObjects;
     public HouseSO Info;
     private void OnTriggerEnter(Collider other){
         if(Info.PlayerLivesHere){
@@ -59,20 +58,12 @@ public class DoorCtrl : MonoBehaviour{
     }
     
     void Enter(){
-        foreach(var o in ActiveObjects){
-            o.SetActive(false);
-        }
-        
-        SceneManager.LoadSceneAsync(Define.Scene.HOUSE_SCENE);
+        SceneCtrl.Instance.ChangeScene(Define.Scene.HOUSE_SCENE);
         ActiveDoor = this;
     }
 
     public static void Exit(){
-        foreach(var o in ActiveDoor.ActiveObjects){
-            o.SetActive(true);
-        }
-
-        SceneManager.LoadSceneAsync(Define.Scene.MAIN_SCENE);
+        SceneCtrl.Instance.ChangeScene(Define.Scene.MAIN_SCENE);
     }
 
    

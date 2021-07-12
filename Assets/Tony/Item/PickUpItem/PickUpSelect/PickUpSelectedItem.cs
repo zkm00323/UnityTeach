@@ -24,11 +24,11 @@ public class PickUpSelectedItem : PickUpItem
     #region Save Objects Scene data
     public void Start()
     {
-		GameCtrl.SaveEvent += SaveFunction;
+		GameCtrl_.SaveEvent += SaveFunction;
     }
     public void OnDestroy()
     {
-		GameCtrl.SaveEvent -= SaveFunction;
+		GameCtrl_.SaveEvent -= SaveFunction;
     }
 
 	public void SaveFunction(object sender, EventArgs args)
@@ -37,7 +37,7 @@ public class PickUpSelectedItem : PickUpItem
 		food.PositionX = transform.position.x;
 		food.PositionY = transform.position.y;
 		food.PositionZ = transform.position.z;
-		GameCtrl.Instance.GetListForScene().SavedFood.Add(food);
+		GameCtrl_.Instance.GetListForScene().SavedFood.Add(food);
 
 	}
 	#endregion

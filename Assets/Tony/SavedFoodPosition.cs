@@ -4,8 +4,7 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class SavedFoodPosition 
-{
+public class SavedFoodPosition {
     public float PositionX, PositionY, PositionZ;
 }
 

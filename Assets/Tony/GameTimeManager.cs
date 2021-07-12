@@ -27,7 +27,6 @@ public class GameTimeManager : MonoBehaviour{
         
         Time = newTime;
         OnTimeChanged.Invoke(Time);
-        Debug.Log(Time);
         yield return TimeCtrl();
     }
 }

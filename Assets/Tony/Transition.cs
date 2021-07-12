@@ -25,10 +25,10 @@ public class Transition : MonoBehaviour
 	{
 
 		//Assign the transition target location.
-		GameCtrl.Instance.TransitionTarget.position = TargetPlayerLocation.position;
+		GameCtrl_.Instance.TransitionTarget.position = TargetPlayerLocation.position;
 		//New:
-		GameCtrl.Instance.IsSceneBeingTransitioned = true;
-		GameCtrl.Instance.FireSaveEvent();
+		GameCtrl_.Instance.IsSceneBeingTransitioned = true;
+		GameCtrl_.Instance.FireSaveEvent();
 		SceneManager.LoadSceneAsync(TargetedSceneIndex);
 
 	}

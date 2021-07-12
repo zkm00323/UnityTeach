@@ -202,7 +202,6 @@ public class UICtrl : MonoBehaviour
 		}
 	}
 	#endregion
-
 }
 
 public class PopupInfoData{

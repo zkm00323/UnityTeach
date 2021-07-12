@@ -5,8 +5,8 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-public class GameCtrl : MonoBehaviour {
-    public static GameCtrl Instance;
+public class GameCtrl_ : MonoBehaviour {
+    public static GameCtrl_ Instance;
 
     public ShopCtrl Shop;
     public WorkCtrl Work;
@@ -43,6 +43,7 @@ public class GameCtrl : MonoBehaviour {
     public SavedDroppableList GetListForScene() //????
     {
         for (int i = 0; i < 10; i++);
+        return new SavedDroppableList(1);
     }
 
     public void InitializeSceneList()

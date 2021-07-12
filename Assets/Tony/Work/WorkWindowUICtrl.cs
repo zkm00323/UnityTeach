@@ -38,15 +38,15 @@ public class WorkWindowUICtrl : MonoBehaviour
 
 	public void B_Confirm()
 	{
-		GameCtrl.Instance.Work.GetSalary(Data, Value);
-		GameCtrl.Instance.Work.ImpactOnSkillPoints(Data, Value);
+		GameCtrl_.Instance.Work.GetSalary(Data, Value);
+		GameCtrl_.Instance.Work.ImpactOnSkillPoints(Data, Value);
 
 	}
 
 	public void B_Exit()
 	{
 
-		GameCtrl.Instance.Work.CloseWorkWindow();
+		GameCtrl_.Instance.Work.CloseWorkWindow();
 
 
 
