@@ -22,7 +22,7 @@ public class DoorCtrl : MonoBehaviour{
                         
                         Info.PlayerLivesHere = true;
                         Info.LastRentTime = GameTimeManager.Time;
-                        GameTimeManager.OnTimeChanged += RentForMonth;
+                        GameTimeManager.RegisterTimeAciton(60*10,RentForMonth);
                         MoneyUI.playerMoney.SubtractMoney(Info.Rent);
                     }));
             },
@@ -32,11 +32,8 @@ public class DoorCtrl : MonoBehaviour{
         ));
     }
 
-    void RentForMonth(DateTime data){
-        if((GameTimeManager.Time-Info.LastRentTime).Minutes>10){
-            UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"付租金![{Info.Rent}]", "確認","取消", OnPay, EndLease));
-        }
-        
+    void RentForMonth(){
+        UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"付租金![{Info.Rent}]", "確認","取消", OnPay, EndLease));
     }
 
     void OnPay(){
@@ -52,7 +49,7 @@ public class DoorCtrl : MonoBehaviour{
     }
 
     void EndLease(){
-        GameTimeManager.OnTimeChanged -= RentForMonth;
+        GameTimeManager.UnRegisterTimeAciton(RentForMonth);
         Info.PlayerLivesHere = false;
         UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"您以結束承租此房!", "確認", () => { }));
     }

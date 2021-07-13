@@ -10,7 +10,7 @@ public class TimeUI : MonoBehaviour
     public TextMeshProUGUI timeText;
     
     private void Start(){
-        GameTimeManager.OnTimeChanged += UpdateTime;
+        GameTimeManager.RegisterTimeAciton(60,UpdateTime);
         //DontDestroyOnLoad(gameObject);
     }
 
@@ -18,7 +18,7 @@ public class TimeUI : MonoBehaviour
         //GameTimeManager.OnTimeChanged -= UpdateTime;
     }
     
-    private void UpdateTime(DateTime date){
-        timeText.text = date.ToString("HH:mm tt", CultureInfo.CreateSpecificCulture("en-US")); 
+    private void UpdateTime(){
+        timeText.text = GameTimeManager.Time.ToString("HH:mm tt", CultureInfo.CreateSpecificCulture("en-US")); 
     }
 }

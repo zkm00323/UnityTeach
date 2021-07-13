@@ -15,6 +15,6 @@ public class GameCtrl : MonoBehaviour {
     }
 
     private void Start(){
-        SceneManager.LoadSceneAsync(Define.Scene.MAIN_SCENE);
+        SceneCtrl.Instance.ChangeScene(Define.Scene.MAIN_SCENE);
     }
 }

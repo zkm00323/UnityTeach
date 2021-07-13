@@ -14,14 +14,10 @@ public class PickUpSelectedItem : PickUpItem
 			}
 		));
 		Destroy(gameObject);
+		AllItemInScene.Remove(this);
 	}
 
-	private void Awake()
-	{
-		AwakeColorChange();
-	}
-
-    #region Save Objects Scene data
+	#region Save Objects Scene data
     public void Start()
     {
 		GameCtrl_.SaveEvent += SaveFunction;

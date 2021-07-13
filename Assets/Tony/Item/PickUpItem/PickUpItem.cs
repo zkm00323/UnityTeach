@@ -9,7 +9,7 @@ public class PickUpItem : ItemMono{
 	
 	public ItemInfoSO ItemName;//道具數據
 	
-	private void Awake(){
+	protected virtual void Awake(){
 		AwakeColorChange(); ;//通過道具數據改變自身外形
 		AwakeSetData();
 
