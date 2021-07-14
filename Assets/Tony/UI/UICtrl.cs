@@ -127,37 +127,27 @@ public class UICtrl : MonoBehaviour
 	#endregion
 
 	#region Work
-	public Zoomer WorkZoomer;
+
 	public WorkWindowUICtrl UI;
-	public void StartWork(WorkInfoSO jobSO)
-    {
-		if (WorkZoomer.gameObject.activeSelf)
-		{
-			WorkZoomer.ZoomOut();
-			if (ItemUICtrl.Selecting != null)
-				ItemUICtrl.Selecting.UnSelect();
-		}
-		else
-		{
-			UI.Setup(jobSO.GetData);
-			WorkZoomer.ZoomIn();
-		}
+	public void StartWork(WorkInfoSO jobSO) {
+		UI.Setup(jobSO.GetData);
 	}
-	public void B_ConfirmWork(WorkInfoSO jobSO)
-    {
-		//????
-
+	
+	public void ConfirmWork(WorkData data,double workHour) {
+		RankInfo info = data.Info.RankList[data.RankIndex];
+		data.TotalWorkHour += (float)workHour;
+		print(info.Salary);
+		print(workHour);
+		MoneyUI.playerMoney.AddMoney((int)Math.Floor( info.Salary*(workHour+1)));
+		PlayerData.LIFE.Instance.Hunger -= info.HungryCost *(float)workHour;
+		PlayerData.LIFE.Instance.Hygiene -= info.HygieneCost *(float)workHour;
+		
+		PlayerData.Skills.Instance.peopleSkillPoint += (int)(info.peopleSkillUp * workHour); //work Hour to int??????
+		PlayerData.Skills.Instance.brainPowerPoint += (int)(info.brainPowerUp * workHour);
+		PlayerData.Skills.Instance.staminaPoint += info.staminaUp;
+		PlayerData.Skills.Instance.charismaPoint += info.charismaUp;
+		PlayerData.Skills.Instance.cookingSkillPoint += info.cookingSkillUp;
 	}
-	public void ExitWork()
-    {
-		if (WorkZoomer.gameObject.activeSelf)
-		{
-			WorkZoomer.ZoomOut();
-			if (ItemUICtrl.Selecting != null)
-				ItemUICtrl.Selecting.UnSelect();
-		}
-	}
-
 
 	#endregion
 	
