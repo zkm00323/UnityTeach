@@ -44,6 +44,7 @@ public class WorkCtrl : MonoBehaviour, IPointerClickHandler{
 
     #endregion
 
+    
     public void GetSalary(WorkData data,double workHour){
         RankInfo info = data.Info.RankList[data.RankIndex];
         data.TotalWorkHour += (float)workHour;

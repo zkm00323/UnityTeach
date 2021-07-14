@@ -17,26 +17,7 @@ public class PickUpSelectedItem : PickUpItem
 		AllItemInScene.Remove(this);
 	}
 
-	#region Save Objects Scene data
-    public void Start()
-    {
-		GameCtrl_.SaveEvent += SaveFunction;
-    }
-    public void OnDestroy()
-    {
-		GameCtrl_.SaveEvent -= SaveFunction;
-    }
-
-	public void SaveFunction(object sender, EventArgs args)
-    {
-		SavedFoodPosition food = new SavedFoodPosition(); //generate a new food item at the same position??
-		food.PositionX = transform.position.x;
-		food.PositionY = transform.position.y;
-		food.PositionZ = transform.position.z;
-		GameCtrl_.Instance.GetListForScene().SavedFood.Add(food);
-
-	}
-	#endregion
+	
 
 	#region ColorChange //see ItemMono for material variables
 

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PickUpItem : ItemMono{
 
-	public static List<PickUpItem> AllItemInScene;
+	public static List<PickUpItem> AllItemInScene; //把場景有的物件加到這個清單裡
 	
 	public ItemInfoSO ItemName;//道具數據
 	
@@ -25,21 +25,21 @@ public class PickUpItem : ItemMono{
 
 	private void AwakeSetData(){
 		if(AllItemInScene == null) AllItemInScene = new List<PickUpItem>();
-		AllItemInScene.Add(this);
+		AllItemInScene.Add(this); //把物件個別加進清單(把這個class加到每個要被存取的物件上
 	}
 
 	public ItemSaveData GetSaveData(){
-		var saveDate = new ItemSaveData();
-		saveDate.Pos = transform.position;
-		saveDate.Rot = transform.eulerAngles;
-		saveDate.Item = ItemName;
-		return saveDate;
+		var saveData = new ItemSaveData(); //instantiate a new ItemSaveData class
+		saveData.Pos = transform.position;
+		saveData.Rot = transform.eulerAngles;
+		saveData.Item = ItemName;
+		return saveData;
 	}
 
 	
 	public static void Gen(ItemSaveData saveData){
 		var o = GameObject.Instantiate(saveData.Item.Prefeb, saveData.Pos, Quaternion.Euler(saveData.Rot));
-	}
+	} //instantiate new ItemSaveData class item
 
 	#endregion
 

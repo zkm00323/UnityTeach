@@ -143,6 +143,11 @@ public class UICtrl : MonoBehaviour
 			WorkZoomer.ZoomIn();
 		}
 	}
+	public void B_ConfirmWork(WorkInfoSO jobSO)
+    {
+		//????
+
+	}
 	public void ExitWork()
     {
 		if (WorkZoomer.gameObject.activeSelf)

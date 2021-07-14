@@ -35,7 +35,7 @@ public class HouseUICtrl : MonoBehaviour {
 
     public void Button_Leave()
     {
-        DoorCtrl.Exit();
+        HouseDoorCtrl.Exit();
     }
 
 	public void Button_SetType(PlaceableItemType type){

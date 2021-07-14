@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DoorCtrl : MonoBehaviour{
+public class HouseDoorCtrl : MonoBehaviour{
 
-    private static DoorCtrl ActiveDoor;
+    private static HouseDoorCtrl ActiveDoor;
     public HouseSO Info;
     private void OnTriggerEnter(Collider other){
         if(Info.PlayerLivesHere){
@@ -22,7 +22,7 @@ public class DoorCtrl : MonoBehaviour{
                         
                         Info.PlayerLivesHere = true;
                         Info.LastRentTime = GameTimeManager.Time;
-                        GameTimeManager.RegisterTimeAciton(60*10,RentForMonth);
+                        GameTimeManager.RegisterTimeAciton(60*60,RentForMonth);
                         MoneyUI.playerMoney.SubtractMoney(Info.Rent);
                     }));
             },

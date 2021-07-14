@@ -6,14 +6,14 @@ using System;
 public class GameTimeManager : MonoBehaviour{
 
     private static GameTimeManager Instance;
-    
+    //60 sec in game= 1 sec in REAL LIFE
     public const int TimeScale = 60;
     public const int UpdateRealSec = 1;
 
     [SerializeField]
     private float TimeSpeed = 1;
 
-    public static DateTime Time{ private set; get; }
+    public static DateTime Time{ private set; get; } //prperty of class/struct DateTime
 
     private void Awake(){
         Instance = this;
@@ -21,14 +21,14 @@ public class GameTimeManager : MonoBehaviour{
 
     void Start(){
         Time = new DateTime(1,1,1,7,00,0);
-        RegisterTimeAciton(GetGameSceFromRealSce(1),TimeCtrl);
+        RegisterTimeAciton(GetGameSecFromRealSec(1),TimeCtrl);
     }
 
-    public static float GetGameSceFromRealSce(float sec){
+    public static float GetGameSecFromRealSec(float sec){
         return sec * TimeScale;
     }
 
-    public static float GetRealSecFromGameSce(float gameSec){
+    public static float GetRealSecFromGameSec(float gameSec){
         return gameSec / TimeScale;
     }
     
@@ -49,7 +49,7 @@ public class GameTimeManager : MonoBehaviour{
     }
 
     static IEnumerator ItemEventCounter(float spaceGameSec, Action onDo){
-        yield return new WaitForSeconds(GetRealSecFromGameSce(spaceGameSec));
+        yield return new WaitForSeconds(GetRealSecFromGameSec(spaceGameSec));
         onDo.Invoke();
         yield return ItemEventCounter(spaceGameSec,onDo);
     }
