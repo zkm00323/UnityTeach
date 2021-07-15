@@ -13,6 +13,7 @@ public class ShopCtrl : MonoBehaviour, IPointerClickHandler{
 	private List<ItemInfoSO> ShopProductList;//商店數據存放點
 
 	public void OnPointerClick(PointerEventData pointerEventData){
+		//if within a certain time frame 
 		UICtrl.Instance.OPNESHOP(ShopProductList);
 	}
 

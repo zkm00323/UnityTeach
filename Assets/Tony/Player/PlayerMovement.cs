@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
@@ -35,7 +36,5 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(direction * Time.deltaTime * _moveSpeed); //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high
     }
 
-    //can run if energy is >30
-
-
+    
 }

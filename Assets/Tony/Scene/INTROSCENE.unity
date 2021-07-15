@@ -264,36 +264,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2813780373872823980, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
-      propertyPath: _healthDownSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2813780373872823980, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
-      propertyPath: _hungerDownSpeed
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2813780373872823980, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
-      propertyPath: _HygieneDownSpeed
-      value: 1.1
-      objectReference: {fileID: 0}
     - target: {fileID: 2813780373872823983, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4938479345585594865, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
-      propertyPath: _gravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8587311765793745646, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
-      propertyPath: money
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8587311765793745646, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
-      propertyPath: moneyText
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2813780373872823980, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
 --- !u!1 &65241558
 GameObject:
@@ -6545,6 +6520,7 @@ MonoBehaviour:
   PopupInfoFalseText: {fileID: 1618349034}
   PopupInfoFalseButton: {fileID: 2131609372}
   UI: {fileID: 1768100451}
+  WorkZoomer: {fileID: 0}
   ShopProductUI_O: {fileID: 1942803518137842771, guid: aa9cb39f3a4345c4e81a8cb8c84f9c76, type: 3}
   Shop_T: {fileID: 384079670}
   SHOPZoomer: {fileID: 1754858520}

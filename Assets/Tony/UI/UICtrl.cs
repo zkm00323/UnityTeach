@@ -129,6 +129,7 @@ public class UICtrl : MonoBehaviour
 	#region Work
 
 	public WorkWindowUICtrl UI;
+	public Zoomer WorkZoomer;
 	public void StartWork(WorkInfoSO jobSO) {
 		UI.Setup(jobSO.GetData);
 	}
@@ -147,6 +148,13 @@ public class UICtrl : MonoBehaviour
 		PlayerData.Skills.Instance.staminaPoint += info.staminaUp;
 		PlayerData.Skills.Instance.charismaPoint += info.charismaUp;
 		PlayerData.Skills.Instance.cookingSkillPoint += info.cookingSkillUp;
+
+
+		GameTimeManager.Time.AddHours(workHour+1);
+		Debug.Log(GameTimeManager.Time.AddHours(workHour+1));
+
+		UI.B_Exit();
+
 	}
 
 	#endregion

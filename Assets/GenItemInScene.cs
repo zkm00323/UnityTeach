@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GenItemCounter : MonoBehaviour{
+public class GenItemInScene : MonoBehaviour{
 
 	public GameObject GenObj;
 	public Transform PosTrans;
-	public float RefreshGameSce = 60;
+	public float RefreshGameSec = 60; //60 sec in game = 1 sec in real life
 
 	private GameObject LastObj;
 	private void Start(){
-		GameTimeManager.RegisterTimeAciton(RefreshGameSce,OnTimeChange);
+		GameTimeManager.RegisterTimeAciton(RefreshGameSec*60*6,OnTimeChange);
 	}
 	private void OnTimeChange(){
 		Gen();

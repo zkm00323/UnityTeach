@@ -22,19 +22,30 @@ public class GameTimeManager : MonoBehaviour{
     void Start(){
         Time = new DateTime(1,1,1,7,00,0);
         RegisterTimeAciton(GetGameSecFromRealSec(1),TimeCtrl);
+        //Debug.Log(Time);
     }
 
     public static float GetGameSecFromRealSec(float sec){
-        return sec * TimeScale;
+        return sec * TimeScale; //1*60 
     }
 
     public static float GetRealSecFromGameSec(float gameSec){
         return gameSec / TimeScale;
     }
     
+    /*public static float GetGameHourFromRealSec(float sec)
+    {
+        return 
+    }*/
     void TimeCtrl(){
-        Debug.Log(DateTime.Now);
+        //Debug.Log(DateTime.Now);
         Time = Time.AddMinutes(1);
+        
+    }
+
+    void OnWork(WorkData data, double workHour)
+    {
+        Time = Time.AddHours(workHour);
     }
 
     private static Dictionary<Action, Coroutine> TimeRegDic = new Dictionary<Action, Coroutine>();
