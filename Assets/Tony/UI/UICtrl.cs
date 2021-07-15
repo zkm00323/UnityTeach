@@ -8,7 +8,7 @@ public class UICtrl : MonoBehaviour
 {
 	public static UICtrl Instance;
 	
-
+	[Header("Health Stats")]
 	public CustomBarUICtrl HealthBar;
 	public CustomBarUICtrl HungerBar;
 	public CustomBarUICtrl HygieneBar;
@@ -22,6 +22,37 @@ public class UICtrl : MonoBehaviour
 		UpdateInventory();
 
 	}
+
+	[Header("Skill Stats")]
+
+	#region PlayerSkills
+	public PlayerSkillsUI skillsUI;
+	public Zoomer SkillZoomer;
+	public KeyCode Key;
+
+	public void UpdateUI()
+	{
+		if (Input.GetKeyDown(Key))
+		{
+			if (SkillZoomer.gameObject.activeSelf)
+			{
+				SkillZoomer.ZoomOut();
+				if (ItemUICtrl.Selecting != null)
+					ItemUICtrl.Selecting.UnSelect();
+			}
+			else
+			{
+				//skillUI.SetUp(new WorkData(Info, 0, 0));
+				SkillZoomer.ZoomIn();
+				skillsUI.SetUp();
+			}
+		}
+
+
+	}
+	#endregion
+
+	[Header("Inventory")]
 
 	#region Inventory
 
@@ -65,6 +96,8 @@ public class UICtrl : MonoBehaviour
 	}
 
 	#endregion
+
+	[Header("House Decorating UI")]
 
 	#region HouseDecoratingUI
 	public List<GameObject> PlaceableItemUIList = new List<GameObject>();//生成的ItemUI記錄在這
@@ -126,6 +159,8 @@ public class UICtrl : MonoBehaviour
 
 	#endregion
 
+	[Header("Work")]
+
 	#region Work
 
 	public WorkWindowUICtrl UI;
@@ -158,7 +193,9 @@ public class UICtrl : MonoBehaviour
 	}
 
 	#endregion
-	
+
+	[Header("Shop")]
+
 	#region SHOP
 
 	public GameObject ShopProductUI_O;

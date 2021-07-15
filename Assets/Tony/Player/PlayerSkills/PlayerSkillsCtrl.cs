@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerSkillsCtrl : MonoBehaviour
 {
 
-    public PlayerSkillsUI skillUI;
+    public static PlayerSkillsUI skillUI;
 
    
 

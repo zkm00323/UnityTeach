@@ -1753,7 +1753,7 @@ MonoBehaviour:
   prestigeRank: {fileID: 0}
   socialScore: {fileID: 0}
   Zoomer: {fileID: 0}
-  Key: 0
+  Key: 115
 --- !u!114 &579687065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6507,6 +6507,9 @@ MonoBehaviour:
   HungerBar: {fileID: 1043182193}
   HygieneBar: {fileID: 1765396855}
   InventoryKey: 32
+  skillsUI: {fileID: 579687064}
+  SkillZoomer: {fileID: 579687065}
+  Key: 99
   Inventory: {fileID: 1629960860}
   ItemUI_O: {fileID: 4928926276410115624, guid: 0056e736eb37c3c49986e1554b3b2986, type: 3}
   Bag_T: {fileID: 619224506}
@@ -6520,7 +6523,7 @@ MonoBehaviour:
   PopupInfoFalseText: {fileID: 1618349034}
   PopupInfoFalseButton: {fileID: 2131609372}
   UI: {fileID: 1768100451}
-  WorkZoomer: {fileID: 0}
+  WorkZoomer: {fileID: 1768100453}
   ShopProductUI_O: {fileID: 1942803518137842771, guid: aa9cb39f3a4345c4e81a8cb8c84f9c76, type: 3}
   Shop_T: {fileID: 384079670}
   SHOPZoomer: {fileID: 1754858520}
@@ -6626,7 +6629,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3460c380b6f155041be575ecf55b0ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillUI: {fileID: 579687064}
   Zoomer: {fileID: 579687065}
   Key: 101
 --- !u!1 &2131609371

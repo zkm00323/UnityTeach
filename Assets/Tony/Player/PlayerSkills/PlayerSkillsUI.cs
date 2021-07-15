@@ -19,14 +19,14 @@ public class PlayerSkillsUI : MonoBehaviour
     //private PlayerSkillsCtrl playerSkills;
 
     void Update(){
-        UpdateUI();
+        UICtrl.Instance.UpdateUI();
     }
 
     #region UI
     public Zoomer Zoomer;
     public KeyCode Key;
 
-    private void UpdateUI()
+    /*private void UpdateUI()
     {
         if (Input.GetKeyDown(Key))
         {
@@ -45,7 +45,7 @@ public class PlayerSkillsUI : MonoBehaviour
         }
 
 
-    }
+    }*/
     #endregion
     // Update is called once per frame
 
