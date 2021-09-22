@@ -19,7 +19,6 @@ public class TimeUI : MonoBehaviour
     }
     
     private void UpdateTime(){
-        print("Update");
         timeText.text = GameTimeManager.Time.ToString("HH:mm tt", CultureInfo.CreateSpecificCulture("en-US")); 
     }
 }

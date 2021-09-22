@@ -12,6 +12,7 @@ public class GenItemInScene : MonoBehaviour{
 	private GameObject LastObj;
 	private void Start(){
 		GameTimeManager.RegisterTimeAciton(RefreshGameSec*60*6,OnTimeChange);
+		Gen();
 	}
 	private void OnTimeChange(){
 		Gen();
