@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.PlayerLoop;
 
 public class GameTimeManager : MonoBehaviour{
 
@@ -14,7 +15,18 @@ public class GameTimeManager : MonoBehaviour{
     private float TimeSpeed = 1;
 
     public static DateTime Time{ private set; get; } //prperty of class/struct DateTime
-
+    
+    public static void AddTime(double hour){
+        Time = Time.AddHours(hour);
+        foreach(var dic in TimeRegDic){
+            dic.Key.Invoke();
+        }
+    }
+    
+    public void Set(){
+        
+    }
+    
     private void Awake(){
         Instance = this;
     }

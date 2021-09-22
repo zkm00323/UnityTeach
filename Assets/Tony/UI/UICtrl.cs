@@ -183,9 +183,9 @@ public class UICtrl : MonoBehaviour
 		PlayerData.Skills.Instance.staminaPoint += info.staminaUp;
 		PlayerData.Skills.Instance.charismaPoint += info.charismaUp;
 		PlayerData.Skills.Instance.cookingSkillPoint += info.cookingSkillUp;
-
-
-		GameTimeManager.Time.AddHours(workHour+1);
+		
+		GameTimeManager.AddTime(workHour + 1);
+		
 		Debug.Log(GameTimeManager.Time.AddHours(workHour+1));
 
 		UI.B_Exit();
