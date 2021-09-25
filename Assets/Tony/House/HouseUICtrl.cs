@@ -33,6 +33,11 @@ public class HouseUICtrl : MonoBehaviour {
 
 	}
 
+	public void Button_Finish()
+    {
+		panels.gameObject.SetActive(false);
+    }
+
     public void Button_Leave()
     {
         HouseDoorCtrl.Exit();

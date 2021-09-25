@@ -61,6 +61,7 @@ public class HouseDoorCtrl : MonoBehaviour{
 
     public static void Exit(){
         SceneCtrl.Instance.ChangeScene(Define.Scene.MAIN_SCENE);
+        
     }
 
    
