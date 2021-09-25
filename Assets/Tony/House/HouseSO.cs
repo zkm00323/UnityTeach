@@ -12,8 +12,18 @@ public class HouseSO: ScriptableObject{
     public int Price;
     public int SocialScoreNeeded;
     public int comfortLevel;
+
+    public List<FurnitureData> FurnitureList;
 }
 
-public class HouseData{
-    
+[Serializable]
+public class FurnitureData{
+    public Vector3 Pos;
+    public Vector3 Rot;
+    public GameObject Prefeb;
+    public FurnitureData(Vector3 pos, Vector3 rot, GameObject prefeb){
+        Pos = pos;
+        Rot = rot;
+        Prefeb = prefeb;
+    }
 }

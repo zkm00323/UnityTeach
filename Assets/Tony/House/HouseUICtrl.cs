@@ -12,7 +12,8 @@ public class HouseUICtrl : MonoBehaviour {
 	public GameObject panels;
 
 	private PlaceableItemType Type = PlaceableItemType.Table;
-
+	public Dictionary<GameObject, GameObject> FurnitureObjDic = new Dictionary<GameObject, GameObject>();
+	
     private void Awake()
     {
 		INSTANCE = this;
@@ -23,7 +24,7 @@ public class HouseUICtrl : MonoBehaviour {
 		panels.gameObject.SetActive(false);
 
 		StartUI();
-
+		StartGen();
 	}
 
 	public void Button_Decorate()
@@ -65,8 +66,7 @@ public class HouseUICtrl : MonoBehaviour {
             }
 			PlaceableTypeDic[pitem.Type].Add(item);
 		}
-
-
+		
 			
 	}
 
@@ -90,7 +90,8 @@ public class HouseUICtrl : MonoBehaviour {
 			var o = Instantiate(ItemUI_O, Bag_T);
 			var ctrl = o.GetComponent<ItemUICtrl>();
 			ctrl.Setup(data, () => {
-				Instantiate((data.Info as PlaceableItemInfoSO).Object, GenPos);
+				var obj = Instantiate((data.Info as PlaceableItemInfoSO).Object, GenPos);
+				FurnitureObjDic.Add(obj, (data.Info as PlaceableItemInfoSO).Object);
 				PlayerData.Instance.RemoveItem(data.Info);
 				StartUI();
 
@@ -98,7 +99,19 @@ public class HouseUICtrl : MonoBehaviour {
 			ItemUIList.Add(o);
 		}
 		
-	} }
+	} 
+	
+	private void StartGen(){
+		var data = HouseDoorCtrl.LastInfo.FurnitureList;
+
+		foreach(var i in data){
+			var obj = Instantiate(i.Prefeb, i.Pos,Quaternion.Euler(i.Rot));
+			FurnitureObjDic.Add(obj, i.Prefeb);
+		}
+	}
+}
+
+
 
 //Each category shows a panel of furnitures it contains
 /*public List<GameObject> Tables = new List<GameObject>();

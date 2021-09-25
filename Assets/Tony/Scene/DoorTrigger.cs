@@ -9,7 +9,7 @@ public class DoorTrigger : MonoBehaviour
     public GameObject houseDoor;
     private void OnTriggerEnter(Collider other)
     {
-        HouseDoorCtrl.Exit();
-
+        print(other.name);
+        if(other.gameObject.tag.Equals("Player"))HouseDoorCtrl.Exit();
     }
 }

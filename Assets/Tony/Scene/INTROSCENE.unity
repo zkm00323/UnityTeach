@@ -264,9 +264,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2813780373872823978, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2813780373872823983, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813780373872823983, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813780373872823983, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495377666369486428, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938479345585594865, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}

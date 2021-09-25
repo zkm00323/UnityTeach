@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class HouseDoorCtrl : MonoBehaviour{
 
-    private static HouseDoorCtrl ActiveDoor;
+    private static Vector3 LastExitPos;
+    public static HouseSO LastInfo;
+    
     public HouseSO Info;
+    public Transform ExitPos;
     private void OnTriggerEnter(Collider other){
         if(Info.PlayerLivesHere){
             Enter();
@@ -55,14 +58,22 @@ public class HouseDoorCtrl : MonoBehaviour{
     }
     
     void Enter(){
+        LastExitPos = ExitPos.position;
+        LastInfo = Info;
         SceneCtrl.Instance.ChangeScene(Define.Scene.HOUSE_SCENE);
-        ActiveDoor = this;
     }
 
     public static void Exit(){
+        FurnitureSave();
         SceneCtrl.Instance.ChangeScene(Define.Scene.MAIN_SCENE);
-        
+        PlayerMovement.Player.GetComponent<CharacterController>()
+                .Move(LastExitPos-PlayerMovement.Player.transform.position);
     }
 
-   
+    static void FurnitureSave(){
+        LastInfo.FurnitureList = new List<FurnitureData>();
+        foreach(var i in HouseUICtrl.INSTANCE.FurnitureObjDic){
+            LastInfo.FurnitureList.Add(new FurnitureData(i.Key.transform.position, i.Key.transform.eulerAngles, i.Value));
+        }
+    }
 }

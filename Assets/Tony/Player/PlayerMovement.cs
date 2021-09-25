@@ -1,10 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
-public class PlayerMovement : MonoBehaviour
-{
+public class PlayerMovement : MonoBehaviour{
+    public static PlayerMovement Player;
+    
     [SerializeField]
     private float _moveSpeed = 5f;
     [SerializeField]
@@ -13,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController controller;
     private Animator animator = null; //for later animation use
     // Start is called before the first frame update
+
+    private void Awake(){
+        Player = this;
+    }
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
