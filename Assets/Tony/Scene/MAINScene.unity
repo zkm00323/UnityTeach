@@ -702,7 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ace0847dae07605408d60f2bb74f08b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GenObj: {fileID: 4402164100157587489, guid: b9585161ca75a0e49bfcd935da2ba0ec, type: 3}
+  GenObj: {fileID: 4968502381959832780, guid: 455c2304746143c4abfddfd20c0121c3, type: 3}
   PosTrans: {fileID: 1123306642}
   RefreshGameSec: 60
 --- !u!65 &1188084113

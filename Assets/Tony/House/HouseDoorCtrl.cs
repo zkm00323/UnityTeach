@@ -70,7 +70,7 @@ public class HouseDoorCtrl : MonoBehaviour{
                 .Move(LastExitPos-PlayerMovement.Player.transform.position);
     }
 
-    static void FurnitureSave(){
+    static void FurnitureSave(){ //家具位置擺放存檔
         LastInfo.FurnitureList = new List<FurnitureData>();
         foreach(var i in HouseUICtrl.INSTANCE.FurnitureObjDic){
             LastInfo.FurnitureList.Add(new FurnitureData(i.Key.transform.position, i.Key.transform.eulerAngles, i.Value));

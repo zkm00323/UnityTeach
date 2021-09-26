@@ -12,7 +12,7 @@ public class HouseUICtrl : MonoBehaviour {
 	public GameObject panels;
 
 	private PlaceableItemType Type = PlaceableItemType.Table;
-	public Dictionary<GameObject, GameObject> FurnitureObjDic = new Dictionary<GameObject, GameObject>();
+	public Dictionary<GameObject, GameObject> FurnitureObjDic = new Dictionary<GameObject, GameObject>(); //實體家具和家具數據prefab
 	
     private void Awake()
     {
@@ -101,7 +101,7 @@ public class HouseUICtrl : MonoBehaviour {
 		
 	} 
 	
-	private void StartGen(){
+	private void StartGen(){ //讀取生成實體和prefab
 		var data = HouseDoorCtrl.LastInfo.FurnitureList;
 
 		foreach(var i in data){

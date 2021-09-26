@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97afa94780c3a6046b10e2612f2b1df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CHANGEType: 0
+  CHANGEType: 2
 --- !u!1 &4915386648710315274
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,4 +225,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Chairs
+  m_Text: 'Chairs
+
+
+
+
+'
