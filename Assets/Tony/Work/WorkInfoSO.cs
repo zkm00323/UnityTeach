@@ -15,8 +15,10 @@ public class WorkInfoSO : ScriptableObject{
 
 	public RankInfo[] RankList;
 
-	public WorkData GetData => new WorkData(this, 0, 0);
-	
+    public WorkData GetGetData() //WorkData is a class that contains all the info in a specific job
+    {
+        return new WorkData(this, 0, 0); //0hour and 0 rank??
+    }
 }
 
 [Serializable]
@@ -45,7 +47,7 @@ public class WorkData{ //I FORGOT WHAT THIS IS FOR
 	public float TotalWorkHour;
 	public int RankIndex;
 
-	public WorkData(WorkInfoSO info, float totalWorkHour,int rankIndex){
+	public WorkData(WorkInfoSO info, float totalWorkHour,int rankIndex){ //constructor for class WorkData
 		Info = info;
 		TotalWorkHour = totalWorkHour;
 		RankIndex = rankIndex;

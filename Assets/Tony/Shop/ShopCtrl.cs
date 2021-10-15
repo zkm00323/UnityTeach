@@ -15,6 +15,7 @@ public class ShopCtrl : MonoBehaviour, IPointerClickHandler{
 	public void OnPointerClick(PointerEventData pointerEventData){
 		//if within a certain time frame 
 		UICtrl.Instance.OPNESHOP(ShopProductList);
+		Debug.Log("clicked on shop npc!!");
 	}
 
 	private void Awake(){

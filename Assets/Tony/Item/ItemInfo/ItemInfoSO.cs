@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 [CreateAssetMenu(menuName = "MySO/ItemInfo")]
 public class ItemInfoSO : ScriptableObject{//道具相關所有數據
@@ -13,14 +15,17 @@ public class ItemInfoSO : ScriptableObject{//道具相關所有數據
     public int Price;
     
     //顯示面
-    public Color ItemColor;
+    public Image ItemImage;
     public Material M;
     public GameObject Prefeb;
     
     public virtual void OnClick(){
     }
 
-    public ItemData GetData => new ItemData(this);
+    public ItemData GetGetData()
+    {
+        return new ItemData(this);
+    }
 }
 
 public class ItemData{

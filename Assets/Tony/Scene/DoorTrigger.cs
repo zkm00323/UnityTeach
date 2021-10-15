@@ -6,10 +6,15 @@ public class DoorTrigger : MonoBehaviour
 {
 
 
-    public GameObject houseDoor;
+    public GameObject door;
     private void OnTriggerEnter(Collider other)
     {
-        print(other.name);
+        //print(other.name);
         if(other.gameObject.tag.Equals("Player"))HouseDoorCtrl.Exit();
+
+        //or put the following and specify the scene name
+        SceneCtrl.Instance.ChangeScene(Define.Scene.MAIN_SCENE);
+
+
     }
 }

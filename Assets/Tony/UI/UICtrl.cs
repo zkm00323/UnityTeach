@@ -28,22 +28,26 @@ public class UICtrl : MonoBehaviour
 	#region PlayerSkills
 	public PlayerSkillsUI skillsUI;
 	public Zoomer SkillZoomer;
-	public KeyCode Key;
+	public KeyCode SkillsKey; //C
+	
 
-	public void UpdateUI()
+
+
+	public void DisplaySkillsUI() //DOES NOT WORK
 	{
-		if (Input.GetKeyDown(Key))
+		//skillsUI.SetUp();
+		
+		if (Input.GetKeyDown(SkillsKey))
 		{
 			if (SkillZoomer.gameObject.activeSelf)
 			{
 				SkillZoomer.ZoomOut();
-				if (ItemUICtrl.Selecting != null)
-					ItemUICtrl.Selecting.UnSelect();
+				
 			}
 			else
 			{
 				//skillUI.SetUp(new WorkData(Info, 0, 0));
-				SkillZoomer.ZoomIn();
+				//SkillZoomer.ZoomIn();
 				skillsUI.SetUp();
 			}
 		}
@@ -166,7 +170,7 @@ public class UICtrl : MonoBehaviour
 	public WorkWindowUICtrl UI;
 	public Zoomer WorkZoomer;
 	public void StartWork(WorkInfoSO jobSO) {
-		UI.Setup(jobSO.GetData);
+		UI.Setup(jobSO.GetGetData());
 	}
 	
 	public void ConfirmWork(WorkData data,double workHour) {
@@ -234,7 +238,7 @@ public class UICtrl : MonoBehaviour
 
 	public void PlayerBuy(ItemInfoSO info){
 		if (MoneyUI.playerMoney.SubtractMoney(info.Price)){
-			PlayerData.Instance.AddItem(info.GetData);
+			PlayerData.Instance.AddItem(info.GetGetData());
 			Instance.PopupInfoSetup(new PopupInfoData("購買 " + info.Name + " 成功!", "好的", "關閉", () => { }, () => { }));
 		}
 		else{

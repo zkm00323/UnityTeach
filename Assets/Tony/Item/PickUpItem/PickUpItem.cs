@@ -16,7 +16,7 @@ public class PickUpItem : ItemMono{
 	}
 
 	public override void OnClick(){ //當玩家點擊物件
-		PlayerData.Instance.AddItem(ItemName.GetData); //給玩家背包填入新的道具
+		PlayerData.Instance.AddItem(ItemName.GetGetData()); //給玩家背包填入新的道具
 		Destroy(gameObject); 
 		AllItemInScene.Remove(this);
 	}

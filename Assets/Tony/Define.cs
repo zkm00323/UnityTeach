@@ -6,6 +6,8 @@ public static class Define {
 	public static class Scene{
 		public const string HOUSE_SCENE = "HouseScene";
 		public const string MAIN_SCENE = "MAINScene";
-		public const string GhettoStreet = "GhettoStreetScene";
+		public const string GhettoStreet = "NewGhetto";
+		public const string ChinaTown = "ChinaTown";
+		
 	}
 }

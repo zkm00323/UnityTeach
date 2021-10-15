@@ -19,11 +19,11 @@ public class PlayerSkillsUI : MonoBehaviour
     //private PlayerSkillsCtrl playerSkills;
 
     void Update(){
-        UICtrl.Instance.UpdateUI();
+        UICtrl.Instance.DisplaySkillsUI();
     }
 
     #region UI
-    public Zoomer Zoomer;
+    public Zoomer skillZoomer;
     public KeyCode Key;
 
     /*private void UpdateUI()
@@ -57,6 +57,8 @@ public class PlayerSkillsUI : MonoBehaviour
         charismaPoint.text = "Charisma: "+ PlayerData.Skills.Instance.charismaPoint.ToString();
         if(cookingSkillPoint!=null)cookingSkillPoint.text = "Cooking: "+ PlayerData.Skills.Instance.cookingSkillPoint.ToString();
         if(socialScore!=null)socialScore.text = "Social Rank Score: "+ PlayerData.Skills.Instance.socialScore.ToString();
+
+        skillZoomer.ZoomIn();
     }
 
    

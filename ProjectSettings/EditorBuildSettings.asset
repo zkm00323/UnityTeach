@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tony/Scene/HouseScene.unity
     guid: 147fa5146bc256c409faa8aaf7aaa1fb
+  - enabled: 1
+    path: Assets/Tony/Scene/NewGhetto.unity
+    guid: 94bf088b3261d25468f7946fee32e49a
+  - enabled: 1
+    path: Assets/Tony/Scene/ChinaTown.unity
+    guid: bd81ee14847b8ab4c936eb21aa08e78c
   m_configObjects: {}

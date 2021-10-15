@@ -14,7 +14,7 @@ public class ShopProductUICtrl : MonoBehaviour{
     public void Setup(ItemInfoSO info){
         Info = info;
         Name.text = info.Name;
-        Color.color = info.ItemColor;
+        Color.color = info.ItemImage.color;
         Cost.text = info.Price+"";
     }
 
