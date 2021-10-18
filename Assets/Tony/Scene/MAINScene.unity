@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe79543ee519d6749bd0f6e9f4870bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 1548555912}
+  entrance: {fileID: 1548555912}
 --- !u!65 &1548555915
 BoxCollider:
   m_ObjectHideFlags: 0

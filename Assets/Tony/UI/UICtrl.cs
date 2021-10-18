@@ -93,7 +93,7 @@ public class UICtrl : MonoBehaviour
 				ItemUICtrl.Selecting = ctrl;
 				data.Info.OnClick();
 			});
-			ItemUIList.Add(o);
+			ItemUIList.Add(o); //add the item into the UI display
 		}
 
 		Desc.text = "";

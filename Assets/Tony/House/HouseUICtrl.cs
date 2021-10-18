@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class HouseUICtrl : MonoBehaviour {
 
 	public static HouseUICtrl INSTANCE;
-	public Transform GenPos;
+	public Transform DropPoint;
 	public Button Decorate;
 	public GameObject panels;
 
@@ -90,9 +90,9 @@ public class HouseUICtrl : MonoBehaviour {
 			var o = Instantiate(ItemUI_O, Bag_T);
 			var ctrl = o.GetComponent<ItemUICtrl>();
 			ctrl.Setup(data, () => {
-				var obj = Instantiate((data.Info as PlaceableItemInfoSO).Object, GenPos);
+				var obj = Instantiate((data.Info as PlaceableItemInfoSO).Object, DropPoint);
 				FurnitureObjDic.Add(obj, (data.Info as PlaceableItemInfoSO).Object);
-				PlayerData.Instance.RemoveItem(data.Info);
+				PlayerData.Instance.RemoveItem(data.Info); //****Remove this item from player's data (remove it from player's inventory cos now it's in here
 				StartUI();
 
 			});

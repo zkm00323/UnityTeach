@@ -60,12 +60,12 @@ public class HouseDoorCtrl : MonoBehaviour{
     void Enter(){
         LastExitPos = ExitPos.position;
         LastInfo = Info;
-        SceneCtrl.Instance.ChangeScene(Define.Scene.HOUSE_SCENE);
+        SceneCtrl.Instance.ChangeScene(SceneNameDefine.Scene.HOUSE_SCENE);
     }
 
     public static void Exit(){
         FurnitureSave();
-        SceneCtrl.Instance.ChangeScene(Define.Scene.MAIN_SCENE);
+        SceneCtrl.Instance.ChangeScene(SceneNameDefine.Scene.MAIN_SCENE);
         PlayerMovement.Player.GetComponent<CharacterController>()
                 .Move(LastExitPos-PlayerMovement.Player.transform.position);
     }

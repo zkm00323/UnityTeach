@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 
 [CreateAssetMenu(menuName = "MySO/ItemInfo")]
-public class ItemInfoSO : ScriptableObject{//道具相關所有數據
+public class ItemInfoSO : ScriptableObject //道具相關所有數據
+{
     
     //數據面
     public int ID;
@@ -32,7 +33,7 @@ public class ItemData{
     public ItemInfoSO Info;
     public int Count = 1;
 
-    public ItemData(ItemInfoSO info){
+    public ItemData(ItemInfoSO info){ //constructor of class ItemData (for other classes to access info
         Info = info;
     }
 }

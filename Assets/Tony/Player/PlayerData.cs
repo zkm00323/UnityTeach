@@ -107,7 +107,7 @@ public class PlayerData{
 
 	}
 
-	public float money = 2000;
+	public float money = 1000;
 
 
 	private PlayerData(){

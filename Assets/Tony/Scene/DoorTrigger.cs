@@ -13,7 +13,7 @@ public class DoorTrigger : MonoBehaviour
         if(other.gameObject.tag.Equals("Player"))HouseDoorCtrl.Exit();
 
         //or put the following and specify the scene name
-        SceneCtrl.Instance.ChangeScene(Define.Scene.MAIN_SCENE);
+        SceneCtrl.Instance.ChangeScene(SceneNameDefine.Scene.MAIN_SCENE);
 
 
     }

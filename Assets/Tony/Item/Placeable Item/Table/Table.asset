@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823a726544b4d5a4eb12e1b72d4d94b4, type: 3}
   m_Name: Table
   m_EditorClassIdentifier: 
-  ID: 4
+  ID: 0
   Name: Table 1
   Desc: 'A small table '
   Price: 50
-  ItemColor: {r: 0, g: 0, b: 0, a: 1}
+  ItemImage: {fileID: 0}
   M: {fileID: 0}
   Prefeb: {fileID: 1113747442478431240, guid: 849e729f5ddeb0048af0fdebb3c1eb33, type: 3}
   Object: {fileID: 6257578379399625645, guid: 4c4bfd6f90b3c5741b91bafe19eb452c, type: 3}

@@ -16,7 +16,7 @@ MonoBehaviour:
   Name: "\u91D1\u82F9\u679C"
   Desc: "\u5403\u6211\u9971\u4E09\u5929"
   Price: 5
-  ItemColor: {r: 1, g: 0.79260254, b: 0, a: 1}
+  ItemImage: {fileID: 0}
   M: {fileID: 2100000, guid: 169949321542c294e85270f1adeee6ce, type: 2}
   Prefeb: {fileID: 4402164100157587489, guid: b9585161ca75a0e49bfcd935da2ba0ec, type: 3}
   hungerPoints: 100

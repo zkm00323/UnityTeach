@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class MoneyUI : MonoBehaviour
@@ -9,7 +10,7 @@ public class MoneyUI : MonoBehaviour
     public static MoneyUI playerMoney;
     
  
-    public Text moneyText; //reference to the UI money display
+    public TextMeshProUGUI moneyText; //reference to the UI money display
     void Start(){
         playerMoney = this;
         moneyText.text = "coins: "+ PlayerData.Instance.money.ToString();
