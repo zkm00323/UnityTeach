@@ -14,6 +14,19 @@ public class CraftingWindow : MonoBehaviour
     }
 
     //ways to open the window
+    public KeyCode key;
+    public Zoomer CraftWindow;
+    
+    public void OpenCraftWindow()
+    {
+        if (Input.GetKeyDown(key))
+        {
+            if (CraftWindow.gameObject.activeSelf)
+                CraftWindow.ZoomOut();
+            else CraftWindow.ZoomIn();
+        }
+        
+    }
 
     public void Craft (CraftingRecipe recipe) //take itemInfoSO 
     {
@@ -27,5 +40,11 @@ public class CraftingWindow : MonoBehaviour
         //Add item crafted to player's inventory
         PlayerData.Instance.AddItem(recipe.itemToCraft.GetGetData()); //AddItem takes in ItemData not ItemInfo so use GetGetData to convert
 
+        
+        //tells that recipe UI to show green meaning craftable now
+        for (int i=0; i<recipeUIs.Length; i++)
+        {
+            recipeUIs[i].UpdateCanCraft(); 
+        }
     }
 }

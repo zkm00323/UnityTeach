@@ -32,12 +32,12 @@ public class GameTimeManager : MonoBehaviour{
     }
 
     void Start(){
-        Time = new DateTime(1,1,1,7,00,0);
-        RegisterTimeAciton(GetGameSecFromRealSec(1),TimeCtrl);
+        Time = new DateTime(1,1,1,7,00,0); //first year, month, day, 7AM 0 seconds
+        RegisterTimeAciton(GetGameSec(1),OneMinuteGameTimePassed); //every seconds pass, trigger a specific action: add 1 minute to clock
         //Debug.Log(Time);
     }
 
-    public static float GetGameSecFromRealSec(float sec){
+    public static float GetGameSec(float sec){
         return sec * TimeScale; //1*60 
     }
 
@@ -49,7 +49,7 @@ public class GameTimeManager : MonoBehaviour{
     {
         return 
     }*/
-    void TimeCtrl(){
+    void OneMinuteGameTimePassed(){
         //Debug.Log(DateTime.Now);
         Time = Time.AddMinutes(1);
         
