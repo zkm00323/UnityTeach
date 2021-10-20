@@ -16,7 +16,7 @@ MonoBehaviour:
   Name: Raw Tuna
   Desc: raw tuna for cooking
   Price: 25
-  ItemImage: {fileID: 0}
+  ItemImage: {fileID: 21300000, guid: 6f06b315aa1168c4a872003db94f418c, type: 3}
   M: {fileID: 0}
   Prefeb: {fileID: 0}
   hungerPoints: 3

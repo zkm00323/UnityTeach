@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,17 +14,20 @@ public class CraftingWindow : MonoBehaviour
         instance = this;
     }
 
+    public void DoUpdate() {
+        OpenCraftWindow();
+    }
+
     //ways to open the window
     public KeyCode key;
     public Zoomer CraftWindow;
     
-    public void OpenCraftWindow()
-    {
-        if (Input.GetKeyDown(key))
-        {
+    public void OpenCraftWindow() {
+        if (Input.GetKeyDown(key)) {
             if (CraftWindow.gameObject.activeSelf)
                 CraftWindow.ZoomOut();
-            else CraftWindow.ZoomIn();
+            else 
+                CraftWindow.ZoomIn();
         }
         
     }

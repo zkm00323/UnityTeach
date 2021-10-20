@@ -19,7 +19,7 @@ public class ItemUICtrl : MonoBehaviour /*,IPointerClickHandler, IPointerEnterHa
     public void Setup(ItemData data, Action onClick){//setupUI數據的同時,傳入onClick方法,讓下面 B_OnClick執行
         ItemName.text = data.Info.Name;
         ItemCount.text = "["+data.Count+"]";
-        ItemImage.sprite = data.Info.ItemImage.sprite;
+        ItemImage.sprite = data.Info.ItemImage;
 
         Data = data;
         OnClick = onClick;

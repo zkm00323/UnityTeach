@@ -30,19 +30,13 @@ public class DayNightCycle : MonoBehaviour
 
     private void Start()
     {
-        sun.transform.localRotation = Quaternion.Euler(15, 0, 0);
-
         
-    }
-    private void Update()
-    {
-        GameTimeManager.RegisterTimeAciton(60 * 60, SunRotates); //every 1 hour in game sun rotates
-
-
+        sun.transform.localRotation = Quaternion.Euler(15, 0, 0);
+        
+        GameTimeManager.RegisterTimeAciton(60*60, SunRotates); //every 1 hour in game sun rotates//
     }
 
-    void SunRotates()
-    {
+    void SunRotates() {
         sun.transform.RotateAround(Vector3.zero, Vector3.right, rotationAngle);
         
     }

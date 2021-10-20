@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: {fileID: 3757866885233679699}
   ItemCount: {fileID: 425121087}
-  ItemColor: {fileID: 4928926276410115630}
+  ItemImage: {fileID: 4928926276410115630}
   SelectionOutline: {fileID: 1329172877610510784}
 --- !u!114 &2568583278008832857
 MonoBehaviour:

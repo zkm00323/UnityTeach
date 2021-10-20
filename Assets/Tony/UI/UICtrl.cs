@@ -7,6 +7,10 @@ using UnityEngine.UI;
 public class UICtrl : MonoBehaviour
 {
 	public static UICtrl Instance;
+
+
+	[Header("Craft")] 
+	public CraftingWindow CraftingCtrl;
 	
 	[Header("Health Stats")]
 	public CustomBarUICtrl HealthBar;
@@ -19,8 +23,9 @@ public class UICtrl : MonoBehaviour
 	}
 
 	private void Update(){
-		UpdateInventory();
-
+		UpdateInventory(); 
+		DisplaySkillsUI();
+		CraftingCtrl.DoUpdate();
 	}
 
 	[Header("Skill Stats")]
@@ -47,7 +52,7 @@ public class UICtrl : MonoBehaviour
 			else
 			{
 				//skillUI.SetUp(new WorkData(Info, 0, 0));
-				//SkillZoomer.ZoomIn();
+				SkillZoomer.ZoomIn();
 				skillsUI.SetUp();
 			}
 		}
@@ -207,12 +212,16 @@ public class UICtrl : MonoBehaviour
 
 	public Zoomer SHOPZoomer;
 
+
+	private List<GameObject> ShopProductList;
 	public void OPNESHOP(List<ItemInfoSO> shopProductList)
 	{
+		ShopProductList = new List<GameObject>();
 		foreach (var info in shopProductList)
 		{  //再讀取ItemList生成新的ItemUI
 			var shopItem = Instantiate(ShopProductUI_O, Shop_T);
 			shopItem.GetComponent<ShopProductUICtrl>().Setup(info);
+			ShopProductList.Add(shopItem);
 		}
 
 		if (SHOPZoomer.gameObject.activeSelf)
@@ -230,6 +239,10 @@ public class UICtrl : MonoBehaviour
 	public void BUTTON_LeaveShop() //close shop panel
 	{
 		if (SHOPZoomer.gameObject.activeSelf){
+			
+			foreach (var o in ShopProductList) {
+				Destroy(o);
+			}
 			SHOPZoomer.ZoomOut();
 			if (ItemUICtrl.Selecting != null)
 				ItemUICtrl.Selecting.UnSelect();

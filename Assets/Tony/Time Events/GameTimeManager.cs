@@ -29,10 +29,11 @@ public class GameTimeManager : MonoBehaviour{
     
     private void Awake(){
         Instance = this;
+        Time = new DateTime(1,1,1,7,00,0); //first year, month, day, 7AM 0 seconds
     }
+    
 
     void Start(){
-        Time = new DateTime(1,1,1,7,00,0); //first year, month, day, 7AM 0 seconds
         RegisterTimeAciton(GetGameSec(1),OneMinuteGameTimePassed); //every seconds pass, trigger a specific action: add 1 minute to clock
         //Debug.Log(Time);
     }

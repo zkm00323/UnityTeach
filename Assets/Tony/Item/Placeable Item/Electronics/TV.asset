@@ -16,7 +16,7 @@ MonoBehaviour:
   Name: Phone 1
   Desc: 
   Price: 500
-  ItemColor: {r: 0, g: 0, b: 0, a: 0}
+  ItemImage: {fileID: 21300000, guid: 6f06b315aa1168c4a872003db94f418c, type: 3}
   M: {fileID: 0}
   Prefeb: {fileID: 1113747442478431240, guid: 849e729f5ddeb0048af0fdebb3c1eb33, type: 3}
   Object: {fileID: 8445568276169010847, guid: 0ba0c3fb8f241fe4093a903d3ffe9f09, type: 3}

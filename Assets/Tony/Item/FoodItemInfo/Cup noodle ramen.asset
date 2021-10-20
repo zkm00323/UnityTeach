@@ -16,7 +16,7 @@ MonoBehaviour:
   Name: Cup noodle ramen
   Desc: 
   Price: 13
-  ItemColor: {r: 0.9529412, g: 0.5293769, b: 0.1647059, a: 0}
+  ItemImage: {fileID: 21300000, guid: 6f06b315aa1168c4a872003db94f418c, type: 3}
   M: {fileID: 0}
   Prefeb: {fileID: 0}
   hungerPoints: 25

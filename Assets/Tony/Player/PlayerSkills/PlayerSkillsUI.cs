@@ -18,10 +18,6 @@ public class PlayerSkillsUI : MonoBehaviour
 
     //private PlayerSkillsCtrl playerSkills;
 
-    void Update(){
-        UICtrl.Instance.DisplaySkillsUI();
-    }
-
     #region UI
     public Zoomer skillZoomer;
     public KeyCode Key;

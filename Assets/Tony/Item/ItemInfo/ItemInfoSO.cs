@@ -16,7 +16,7 @@ public class ItemInfoSO : ScriptableObject //道具相關所有數據
     public int Price;
     
     //顯示面
-    public Image ItemImage;
+    public Sprite ItemImage;
     public Material M;
     public GameObject Prefeb;
     
