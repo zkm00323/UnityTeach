@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9176230966018382279
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.1
+    min: 0
+    max: 1
 --- !u!114 &-5126677758636399066
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -19,10 +38,10 @@ MonoBehaviour:
     m_Value: {x: 1, y: 1, z: 1, w: 2.4670797e-11}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9421368, z: 0.880431, w: 0.028946998}
+    m_Value: {x: 0.89752674, y: 0.8982974, z: 1, w: -0.15308636}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0.15099369}
+    m_Value: {x: 0.97223973, y: 0.7702289, z: 1, w: 0.15099369}
 --- !u!114 &-1147023476178934797
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -39,7 +58,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 1.7
     min: 0
   intensity:
     m_OverrideState: 1
@@ -92,6 +111,7 @@ MonoBehaviour:
   - {fileID: 1275150136435595369}
   - {fileID: -5126677758636399066}
   - {fileID: 6966174099892431234}
+  - {fileID: -9176230966018382279}
 --- !u!114 &1275150136435595369
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -111,7 +131,7 @@ MonoBehaviour:
     m_Value: 0.02
   contrast:
     m_OverrideState: 1
-    m_Value: 7.64
+    m_Value: 5
     min: -100
     max: 100
   colorFilter:
@@ -127,7 +147,7 @@ MonoBehaviour:
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: 0.9
+    m_Value: 3
     min: -100
     max: 100
 --- !u!114 &6966174099892431234
@@ -153,7 +173,7 @@ MonoBehaviour:
     min: 0
     max: 1
   response:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
     min: 0
     max: 1

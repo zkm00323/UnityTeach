@@ -111,7 +111,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShopProductList:
   - {fileID: 11400000, guid: 8626b76cef8c2f3479c3d9e663cd0ce9, type: 2}
-  - {fileID: 11400000, guid: 6bade2edacbbac145929aee54cda994f, type: 2}
   - {fileID: 11400000, guid: c676d952036fc014d87de74b3857bc3c, type: 2}
   - {fileID: 11400000, guid: 6875fe5c8d45cf946bcc7f24f8ab4f1f, type: 2}
-  - {fileID: 11400000, guid: 804488e3730d5bd4fac5aa8854222bd2, type: 2}
+  - {fileID: 11400000, guid: d13bfc93df57d994491a868151f1810f, type: 2}
+  - {fileID: 11400000, guid: 0d969f2b5ccf5ab489a90deaf58750e0, type: 2}
+  - {fileID: 11400000, guid: b4216785f34e1b743828b189218af9df, type: 2}
+  - {fileID: 11400000, guid: 1cd22352012a67c4086055b4d54d148f, type: 2}
+  - {fileID: 11400000, guid: 33b46d5180e1b2d4d8becac14b123a71, type: 2}

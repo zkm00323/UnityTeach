@@ -11,6 +11,11 @@ public class HouseDoorCtrl : MonoBehaviour{
     
     public HouseSO Info;
     public Transform ExitPos;
+
+    private void OnApplicationQuit()
+    {
+        //Info.PlayerLivesHere = false; //reset player's housing state 
+    }
     private void OnTriggerEnter(Collider other){
         if(Info.PlayerLivesHere){
             Enter();

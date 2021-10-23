@@ -16,7 +16,7 @@ MonoBehaviour:
   Name: Tuna Roll
   Desc: made of raw tuna and dried seaweed
   Price: 0
-  ItemImage: {fileID: 21300000, guid: 6f06b315aa1168c4a872003db94f418c, type: 3}
+  ItemImage: {fileID: 21300000, guid: 8673f94c61873784c942cdcfc036f895, type: 3}
   M: {fileID: 0}
   Prefeb: {fileID: 0}
   hungerPoints: 30

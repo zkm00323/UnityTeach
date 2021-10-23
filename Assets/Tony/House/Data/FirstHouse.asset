@@ -17,3 +17,13 @@ MonoBehaviour:
   Price: 9999999
   SocialScoreNeeded: 0
   comfortLevel: 0
+  FurnitureList:
+  - Pos: {x: 2.994659, y: 1.0000005, z: -1.9291112}
+    Rot: {x: -0.0000003184703, y: 151.31665, z: -0.000025666806}
+    Prefeb: {fileID: 6257578379399625645, guid: 4c4bfd6f90b3c5741b91bafe19eb452c, type: 3}
+  - Pos: {x: 8.218627, y: -994.8319, z: -3.0866098}
+    Rot: {x: 270, y: 0.39060992, z: 0}
+    Prefeb: {fileID: 6257578379399625645, guid: 4c4bfd6f90b3c5741b91bafe19eb452c, type: 3}
+  - Pos: {x: 167.87537, y: -3020.439, z: -4.984665}
+    Rot: {x: 14.12614, y: 349.91412, z: 107.66535}
+    Prefeb: {fileID: 6257578379399625645, guid: 4c4bfd6f90b3c5741b91bafe19eb452c, type: 3}

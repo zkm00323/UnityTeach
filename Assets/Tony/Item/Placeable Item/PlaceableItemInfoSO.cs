@@ -7,8 +7,16 @@ using UnityEngine;
 public class PlaceableItemInfoSO : ItemInfoSO{
 	public GameObject Object;
 	public PlaceableItemType Type;
+	public int hygienePoints;
+	public int energyPoints; //add this to playerdata later
+	public int moodPoints; //add to playerdata later
+
+    public override void OnClick()
+    {
+		PlayerData.LIFE.Instance.Hygiene += hygienePoints;
+	}
 }
 
 public enum PlaceableItemType{
-	Chairs,Table, Bed,ElectronicAppliances, Lightings, Kitchen, Storageware, Bathroom, Decorations, Miscelleneous
+	Chairs,Table, Bedroom,ElectronicAppliances, Lightings, Kitchen, Storageware, Bathroom, Decorations, Miscelleneous
 }
