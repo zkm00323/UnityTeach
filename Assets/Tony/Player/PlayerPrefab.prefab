@@ -1091,7 +1091,7 @@ CharacterController:
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.07
+  m_SkinWidth: 0.06
   m_MinMoveDistance: 0.001
   m_Center: {x: 1.16, y: 0.87, z: 0}
 --- !u!114 &6643827749934590675
@@ -1107,7 +1107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 4
-  _gravity: 9.81
+  _gravity: 0
+  rotationSpeed: 720
 --- !u!1 &5837305217049337381
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,8 @@ using UnityEngine;
 public class EntranceToScene : MonoBehaviour
 {
     public GameObject entrance;
+    private static Vector3 LastExitPos;
+    public Transform ExitPos;
     private string NameOfScene { get; set; } //name of the scene you want to go to
 
     public void OnTriggerEnter(Collider other)

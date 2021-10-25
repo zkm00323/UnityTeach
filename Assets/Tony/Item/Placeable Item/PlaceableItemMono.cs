@@ -1,21 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class PlaceableItemMono : MonoBehaviour
+public class PlaceableItemMono : ItemMono
 {
-    public ItemInfoSO Info;
+	public int hygienePoints;
+	public ItemInfoSO Info;
+
+	public override void OnClick()
+	{
+		PlayerData.LIFE.Instance.Hygiene += hygienePoints;
+	}
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	private void Awake()
+	{
+		AwakeColorChange();
+		Debug.Log("Clicked!");
+	}
+	#region ColorChange
+	public Material defaultColor;
+	public Material highlight;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private void AwakeColorChange()
+	{
+		defaultColor = GetComponent<MeshRenderer>().material;
+	}
+
+	#endregion
+
+	public override void OnPointerEnter()
+	{
+		GetComponent<MeshRenderer>().material = highlight;
+		Debug.Log("Table!");
+	}
+
+	public override void OnPointerExit()
+	{
+		GetComponent<MeshRenderer>().material = defaultColor;
+	}
+
+
 }

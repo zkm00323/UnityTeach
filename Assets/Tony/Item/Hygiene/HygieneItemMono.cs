@@ -32,6 +32,7 @@ public class HygieneItemMono : ItemMono
 	public override void OnPointerEnter()
 	{
 		GetComponent<MeshRenderer>().material = highlight;
+		Debug.Log("Shower!");
 	}
 
 	public override void OnPointerExit()

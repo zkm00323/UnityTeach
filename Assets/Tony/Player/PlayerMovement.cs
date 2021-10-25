@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour{
             animator.SetBool("isWalking", false);
         }
 
+        
 
         controller.Move(direction * Time.deltaTime * _moveSpeed); //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high
         if (direction!= Vector3.zero)
