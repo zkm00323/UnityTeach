@@ -1524,6 +1524,18 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8801813956271192701, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
   m_PrefabInstance: {fileID: 8801813956108450196}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &2054538218
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054538216}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2105842894
 GameObject:
   m_ObjectHideFlags: 0

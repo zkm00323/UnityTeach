@@ -14,7 +14,9 @@ public class PlayerData{
 			return _Instance;
 		}
 	}
-	
+
+	public float money = 1000;
+
 	public class Skills{
 		private static Skills _Instance;
 
@@ -30,7 +32,7 @@ public class PlayerData{
 		public int charismaPoint = 0;
 		public int cookingSkillPoint = 0;
 		public string[] prestigeRank;
-		public float socialScore = 0; //can be negative
+		public float socialScore = 0; //can be boosted by quests?
 	}
 
 	public class LIFE {
@@ -45,6 +47,8 @@ public class PlayerData{
 					_Instance.Health = _Instance._maxHealth;
 					_Instance.Hunger = _Instance._maxHunger;
 					_Instance.Hygiene = _Instance._maxHygiene;
+					
+					
 				}
 				return _Instance;
 			}
@@ -62,6 +66,11 @@ public class PlayerData{
 		private float _hygiene;
 		[SerializeField]
 		private float _maxHygiene = 100;
+		[SerializeField]
+		private float _energy = 100;
+		[SerializeField]
+		private float _maxEnergy = 100;
+
 
 		public float Health
 		{
@@ -105,9 +114,23 @@ public class PlayerData{
 			}
 		}
 
+		public float Energy
+		{
+			set
+			{
+				_energy = math.clamp(value, 0, _maxEnergy);
+				UICtrl.Instance.EnergyBar.Value = _energy / _maxEnergy;
+			}
+			get
+			{
+
+				return _energy;
+			}
+		}
+
 	}
 
-	public float money = 1000;
+	
 
 
 	private PlayerData(){
@@ -119,6 +142,7 @@ public class PlayerData{
 		UpdateHealthDown();
 		UpdateHungerDown();
 		UpdateHygieneDown();
+		UpdateEnergyDown();
 	}
 
 	#region HealthDown
@@ -159,9 +183,18 @@ public class PlayerData{
 
 	#endregion
 
-	#region Inventory
+	#region EnergyDown
+	private float _EnergyDownValue = 1;
+	public float _EnergyDownSpeed = 3f;
+	void UpdateEnergyDown()
+	{
+		//Energy is only down when player is running or working
+	}
+    #endregion
 
-	public List<ItemData> ItemList = new List<ItemData>();//背包數據存放點
+    #region Inventory
+
+    public List<ItemData> ItemList = new List<ItemData>();//背包數據存放點
 	
 
 	public void AddItem(ItemData data){ //添加道具入口

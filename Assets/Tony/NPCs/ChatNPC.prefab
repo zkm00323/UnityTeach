@@ -91,7 +91,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354717245295240283}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -111,11 +111,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npc: {fileID: 11400000, guid: 370b7812dbf643b45926a9d5cecb2638, type: 2}
   player: {fileID: 2813780373872823983, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
-  dialogueUI: {fileID: 0}
-  playerResponseButton:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  dialogueUI: {fileID: 8801813956271192700, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
+  ResponseButtons: []
   npcName: {fileID: 0}
   npcDialogueBox: {fileID: 0}
   playerResponse: {fileID: 0}

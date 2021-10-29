@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class DialogueManager : MonoBehaviour
+using UnityEngine.EventSystems;
+public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public NPCDialogue npc;
     bool isTalking = false;
@@ -10,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     float currentResponseTracker = 0;
     public GameObject player;
     public GameObject dialogueUI; //make it a bark above npc's head
-
+    
     //public Button[] playerResponseButton;
     public List<GameObject> ResponseButtons = new List<GameObject>();
 
@@ -44,7 +45,7 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    private void OnMouseOver()
+    public void OnPointerClick(PointerEventData eventData)
     {
         StartCoroutine(DisplayDialogue());
         
@@ -52,11 +53,11 @@ public class DialogueManager : MonoBehaviour
     }
     IEnumerator DisplayDialogue()
     {
-        if (Input.GetKeyDown(KeyCode.T) && isTalking == false)
+        if ( isTalking == false)
         {
             StartConversation();
         }
-        else if (Input.GetKeyDown(KeyCode.T) && isTalking == true)
+        else if (isTalking == true)
         {
             EndDialogue();
         }
@@ -112,11 +113,19 @@ public class DialogueManager : MonoBehaviour
         npcDialogueBox.text = npc.npcDialogue[0];
 
     }
-    void EndDialogue()
+    public void EndDialogue()
     {
         isTalking = false;
         dialogueUI.SetActive(false);
     }
 
-    
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
+    }
 }

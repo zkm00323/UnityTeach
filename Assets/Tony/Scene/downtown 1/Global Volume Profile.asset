@@ -16,7 +16,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 0.23
     min: 0
     max: 1
 --- !u!114 &-5126677758636399066
@@ -41,7 +41,7 @@ MonoBehaviour:
     m_Value: {x: 0.89752674, y: 0.8982974, z: 1, w: -0.15308636}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 0.97223973, y: 0.7702289, z: 1, w: 0.15099369}
+    m_Value: {x: 0.97223973, y: 0.7702289, z: 1, w: 0.43895176}
 --- !u!114 &-1147023476178934797
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -147,7 +147,7 @@ MonoBehaviour:
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 16
     min: -100
     max: 100
 --- !u!114 &6966174099892431234

@@ -16,6 +16,7 @@ public class UICtrl : MonoBehaviour
 	public CustomBarUICtrl HealthBar;
 	public CustomBarUICtrl HungerBar;
 	public CustomBarUICtrl HygieneBar;
+	public CustomBarUICtrl EnergyBar;
 
 	public KeyCode InventoryKey;
 	private void Awake(){

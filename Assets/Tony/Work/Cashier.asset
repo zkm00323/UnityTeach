@@ -21,6 +21,7 @@ MonoBehaviour:
   - Name: Cashier at Convenience Store
     Salary: 13
     WorkHourNeed: 0
+    MinSocialScore: 0
     HungryCost: 3
     EnergyCost: 3
     HygieneCost: 3
@@ -28,4 +29,4 @@ MonoBehaviour:
     brainPowerUp: 0
     staminaUp: 0
     charismaUp: 0
-    cookingSkill: 0
+    cookingSkillUp: 0
