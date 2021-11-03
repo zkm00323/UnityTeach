@@ -124,13 +124,13 @@ Material:
     - _OcclusionStrength: 1
     - _OutlineDepthOffset: 0
     - _OutlineScale: 1
-    - _OutlineWidth: 0.53
+    - _OutlineWidth: 0.78
     - _OverrideLightmapDir: 0
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RimEnabled: 1
-    - _SelfShadingSize: 1
+    - _SelfShadingSize: 0.63
     - _SelfShadingSizeExtra: 0.711
     - _ShadowEdgeSize: 0.336
     - _ShadowEdgeSizeExtra: 0.3
@@ -149,7 +149,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.6509804, g: 0.5372549, b: 0.3254902, a: 1}
+    - _BaseColor: {r: 0.86274517, g: 0.454902, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDim: {r: 0.4716981, g: 0.32249415, b: 0.050729766, a: 1}
     - _ColorDimCurve: {r: 0.43225688, g: 0.23137255, b: 0.9254902, a: 1}

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9f5076ce1a2ac9546a6d2ae7fe4abb17
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - ARB 66 Neon Block JUN-37
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: dfebe417d5835bf4dbd90fa1df7a6134, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

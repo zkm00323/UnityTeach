@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: 1e272ff7fd4a31e48ad453154de8015a
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Flatsigns_1
+    100002: HostClub
+    100004: Hotel
+    100006: Internetbar
+    100008: LoveHotel
+    100010: Pachinko
+    100012: PandaBar
+    100014: Ramen
+    100016: scaffolding_signs
+    100018: scaffolding_signs_2
+    100020: Seamstress
+    100022: Sushi
+    100024: //RootNode
+    100026: Triangle_Sign_1
+    100028: Triangle_Sign_2
+    100030: Flatsigns
+    100032: Flatsigns 1
+    100034: Flatsigns 2
+    100036: Flatsigns 3
+    100038: Flatsigns 4
+    100040: Flatsigns 5
+    100042: Hotel 1
+    100044: LoveHotel 1
+    100046: lovehoteltriangle
+    100048: Main Camera
+    100050: metalbars
+    100052: metalbars 1
+    100054: metalbars 2
+    100056: Moneyexchange
+    100058: Render
+    100060: scafolding
+    100062: scafolding2
+    100064: Sky
+    100066: Sushi 1
+    100068: TokyoNightLifeSigns
+    100070: Flatsigns_2
+    100072: Flatsigns_3
+    100074: Flatsigns_4
+    100076: Flatsigns_5
+    100078: Flatsigns_6
+    100080: Hotel_2
+    100082: LoveHotel_2
+    100084: metalbars_2
+    100086: metalbars_3
+    100088: Sushi_2
+    400000: Flatsigns_1
+    400002: HostClub
+    400004: Hotel
+    400006: Internetbar
+    400008: LoveHotel
+    400010: Pachinko
+    400012: PandaBar
+    400014: Ramen
+    400016: scaffolding_signs
+    400018: scaffolding_signs_2
+    400020: Seamstress
+    400022: Sushi
+    400024: //RootNode
+    400026: Triangle_Sign_1
+    400028: Triangle_Sign_2
+    400030: Flatsigns
+    400032: Flatsigns 1
+    400034: Flatsigns 2
+    400036: Flatsigns 3
+    400038: Flatsigns 4
+    400040: Flatsigns 5
+    400042: Hotel 1
+    400044: LoveHotel 1
+    400046: lovehoteltriangle
+    400048: Main Camera
+    400050: metalbars
+    400052: metalbars 1
+    400054: metalbars 2
+    400056: Moneyexchange
+    400058: Render
+    400060: scafolding
+    400062: scafolding2
+    400064: Sky
+    400066: Sushi 1
+    400068: TokyoNightLifeSigns
+    400070: Flatsigns_2
+    400072: Flatsigns_3
+    400074: Flatsigns_4
+    400076: Flatsigns_5
+    400078: Flatsigns_6
+    400080: Hotel_2
+    400082: LoveHotel_2
+    400084: metalbars_2
+    400086: metalbars_3
+    400088: Sushi_2
+    2100000: lovehoteltriangle
+    2100002: Moneyexchange
+    2100004: metalbars
+    2100006: Sushi
+    2100008: Hotel
+    2100010: LoveHotel
+    2100012: scafolding
+    2100014: scafolding2
+    2100016: Flatsigns
+    2100018: metalbars.1
+    2100020: metalbars.2
+    2100022: Flatsigns.1
+    2100024: Flatsigns.2
+    2100026: Flatsigns.3
+    2100028: Flatsigns.4
+    2100030: Flatsigns.5
+    2300000: HostClub
+    2300002: Hotel
+    2300004: Internetbar
+    2300006: LoveHotel
+    2300008: Pachinko
+    2300010: PandaBar
+    2300012: Ramen
+    2300014: scaffolding_signs
+    2300016: scaffolding_signs_2
+    2300018: Seamstress
+    2300020: Sushi
+    2300022: Triangle_Sign_1
+    2300024: Triangle_Sign_2
+    3300000: HostClub
+    3300002: Hotel
+    3300004: Internetbar
+    3300006: LoveHotel
+    3300008: Pachinko
+    3300010: PandaBar
+    3300012: Ramen
+    3300014: scaffolding_signs
+    3300016: scaffolding_signs_2
+    3300018: Seamstress
+    3300020: Sushi
+    3300022: Triangle_Sign_1
+    3300024: Triangle_Sign_2
+    4300000: Triangle_Sign_1
+    4300002: Triangle_Sign_2
+    4300004: Sushi
+    4300006: Hotel
+    4300008: LoveHotel
+    4300010: scaffolding_signs
+    4300012: scaffolding_signs_2
+    4300014: Seamstress
+    4300016: Pachinko
+    4300018: Internetbar
+    4300020: HostClub
+    4300022: Ramen
+    4300024: PandaBar
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
