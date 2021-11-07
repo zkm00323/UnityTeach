@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 7075390341716514926}
   - component: {fileID: 991155961135942524}
   - component: {fileID: 63236234489637919}
-  - component: {fileID: 6135083826661001880}
-  - component: {fileID: 4007983753226912418}
+  - component: {fileID: 212968056100644068}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -127,7 +126,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6135083826661001880
+--- !u!114 &212968056100644068
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,27 +135,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6257578379399625645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 626bb937830b8a74f9bb52645257fec5, type: 3}
+  m_Script: {fileID: 11500000, guid: f06ac6c2716fe064b9f770d142b65037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _originalMaterial: {fileID: 2100000, guid: c5dbab14d63a8d345931c0d8e44b20a1, type: 2}
-  _highlightMaterial: {fileID: 2100000, guid: 5105c16617b77e54281e310f2b309cf6, type: 2}
-  ItemName: {fileID: 11400000, guid: 6875fe5c8d45cf946bcc7f24f8ab4f1f, type: 2}
---- !u!114 &4007983753226912418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6257578379399625645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 120af4bd4b25b70479725a725624b363, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _originalMaterial: {fileID: 2100000, guid: c5dbab14d63a8d345931c0d8e44b20a1, type: 2}
-  _highlightMaterial: {fileID: 2100000, guid: 57fd6c4741f902e4f817bf97148c2991, type: 2}
-  hygienePoints: 0
-  Info: {fileID: 11400000, guid: 6875fe5c8d45cf946bcc7f24f8ab4f1f, type: 2}
-  defaultColor: {fileID: 2100000, guid: c5dbab14d63a8d345931c0d8e44b20a1, type: 2}
-  highlight: {fileID: 2100000, guid: 57fd6c4741f902e4f817bf97148c2991, type: 2}
+  _originalMaterial: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  _highlightMaterial: {fileID: 450498493034011815, guid: 31d4a5b315bc6f04588bebc5236f325c, type: 2}
+  hygienePoints: 100

@@ -17,7 +17,6 @@ public class PlaceableItemMono : ItemMono
 	private void Awake()
 	{
 		AwakeColorChange();
-		Debug.Log("Clicked!");
 	}
 	#region ColorChange
 	public Material defaultColor;
@@ -33,7 +32,6 @@ public class PlaceableItemMono : ItemMono
 	public override void OnPointerEnter()
 	{
 		GetComponent<MeshRenderer>().material = highlight;
-		Debug.Log("Table!");
 	}
 
 	public override void OnPointerExit()

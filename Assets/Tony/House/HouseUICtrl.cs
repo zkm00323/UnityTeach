@@ -88,6 +88,7 @@ public class HouseUICtrl : MonoBehaviour {
 		ItemUIList.Clear();
 		foreach (var data in ItemList) {  //再讀取ItemList生成新的ItemUI
 			var o = Instantiate(ItemUI_O, Bag_T);
+
 			var ctrl = o.GetComponent<ItemUICtrl>();
 			ctrl.Setup(data, () => {
 				var obj = Instantiate((data.Info as PlaceableItemInfoSO).Object, DropPoint);

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,12 +13,9 @@ public class ObjectPlacement : MonoBehaviour
     //disable view from player's inventory
 
     #region Dragging furnitures to place
-    private void OnMouseDown()
-    {
+    private void OnMouseDown() {
         mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
         mOffset = gameObject.transform.position - GetMouseWorldPos();
-
-        
     }
     private Vector3 GetMouseWorldPos()
     {
@@ -31,7 +29,4 @@ public class ObjectPlacement : MonoBehaviour
         transform.position = GetMouseWorldPos() + mOffset;
     }
     #endregion
-
-
-    
 }

@@ -15,12 +15,14 @@ public class DayNightCycle : MonoBehaviour
 
     [Header("Sun")]
     public Light sun;
+    public static Light _Sun;
     public Gradient sunColor;
     public AnimationCurve sunIntensity;
 
 
     [Header("Moon")]
     public Light moon;
+
     public Gradient moonColor;
     public AnimationCurve moonIntensity;
 
@@ -32,13 +34,12 @@ public class DayNightCycle : MonoBehaviour
     {
         
         sun.transform.localRotation = Quaternion.Euler(15, 0, 0);
-        
+        _Sun = sun;
         GameTimeManager.RegisterTimeAciton(60*60, SunRotates); //every 1 hour in game sun rotates//
     }
 
     void SunRotates() {
-        sun.transform.RotateAround(Vector3.zero, Vector3.right, rotationAngle);
-        
+        _Sun.transform.RotateAround(Vector3.zero, Vector3.right, rotationAngle);
     }
 
     void SunIntensity()
