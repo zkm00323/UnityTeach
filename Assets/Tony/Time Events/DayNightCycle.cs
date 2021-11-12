@@ -35,7 +35,7 @@ public class DayNightCycle : MonoBehaviour
         
         sun.transform.localRotation = Quaternion.Euler(15, 0, 0);
         _Sun = sun;
-        GameTimeManager.RegisterTimeAciton(60*60, SunRotates); //every 1 hour in game sun rotates//
+        GameTimeManager.RegisterTimeAciton(60*60, SunRotates); //do sun intenesity and angle based on DateTime time
     }
 
     void SunRotates() {

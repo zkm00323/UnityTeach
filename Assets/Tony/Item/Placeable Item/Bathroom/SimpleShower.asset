@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823a726544b4d5a4eb12e1b72d4d94b4, type: 3}
+  m_Name: SimpleShower
+  m_EditorClassIdentifier: 
+  ID: 0
+  Name: ShowerRoom
+  Desc: A simple shower room
+  Price: 60
+  ItemImage: {fileID: 0}
+  M: {fileID: 0}
+  Prefeb: {fileID: 0}
+  Object: {fileID: 5717549029616559202, guid: b2bedabd87c866743855bae84d940b18, type: 3}
+  Type: 7

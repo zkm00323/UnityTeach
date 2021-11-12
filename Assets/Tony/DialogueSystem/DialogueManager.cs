@@ -5,7 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public NPCDialogue npc;
+    public NPCDialogue dialogue;
+    //create different dialogue object based on relationship level
     bool isTalking = false;
     float distance;
     float currentResponseTracker = 0;
@@ -64,7 +65,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnte
 
         for (int i = 0; i < ResponseButtons.Count; i++)
         {
-            ResponseButtons[i].GetComponentInChildren<Text>().text = npc.playerDialogue[i];
+            ResponseButtons[i].GetComponentInChildren<Text>().text = dialogue.playerDialogue[i];
             //buttonobj.GetComponentInChildren<Text>().text = "bla bla";
 
         }
@@ -81,7 +82,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnte
         optionSelected = true;
 
         //1 second delay then do the below
-        npcDialogueBox.text = npc.npcDialogue[1];
+        npcDialogueBox.text = dialogue.npcDialogue[1];
         
     } //someButton.GetComponent<Button>().onClick.AddListener(() => SomeFunction(SomeParameter));
 
@@ -89,7 +90,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnte
     {
         optionSelected = true;
 
-        npcDialogueBox.text = npc.npcDialogue[2];
+        npcDialogueBox.text = dialogue.npcDialogue[2];
 
 
     }
@@ -98,7 +99,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnte
         optionSelected = true;
 
 
-        npcDialogueBox.text = npc.npcDialogue[3];
+        npcDialogueBox.text = dialogue.npcDialogue[3];
 
 
     }
@@ -108,9 +109,9 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnte
     {
         isTalking = true;
         currentResponseTracker = 0;
-        npcName.text = npc.name;
+        npcName.text = dialogue.name;
         dialogueUI.SetActive(true);
-        npcDialogueBox.text = npc.npcDialogue[0];
+        npcDialogueBox.text = dialogue.npcDialogue[0];  //dialogue SO is different based on friendship level
 
     }
     public void EndDialogue()

@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 723825470209726131}
   - component: {fileID: 723825470209726130}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Resources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -611,7 +611,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 2
   m_Spacing: 1.06
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
@@ -1188,6 +1188,7 @@ GameObject:
   - component: {fileID: 723825470486102372}
   - component: {fileID: 723825470486102394}
   - component: {fileID: 723825470486102393}
+  - component: {fileID: 1193182829}
   m_Layer: 5
   m_Name: CraftingUI
   m_TagString: Untagged
@@ -1280,6 +1281,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10b56e1913fcb7469a671398b4dc485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &1193182829
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723825470486102374}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &723825470497900172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,6 +1667,7 @@ GameObject:
   - component: {fileID: 723825470849080446}
   - component: {fileID: 723825470849080447}
   - component: {fileID: 723825470849080440}
+  - component: {fileID: 1704759286}
   m_Layer: 5
   m_Name: Recipe2
   m_TagString: Untagged
@@ -1733,13 +1747,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58e906661c319744aa1f169ab030e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipe: {fileID: 0}
-  backgroundImage: {fileID: 0}
-  icon: {fileID: 0}
-  itemName: {fileID: 0}
-  resourceCosts: []
-  canCraftColor: {r: 0, g: 0, b: 0, a: 0}
-  cannotCraftColor: {r: 0, g: 0, b: 0, a: 0}
+  recipe: {fileID: 11400000, guid: b86e13ac3c4fa8d4896b9f0b2161e466, type: 2}
+  backgroundImage: {fileID: 723825470849080447}
+  icon: {fileID: 723825471163190906}
+  itemName: {fileID: 723825471708580302}
+  resourceCosts:
+  - {fileID: 723825469752291203}
+  - {fileID: 723825471228838062}
+  - {fileID: 723825470637903843}
+  - {fileID: 723825471294615283}
+  canCraftColor: {r: 0.6689522, g: 0.990566, b: 0.47098607, a: 1}
+  cannotCraftColor: {r: 0.972549, g: 0.50980395, b: 0.50980395, a: 1}
+--- !u!114 &1704759286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723825470849080442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 723825470849080447}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 723825470849080440}
+        m_TargetAssemblyTypeName: CraftingRecipeUI, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &723825470868020003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,7 +2244,7 @@ GameObject:
   - component: {fileID: 723825471278908503}
   - component: {fileID: 723825471278908502}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Resources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2216,7 +2290,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 2
   m_Spacing: 1.06
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
@@ -2385,7 +2459,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 723825471535680764}
-  - component: {fileID: 723825471535680755}
   m_Layer: 5
   m_Name: Recipes
   m_TagString: Untagged
@@ -2413,50 +2486,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -23.85058}
   m_SizeDelta: {x: 600, y: 568.5012}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &723825471535680755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723825471535680765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &723825471546907329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +2766,7 @@ GameObject:
   - component: {fileID: 723825471719025440}
   - component: {fileID: 723825471719025441}
   - component: {fileID: 723825471719025447}
+  - component: {fileID: 1183964959}
   m_Layer: 5
   m_Name: Recipe1
   m_TagString: Untagged
@@ -2816,13 +2846,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58e906661c319744aa1f169ab030e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipe: {fileID: 0}
-  backgroundImage: {fileID: 0}
-  icon: {fileID: 0}
-  itemName: {fileID: 0}
-  resourceCosts: []
-  canCraftColor: {r: 0, g: 0, b: 0, a: 0}
-  cannotCraftColor: {r: 0, g: 0, b: 0, a: 0}
+  recipe: {fileID: 11400000, guid: 593cb3470825fcf4dbbde1b75e821685, type: 2}
+  backgroundImage: {fileID: 723825471719025441}
+  icon: {fileID: 723825471308312804}
+  itemName: {fileID: 723825470868020001}
+  resourceCosts:
+  - {fileID: 723825470843983102}
+  - {fileID: 723825470054072642}
+  - {fileID: 723825470512614264}
+  - {fileID: 723825470461837053}
+  canCraftColor: {r: 0.6592282, g: 0.9811321, b: 0.48501244, a: 1}
+  cannotCraftColor: {r: 0.9716981, g: 0.50784975, b: 0.50784975, a: 1}
+--- !u!114 &1183964959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723825471719025443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 723825471719025441}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 723825471719025447}
+        m_TargetAssemblyTypeName: CraftingRecipeUI, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &723825471790203090
 GameObject:
   m_ObjectHideFlags: 0

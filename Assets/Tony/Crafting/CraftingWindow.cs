@@ -39,13 +39,15 @@ public class CraftingWindow : MonoBehaviour
         {
             for (int x = 0; x < recipe.cost[i].quantity; x++); //call this line however many times there is this quantity in the inventory eg. 5 wood then call this 5 times
             PlayerData.Instance.RemoveItem(recipe.cost[i].item); //removeItem includes a call to update bag
+
+
         }
 
         //Add item crafted to player's inventory
         PlayerData.Instance.AddItem(recipe.itemToCraft.GetGetData()); //AddItem takes in ItemData not ItemInfo so use GetGetData to convert
 
         
-        //tells that recipe UI to show green meaning craftable now
+        //tells that recipe UI to show green meaning craftable now //this needs to happen before we close the craft window
         for (int i=0; i<recipeUIs.Length; i++)
         {
             recipeUIs[i].UpdateCanCraft(); 

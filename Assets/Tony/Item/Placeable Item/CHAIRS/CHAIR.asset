@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: CHAIR
   m_EditorClassIdentifier: 
   ID: 99
-  Name: CHAIR ONE
-  Desc: AAAA
-  Price: 0
-  ItemImage: {fileID: 21300000, guid: 6f06b315aa1168c4a872003db94f418c, type: 3}
+  Name: Dining Chair Simple
+  Desc: A simple dining chair
+  Price: 15
+  ItemImage: {fileID: 0}
   M: {fileID: 0}
   Prefeb: {fileID: 1113747442478431240, guid: 849e729f5ddeb0048af0fdebb3c1eb33, type: 3}
-  Object: {fileID: 6257578379399625645, guid: 4c4bfd6f90b3c5741b91bafe19eb452c, type: 3}
+  Object: {fileID: 2251099591706488179, guid: 1a4a3890afac0fe4b8279c356145394a, type: 3}
   Type: 0
+  hygienePoints: 0
+  energyPoints: 5
+  moodPoints: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RaycastManager : MonoBehaviour
 {
-    [SerializeField] private Material highlightMaterial;
+    /*[SerializeField] private Material highlightMaterial;
     [SerializeField] private string foodTag = "Food";
     [SerializeField] private string hygieneTag = "HygieneProduct";
     [SerializeField] private string jobTag = "Job";
@@ -36,5 +36,5 @@ public class RaycastManager : MonoBehaviour
 
 
         }
-    }
+    }*/
 }

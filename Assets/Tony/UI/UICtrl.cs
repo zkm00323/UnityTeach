@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UICtrl : MonoBehaviour
+public class UICtrl : MonoBehaviour //attach to canvas on introscene 
 {
 	public static UICtrl Instance;
 
@@ -284,5 +284,7 @@ public class PopupInfoData{
 		TrueAction = trueAction;
 		Single = true;
 	}
+
+
 }
 

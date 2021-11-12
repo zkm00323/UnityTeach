@@ -21,12 +21,12 @@ public class HouseDoorCtrl : MonoBehaviour{
             Enter();
             return;
         }
-        UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"Rent:{Info.Rent}\n SocialScoreNeeded:{Info.SocialScoreNeeded}","租房","取消",
+        UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"Rent:{Info.Rent}\n SocialScoreNeeded:{Info.SocialScoreNeeded}","Rent House","Cancel",
             () => {
                 if(PlayerData.Instance.money < Info.Rent)
-                    UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"沒有足夠的錢承租", "確認", () => { EndLease();}));
+                    UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"You don't have enough to pay rent!!", "Confirm", () => { EndLease();}));
                 else
-                    UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"承租成功!", "確認", () => {
+                    UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"Succesful!", "OK", () => {
                         
                         Info.PlayerLivesHere = true;
                         Info.LastRentTime = GameTimeManager.Time;
@@ -41,7 +41,7 @@ public class HouseDoorCtrl : MonoBehaviour{
     }
 
     void RentForMonth(){
-        UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"付租金![{Info.Rent}]", "確認","取消", OnPay, EndLease));
+        UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"Pay rent![{Info.Rent}]", "Confirm","Cancel", OnPay, EndLease));
     }
 
     void OnPay(){

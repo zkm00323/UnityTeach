@@ -5,7 +5,7 @@ using UnityEngine;
 public class TableClickAction : ItemMono
 {
     
-    public int hygienePoints = 100;
+    public int hygienePoints;
     
     public override void OnClick()
     {

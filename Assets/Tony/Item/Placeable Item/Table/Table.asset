@@ -13,14 +13,11 @@ MonoBehaviour:
   m_Name: Table
   m_EditorClassIdentifier: 
   ID: 0
-  Name: Table 1
-  Desc: 'A small table '
+  Name: Round Table
+  Desc: A simple small round table
   Price: 50
-  ItemImage: {fileID: 21300000, guid: 6f06b315aa1168c4a872003db94f418c, type: 3}
+  ItemImage: {fileID: 0}
   M: {fileID: 0}
-  Prefeb: {fileID: 1113747442478431240, guid: 849e729f5ddeb0048af0fdebb3c1eb33, type: 3}
-  Object: {fileID: 6257578379399625645, guid: 4c4bfd6f90b3c5741b91bafe19eb452c, type: 3}
+  Prefeb: {fileID: 0}
+  Object: {fileID: 1764766054349518288, guid: ef35692e4abbae041a96da738fd64cfb, type: 3}
   Type: 1
-  hygienePoints: 0
-  energyPoints: 7
-  moodPoints: 0

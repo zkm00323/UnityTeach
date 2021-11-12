@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NPCData 
 {
-    private bool isDatingPlayer = false;
-    private int relationshipPoints;
+    private static bool isDatingPlayer = false;
+    private static int relationshipPoints;
     private List<NPCQuest> npcQuestList = new List<NPCQuest>();
     private List<CraftingRecipe> recipeList = new List<CraftingRecipe>();
     private List<ItemData> favoriteItems = new List<ItemData>();
