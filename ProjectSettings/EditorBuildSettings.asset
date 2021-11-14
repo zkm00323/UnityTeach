@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tony/Scene/New ChinaTown.unity
     guid: 0103aabea7a773740b0498ce9c4d5da2
+  - enabled: 1
+    path: Assets/Tony/Scene/Sushi.unity
+    guid: bcd8ac59f4a07c74fb2bcaa37d2c89a3
+  - enabled: 1
+    path: Assets/Tony/Scene/ConvenienceStore.unity
+    guid: bed15683337e3e746b8a8a1522f5316e
   m_configObjects: {}

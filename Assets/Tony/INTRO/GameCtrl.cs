@@ -17,4 +17,22 @@ public class GameCtrl : MonoBehaviour {
     private void Start(){
         SceneCtrl.Instance.ChangeScene(SceneNameDefine.Scene.MAIN_SCENE);
     }
+
+    //manage scene transition
+
+    private string _previousSceneName;
+    public void EnterDoor(string previousScenename, string newSceneName)
+    {
+        _previousSceneName = previousScenename;
+        StartCoroutine(WaitForSceneLoad(newSceneName));
+    }
+
+    IEnumerator WaitForSceneLoad(string scenename)
+    {
+        while (SceneManager.GetActiveScene().name != scenename)
+        {
+            yield return null;
+        }
+
+    }
 }

@@ -9,7 +9,7 @@ public class EventController : MonoBehaviour //event controller for Quests
     public static event System.Action<Quest> OnQuestProgressChanged = delegate { };
     public static event System.Action<Quest> OnQuestCompleted = delegate { };
 
-
+    
 
     //we need to invoke the above events in the folloiwng EVENT HANDLERS;
     public static void EnemyDied(int enemyID)

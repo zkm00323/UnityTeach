@@ -22,15 +22,15 @@ public class CraftingWindow : MonoBehaviour
     public KeyCode key;
     public Zoomer CraftWindow;
     
-    public void OpenCraftWindow() {
-        if (Input.GetKeyDown(key)) {
+    public void OpenCraftWindow() 
+         {
             if (CraftWindow.gameObject.activeSelf)
                 CraftWindow.ZoomOut();
             else 
                 CraftWindow.ZoomIn();
         }
-        
-    }
+       
+    
 
     public void Craft (CraftingRecipe recipe) //take itemInfoSO 
     {
@@ -50,7 +50,8 @@ public class CraftingWindow : MonoBehaviour
         //tells that recipe UI to show green meaning craftable now //this needs to happen before we close the craft window
         for (int i=0; i<recipeUIs.Length; i++)
         {
-            recipeUIs[i].UpdateCanCraft(); 
+            recipeUIs[i].UpdateCanCraft();
+            Debug.Log("updating recipe UI");
         }
     }
 }

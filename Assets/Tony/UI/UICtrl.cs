@@ -11,6 +11,10 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 
 	[Header("Craft")] 
 	public CraftingWindow CraftingCtrl;
+	public void Button_CraftWindow() //allows to open on UI
+    {
+		CraftingCtrl.OpenCraftWindow();
+    }
 	
 	[Header("Health Stats")]
 	public CustomBarUICtrl HealthBar;
@@ -26,7 +30,7 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 	private void Update(){
 		UpdateInventory(); 
 		DisplaySkillsUI();
-		CraftingCtrl.DoUpdate();
+		//CraftingCtrl.DoUpdate();
 	}
 
 	[Header("Skill Stats")]
@@ -57,7 +61,21 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 				skillsUI.SetUp();
 			}
 		}
+	}
 
+	public void Button_DisplaySkill()
+    {
+		if (SkillZoomer.gameObject.activeSelf)
+		{
+			SkillZoomer.ZoomOut();
+
+		}
+		else
+		{
+			//skillUI.SetUp(new WorkData(Info, 0, 0));
+			SkillZoomer.ZoomIn();
+			skillsUI.SetUp();
+		}
 
 	}
 	#endregion
@@ -80,6 +98,20 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 			else{
 				Inventory.ZoomIn();
 			}
+		}
+	}
+
+	public void Button_Inventory() //allows you to open/close inventory on UI
+    {
+		if (Inventory.gameObject.activeSelf)
+		{
+			Inventory.ZoomOut();
+			if (ItemUICtrl.Selecting != null)
+				ItemUICtrl.Selecting.UnSelect();
+		}
+		else
+		{
+			Inventory.ZoomIn();
 		}
 	}
 

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c27f6c510f408140aaf0571d221c170, type: 3}
-  m_Name: FirstHouse
+  m_Name: House2
   m_EditorClassIdentifier: 
   PlayerLivesHere: 0
-  Rent: 500
-  Price: 9999999
+  Rent: 350
+  Price: 0
   SocialScoreNeeded: 0
   comfortLevel: 0
   FurnitureList: []
