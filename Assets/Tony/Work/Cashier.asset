@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba031db570b7244e8b43c683203a01c, type: 3}
   m_Name: Cashier
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Kostco's Cashier
   OpenTime: 0
   CloseTime: 0
   MinWorkHour: 0
   MaxWorkHour: 0
   RankList:
-  - Name: Cashier at Convenience Store
-    Salary: 13
+  - Name: 'Cashier at Kostco''s '
+    Salary: 11
     WorkHourNeed: 0
     MinSocialScore: 0
     HungryCost: 3

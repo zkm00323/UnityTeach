@@ -6,17 +6,25 @@ using UnityEngine.SceneManagement;
 public class SceneExit : MonoBehaviour
 {
     public string sceneToLoad;
-    [SerializeField]
-    private Transform spawnPoint;
+    public string previousScene;
 
+    private float delayTime = 1f;
 
     private void OnTriggerEnter(Collider other)
     {
       if (other.gameObject.tag.Equals("Player"))
-            SceneCtrl.Instance.ChangeScene(sceneToLoad);
-        /*PlayerMovement.Player.GetComponent<CharacterController>()
-                 .Move(spawnPoint.position);*/
+        {
+            Invoke("SceneChangeDelay", delayTime);
 
+
+        }
+
+
+    }
+    void SceneChangeDelay()
+    {
+        SceneCtrl.Instance.ChangeScene(sceneToLoad);
+        GameCtrl.Instance.EnterDoor(previousScene, sceneToLoad);
     }
 
 

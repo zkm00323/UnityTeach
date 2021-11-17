@@ -29,10 +29,31 @@ public class GameCtrl : MonoBehaviour {
 
     IEnumerator WaitForSceneLoad(string scenename)
     {
-        while (SceneManager.GetActiveScene().name != scenename)
+
+        //yield return new WaitForSeconds(0.5f);
+        Debug.Log($"{scenename}");
+        Debug.Log($"{SceneManager.GetActiveScene().name}");
+        while (SceneManager.GetActiveScene().name != scenename) //loop until it sees the scene name changes to the new scene name 
         {
             yield return null;
         }
+
+        Debug.Log($"{SceneManager.GetActiveScene().name}");
+
+        GameObject entrance = GameObject.Find($"from{_previousSceneName}"); //find the object in the scene with the name "fromSCENENAME" 
+        Debug.Log($"entrance found {entrance.name}" );
+        /*PlayerMovement.Player.GetComponent<CharacterController>()
+        .Move(PlayerMovement.Player.transform.position-entrance.transform.position);*/
+        
+        Debug.Log($"Entrance pos: {entrance.transform.position}");
+
+        PlayerMovement.Player.MoveTo(entrance.transform.position);
+        
+        /*var player = GameObject.FindGameObjectWithTag("Player");
+        Debug.Log($"Player pos: {PlayerMovement.Player.transform.position}");
+        // PlayerMovement.Player.transform.position = entrance.transform.position;
+        player.transform.position = entrance.transform.position;
+        Debug.Log($"Player pos: {PlayerMovement.Player.transform.position}");*/
 
     }
 }

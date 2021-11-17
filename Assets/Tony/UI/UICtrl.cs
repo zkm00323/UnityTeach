@@ -219,6 +219,7 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 		MoneyUI.playerMoney.AddMoney((int)Math.Floor( info.Salary*(workHour+1)));
 		PlayerData.LIFE.Instance.Hunger -= info.HungryCost *(float)workHour;
 		PlayerData.LIFE.Instance.Hygiene -= info.HygieneCost *(float)workHour;
+		PlayerData.LIFE.Instance.Energy -= info.EnergyCost * (float)workHour;
 		
 		PlayerData.Skills.Instance.peopleSkillPoint += (int)(info.peopleSkillUp * workHour); //work Hour to int??????
 		PlayerData.Skills.Instance.brainPowerPoint += (int)(info.brainPowerUp * workHour);

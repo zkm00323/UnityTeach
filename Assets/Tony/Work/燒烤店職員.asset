@@ -23,7 +23,7 @@ MonoBehaviour:
     WorkHourNeed: 0
     MinSocialScore: 0
     HungryCost: 5
-    EnergyCost: 5
+    EnergyCost: 7
     HygieneCost: 5
     peopleSkillUp: 0
     brainPowerUp: 0

@@ -34,6 +34,8 @@ public class GenItemInScene : MonoBehaviour{
 			LastObj = Instantiate(_GenObj, _PosTrans.position, _PosTrans.rotation);
 			//make the object move to above trashcan after player searched it
 		}
+
+		if (LastObj != null) { }; //how to check for null????/
 	}
 
 	

@@ -19,9 +19,9 @@ public class WorkWindowUICtrl : MonoBehaviour
 	private double Value;
 	public void Setup(WorkData data){
 		RankInfo.text = data.Info.RankList[data.RankIndex].Name + "[" + data.Info.RankList[data.RankIndex].Salary + "$/h]";
-		HungryCost.text = "飢餓消耗:" + data.Info.RankList[data.RankIndex].HungryCost + "h";
-		EnergyCost.text = "能量消耗:" + data.Info.RankList[data.RankIndex].EnergyCost + "h";
-		HygieneCost.text = "衛生消耗:" + data.Info.RankList[data.RankIndex].HygieneCost + "h";
+		HungryCost.text = "Hunger Cost:" + data.Info.RankList[data.RankIndex].HungryCost + "h";
+		EnergyCost.text = "Energy Cost:" + data.Info.RankList[data.RankIndex].EnergyCost + "h";
+		HygieneCost.text = "Hygiene Cost:" + data.Info.RankList[data.RankIndex].HygieneCost + "h";
 		Data = data;
 		WorkZoomer.ZoomIn();
 	}

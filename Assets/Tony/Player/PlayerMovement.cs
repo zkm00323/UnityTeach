@@ -81,5 +81,12 @@ public class PlayerMovement : MonoBehaviour{
         }*/
 
     }
+
+    public void MoveTo(Vector3 targetPoint) //simply move to a point
+    {
+        Vector3 moveVector = targetPoint - Player.transform.position;
+        controller.Move(moveVector);
+
+    }
     
 }

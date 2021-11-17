@@ -15,14 +15,14 @@ public class SceneEntrance : MonoBehaviour
 
     private void Awake()
     {
-        MovePlayerHere();
+        //MovePlayerHere();
         Debug.Log("player is moved!");
     }
     //public Transform ExitPos;
     
     //different scene has different spawn point
 
-    public void MovePlayerHere()
+    /*public void MovePlayerHere()
     {
         //if previous scene name == xxx 
        if (PreviousScene.PreviousLevel == "MAINScene" )
@@ -32,7 +32,7 @@ public class SceneEntrance : MonoBehaviour
         if (PreviousScene.PreviousLevel == "ConvenienceStore")
             PlayerMovement.Player.GetComponent<CharacterController>()
                .Move(spawnPoint2.position);
-    }
+    }*/
 
     
     //method that checks for last scene
