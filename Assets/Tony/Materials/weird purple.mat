@@ -20,9 +20,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: billboard 2
+  m_Name: weird purple
   m_Shader: {fileID: 4800000, guid: f7e38193b7f064d7380403618fd8b69e, type: 3}
-  m_ShaderKeywords: _CELPRIMARYMODE_SINGLE _TEXTUREBLENDINGMODE_MULTIPLY _UNITYSHADOWMODE_MULTIPLY
+  m_ShaderKeywords: DR_GRADIENT_ON _CELPRIMARYMODE_SINGLE _TEXTUREBLENDINGMODE_MULTIPLY
+    _UNITYSHADOWMODE_MULTIPLY
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
@@ -69,20 +70,20 @@ Material:
     - _GradientAngle: 0
     - _GradientCenterX: 0
     - _GradientCenterY: 0
-    - _GradientEnabled: 0
-    - _GradientSize: 10
+    - _GradientEnabled: 1
+    - _GradientSize: 4.75
     - _LightContribution: 0
     - _LightFalloffSize: 0.0001
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
     - _OutlineDepthOffset: 0
     - _OutlineScale: 1
-    - _OutlineWidth: 1.7
+    - _OutlineWidth: 0
     - _OverrideLightmapDir: 0
     - _QueueOffset: 0
     - _RimEnabled: 0
-    - _SelfShadingSize: 0.768
-    - _SelfShadingSizeExtra: 0.6
+    - _SelfShadingSize: 0.881
+    - _SelfShadingSizeExtra: 0.214
     - _ShadowEdgeSize: 0.228
     - _ShadowEdgeSizeExtra: 0.05
     - _SpecularEnabled: 0
@@ -96,15 +97,15 @@ Material:
     - _VertexColorsEnabled: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.7075472, g: 0, b: 0.43372536, a: 1}
-    - _ColorDim: {r: 0.05660379, g: 0.0000000071975443, b: 0, a: 1}
+    - _BaseColor: {r: 0.19045922, g: 0.6267404, b: 0.9433962, a: 1}
+    - _ColorDim: {r: 0.3301887, g: 0, b: 0, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
-    - _ColorDimExtra: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _ColorDimExtra: {r: 1, g: 0.20861846, b: 0, a: 1}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
-    - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
-    - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
-    - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _ColorGradient: {r: 0.7924528, g: 0.054181635, b: 0, a: 1}
+    - _FlatRimColor: {r: 0.6698113, g: 0, b: 0, a: 1}
+    - _FlatSpecularColor: {r: 0.8679245, g: 0, b: 0, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _OutlineColor: {r: 0.09433961, g: 0.09433961, b: 0.09433961, a: 1}
+    - _OutlineColor: {r: 1, g: 0.973182, b: 0.7962264, a: 1}
     - _UnityShadowColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
   m_BuildTextureStacks: []

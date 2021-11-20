@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestDatabase : MonoBehaviour //attach to a gmae object
+public class QuestDatabase : MonoBehaviour //attach to a Questing gameobject
 {
     //dictionary to keep track of what quest has what status
     //key- quest name     value- array of int

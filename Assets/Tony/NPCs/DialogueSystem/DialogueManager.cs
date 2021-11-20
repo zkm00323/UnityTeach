@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnte
             EndDialogue();
         }
 
-        for (int i = 0; i < ResponseButtons.Count; i++)
+        for (int i = 0; i < ResponseButtons.Count; i++) //also player making choices
         {
             ResponseButtons[i].GetComponentInChildren<Text>().text = dialogue.playerDialogue[i];
             //buttonobj.GetComponentInChildren<Text>().text = "bla bla";
@@ -79,7 +79,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnte
     #region PlayerResponseButton //is there a better way to write this?
     public void Button1_Response()
     {
-        optionSelected = true;
+        optionSelected = true; //call the quest giver?
 
         //1 second delay then do the below
         npcDialogueBox.text = dialogue.npcDialogue[1];

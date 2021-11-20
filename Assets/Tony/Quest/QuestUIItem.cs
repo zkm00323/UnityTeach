@@ -17,6 +17,7 @@ public class QuestUIItem : MonoBehaviour //attach to each quest prefab slot
     }
     public void Setup(Quest questToSetup) //allows you to change quest name in inspector
     {
+        quest = questToSetup;
         questName.text = questToSetup.questName;
         questProgress.text = questToSetup.goal.countCurrent + "/" + questToSetup.goal.countNeeded;
     }
@@ -26,7 +27,7 @@ public class QuestUIItem : MonoBehaviour //attach to each quest prefab slot
         if (this.quest == quest)
         {
             questProgress.text = quest.goal.countCurrent + "/" + quest.goal.countNeeded;
-
+            Debug.Log("Update Quest Progress"); 
         }
 
     }

@@ -87,9 +87,9 @@ Material:
     - _FlatRimSize: 0.4
     - _FlatShadowsEnabled: 1
     - _FlatSmoothness: 0.362
-    - _FlatSpecularEdgeSmoothness: 0.5
+    - _FlatSpecularEdgeSmoothness: 0.815
     - _FlatSpecularEnabled: 1
-    - _FlatSpecularSize: 0.16
+    - _FlatSpecularSize: 0.716
     - _FlatSpecularSmoothness: 0.5
     - _Flatness: 1
     - _FlatnessExtra: 1

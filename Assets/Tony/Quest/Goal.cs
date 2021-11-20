@@ -13,6 +13,7 @@ public class Goal //doesn't need to be attached to any objct
     public void Increment(int amount)
     {
         countCurrent = Mathf.Min(countCurrent + amount, countNeeded); //Mathf.Min finds the lower one in the two values
+        Debug.Log("Increment!!!");
         if (countCurrent >= countNeeded)
         {
             this.completed = true;

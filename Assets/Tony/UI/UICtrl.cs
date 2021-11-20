@@ -9,13 +9,25 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 	public static UICtrl Instance;
 
 
+
+	
+
+
 	[Header("Craft")] 
 	public CraftingWindow CraftingCtrl;
 	public void Button_CraftWindow() //allows to open on UI
     {
 		CraftingCtrl.OpenCraftWindow();
     }
+
 	
+
+	public void Button_OpenQuestWindow()
+	{
+		Debug.Log("Y");
+	}
+
+
 	[Header("Health Stats")]
 	public CustomBarUICtrl HealthBar;
 	public CustomBarUICtrl HungerBar;

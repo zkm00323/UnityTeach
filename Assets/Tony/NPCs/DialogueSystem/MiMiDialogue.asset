@@ -14,11 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCname: Mimi
   npcDialogue:
-  - "Hey whats up\t"
-  - I'm doing ok
-  - I'm from downtown
-  - See ya
+  - What's up?
+  - I ain't got no money
+  - Right down the corner
   playerDialogue:
-  - No much How bout you
-  - "where are you from?\t"
-  - Bye
+  - Beg
+  - Where do I find Bobo's burger?

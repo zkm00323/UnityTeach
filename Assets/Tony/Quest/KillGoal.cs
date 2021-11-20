@@ -21,6 +21,10 @@ public class KillGoal : Goal //inherit from goal base class
         if (this.enemyID== enemyID)
         {
             Increment(1); //increment is from base goal class
+            if (this.completed)
+            {
+                EventController.OnEnemyDied -= EnemyKilled;
+            }
         }
     }
 
