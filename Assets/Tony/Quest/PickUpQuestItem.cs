@@ -14,7 +14,7 @@ public class PickUpQuestItem : ItemMono
 
     void Start()
     {
-        QuestItemID = 100;
+        //QuestItemID = 100;
     }
 
     public override void OnClick()

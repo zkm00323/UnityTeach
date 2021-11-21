@@ -1672,7 +1672,6 @@ MonoBehaviour:
   _originalMaterial: {fileID: 2100000, guid: 0bf3b15121e4594488c1380861cc0f01, type: 2}
   _highlightMaterial: {fileID: 2002985388980897473, guid: 45add7e63ad218340aa6c4a0941d5a27, type: 3}
   QuestItemID: 100
-  thisQuestName: FindDogQuest
 --- !u!1 &2054538216 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8801813956271192700, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
@@ -1905,6 +1904,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1433472241}
     m_Modifications:
+    - target: {fileID: 3249275273102978346, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 354717245327459765}
+    - target: {fileID: 3249275273102978346, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249275273102978346, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249275273102978346, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8801813955550487147, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

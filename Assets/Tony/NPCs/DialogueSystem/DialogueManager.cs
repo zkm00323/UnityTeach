@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    public QuestGiver questGiver;
     public NPCDialogue dialogue;
     //create different dialogue object based on relationship level
     bool isTalking = false;
@@ -76,10 +77,11 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnte
    
     }
 
-    #region PlayerResponseButton //is there a better way to write this?
+    #region PlayerResponseButton 
     public void Button1_Response()
     {
         optionSelected = true; //call the quest giver?
+        //questGiver.GiveQuest();
 
         //1 second delay then do the below
         npcDialogueBox.text = dialogue.npcDialogue[1];
