@@ -78,7 +78,7 @@ Material:
     - _LightmapDirectionYaw: 0
     - _OutlineDepthOffset: 0
     - _OutlineScale: 1
-    - _OutlineWidth: 0
+    - _OutlineWidth: 1
     - _OverrideLightmapDir: 0
     - _QueueOffset: 0
     - _RimEnabled: 1
@@ -106,6 +106,6 @@ Material:
     - _FlatRimColor: {r: 0.6698113, g: 0, b: 0, a: 1}
     - _FlatSpecularColor: {r: 0.09740115, g: 0.9056604, b: 0.5438233, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _OutlineColor: {r: 0.9528302, g: 0.46842018, b: 0, a: 1}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnityShadowColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
   m_BuildTextureStacks: []

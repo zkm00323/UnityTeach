@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 268391789}
   - component: {fileID: 268391788}
   - component: {fileID: 268391791}
+  - component: {fileID: 268391792}
   m_Layer: 0
   m_Name: ShowerRoom
   m_TagString: Untagged
@@ -393,6 +394,21 @@ MonoBehaviour:
   Info: {fileID: 11400000, guid: e95b0a4093b3a1e4690d568b4d0fd5c3, type: 2}
   defaultColor: {fileID: 2100000, guid: d7e2d4c1e96658b4d915bbaab8c52868, type: 2}
   highlight: {fileID: 2100000, guid: 57fd6c4741f902e4f817bf97148c2991, type: 2}
+--- !u!114 &268391792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268391786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e980f70a5b0a4b45ac6e15c617d9ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSize: 0
+  outlineSize: 0
+  distanceToAct: 2
 --- !u!114 &290344170 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8801813955852187006, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
@@ -864,6 +880,7 @@ GameObject:
   - component: {fileID: 1188084113}
   - component: {fileID: 1188084112}
   - component: {fileID: 1188084117}
+  - component: {fileID: 1188084118}
   m_Layer: 0
   m_Name: ItemSpawner
   m_TagString: Untagged
@@ -918,7 +935,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 93e9643bc5f67a04d96b5187265c9381, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -979,6 +996,21 @@ MonoBehaviour:
   _originalMaterial: {fileID: 2100000, guid: 2fdc95aeb030d7e44926472c300f0c5d, type: 2}
   _highlightMaterial: {fileID: 2002985388980897473, guid: 45add7e63ad218340aa6c4a0941d5a27, type: 3}
   moveFoodHere: {fileID: 804912304}
+--- !u!114 &1188084118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188084111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e980f70a5b0a4b45ac6e15c617d9ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSize: 0
+  outlineSize: 7
+  distanceToAct: 2
 --- !u!1 &1433472237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,17 +1861,6 @@ PrefabInstance:
       objectReference: {fileID: 792910847}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
---- !u!114 &354717245327459765 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 354717245327459766, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
-  m_PrefabInstance: {fileID: 354717245327459764}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f20177ed052d1a843bc26949fa8f122a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3541358137452151615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1907,7 +1928,7 @@ PrefabInstance:
     - target: {fileID: 3249275273102978346, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 354717245327459765}
+      objectReference: {fileID: 0}
     - target: {fileID: 3249275273102978346, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EndDialogue
@@ -1923,11 +1944,11 @@ PrefabInstance:
     - target: {fileID: 8801813955550487147, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 354717245327459765}
+      objectReference: {fileID: 0}
     - target: {fileID: 8801813956090738375, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 354717245327459765}
+      objectReference: {fileID: 0}
     - target: {fileID: 8801813956271192700, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
       propertyPath: m_Name
       value: dialogueUI
@@ -2023,7 +2044,7 @@ PrefabInstance:
     - target: {fileID: 8801813956826775188, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 354717245327459765}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
 --- !u!1001 &9050255575452993062

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class DialogueManager : MonoBehaviour, IPointerClickHandler //quest manager without quests but responses from NPCs
 {
     public QuestGiver questGiver;
     public NPCDialogue dialogue;
@@ -122,7 +122,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnte
         dialogueUI.SetActive(false);
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    /*public void OnPointerEnter(PointerEventData eventData)
     {
         throw new System.NotImplementedException();
     }
@@ -130,5 +130,5 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler, IPointerEnte
     public void OnPointerExit(PointerEventData eventData)
     {
         throw new System.NotImplementedException();
-    }
+    }*/
 }

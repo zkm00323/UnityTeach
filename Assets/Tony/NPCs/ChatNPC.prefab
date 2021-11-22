@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 354717245295240263}
   - component: {fileID: 354717245295240262}
   - component: {fileID: 354717245295240261}
-  - component: {fileID: 354717245327459766}
+  - component: {fileID: 1937530107}
   m_Layer: 0
   m_Name: ChatNPC
   m_TagString: Untagged
@@ -97,7 +97,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &354717245327459766
+--- !u!114 &1937530107
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,13 +106,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 354717245295240283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f20177ed052d1a843bc26949fa8f122a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d365233a75184041908f241ad95a453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npc: {fileID: 11400000, guid: 370b7812dbf643b45926a9d5cecb2638, type: 2}
-  player: {fileID: 2813780373872823983, guid: d1876cba666ec2943bb14f582fa1db03, type: 3}
-  dialogueUI: {fileID: 8801813956271192700, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
-  ResponseButtons: []
-  npcName: {fileID: 0}
-  npcDialogueBox: {fileID: 0}
-  playerResponse: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: 74bdf4bcae566d241a30f414bd5c6727, type: 2}
+  dialogueUI: {fileID: 0}
+  playerChoices:
+  - {fileID: 0}
+  - {fileID: 0}
+  nameText: {fileID: 0}
+  dialogueText: {fileID: 0}

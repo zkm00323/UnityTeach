@@ -4,23 +4,21 @@ using UnityEngine;
 
 public class ObjectOutliner : MonoBehaviour
 {
-    public GameObject player;
-    public Shader shader1;
-    public Shader shader2;
-    public float outlineSize = 0.01f;
+    private GameObject player;
+
+    public float defaultSize;
+    public float outlineSize;
     public float distanceToAct = 2;
-    public Color outlineColor = Color.black;
+    //public Color outlineColor = Color.black;
     private bool alreadyNear = false;
 
 
-    public Material material;
-    public Material Outlined;
+    
 
 
     void Start()
     {
-        shader1 = Shader.Find("Outline");
-        shader2 = Shader.Find("Outlined/Silhouetted Diffuse");
+        player = GameObject.FindGameObjectWithTag("Player");
 
     }
 
@@ -32,8 +30,14 @@ public class ObjectOutliner : MonoBehaviour
             if (!alreadyNear)
             {
                 alreadyNear = true;
-                //gameObject.GetComponent<Renderer>().material
+                gameObject.GetComponent<MeshRenderer>().material.SetFloat("_OutlineWidth", outlineSize);
             }
+            
+        }
+        else
+        {
+            alreadyNear = false;
+            gameObject.GetComponent<MeshRenderer>().material.SetFloat("_OutlineWidth", defaultSize);
         }
     }
 
