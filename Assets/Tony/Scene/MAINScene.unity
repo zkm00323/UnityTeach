@@ -759,6 +759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Info: {fileID: 11400000, guid: ece2474f3969bc44cb65a6cd16424210, type: 2}
   ExitPos: {fileID: 1688296498}
+  houseScene: House1
 --- !u!65 &932546539
 BoxCollider:
   m_ObjectHideFlags: 0

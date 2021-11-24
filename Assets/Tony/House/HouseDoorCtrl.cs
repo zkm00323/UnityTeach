@@ -12,6 +12,8 @@ public class HouseDoorCtrl : MonoBehaviour{
     public HouseSO Info;
     public Transform ExitPos;
 
+    public string houseScene;
+
     private void OnApplicationQuit()
     {
         //Info.PlayerLivesHere = false; //reset player's housing state 
@@ -65,7 +67,7 @@ public class HouseDoorCtrl : MonoBehaviour{
     void Enter(){
         LastExitPos = ExitPos.position;
         LastInfo = Info;
-        SceneCtrl.Instance.ChangeScene(SceneNameDefine.Scene.HOUSE_SCENE);
+        SceneCtrl.Instance.ChangeScene(houseScene);
     }
 
     public static void Exit(){
