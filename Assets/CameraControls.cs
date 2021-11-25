@@ -22,8 +22,8 @@ public class CameraControls : MonoBehaviour
         if (Input.GetMouseButtonDown(2))
         {
             isDragging = true;
-            freeLookComponent.m_XAxis.m_MaxSpeed = 500;
-            //freeLookComponent.m_YAxis.m_MaxSpeed = 100;
+            freeLookComponent.m_XAxis.m_MaxSpeed = 300;
+            //freeLookComponent.m_YAxis.m_MaxSpeed = 0.5f;
             
 
         }
