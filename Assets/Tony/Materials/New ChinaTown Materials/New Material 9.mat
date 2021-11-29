@@ -22,7 +22,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: New Material 9
   m_Shader: {fileID: 4800000, guid: f7e38193b7f064d7380403618fd8b69e, type: 3}
-  m_ShaderKeywords: _CELPRIMARYMODE_SINGLE _TEXTUREBLENDINGMODE_MULTIPLY _UNITYSHADOWMODE_MULTIPLY
+  m_ShaderKeywords: DR_SPECULAR_ON _CELPRIMARYMODE_SINGLE _TEXTUREBLENDINGMODE_MULTIPLY
+    _UNITYSHADOWMODE_MULTIPLY
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
@@ -117,7 +118,7 @@ Material:
     - _FlatRimLightAlign: 0
     - _FlatRimSize: 0.5
     - _FlatSpecularEdgeSmoothness: 0.07
-    - _FlatSpecularSize: 0.69
+    - _FlatSpecularSize: 0.902
     - _Flatness: 0.61
     - _FlatnessExtra: 1
     - _GlossMapScale: 0
@@ -148,7 +149,7 @@ Material:
     - _ShadowEdgeSizeExtra: 0.05
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
-    - _SpecularEnabled: 0
+    - _SpecularEnabled: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
@@ -170,7 +171,7 @@ Material:
     - _ColorGradient: {r: 0.2814169, g: 0.2830189, b: 0.28167972, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatRimColor: {r: 0.5529412, g: 0.69411767, b: 0.54509807, a: 1}
-    - _FlatSpecularColor: {r: 0.5529412, g: 0.69411767, b: 0.54509807, a: 1}
+    - _FlatSpecularColor: {r: 0.69411767, g: 0.3529412, b: 1, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0.4666667, g: 0.2627451, b: 0.11764707, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

@@ -1700,16 +1700,20 @@ PrefabInstance:
       value: 2.4753
       objectReference: {fileID: 0}
     - target: {fileID: 4399261572743249696, guid: f7af75beca6409e4db09b2129b6f1f96, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.186817
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399261572743249696, guid: f7af75beca6409e4db09b2129b6f1f96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -54.44
+      value: -54.89
       objectReference: {fileID: 0}
     - target: {fileID: 4399261572743249696, guid: f7af75beca6409e4db09b2129b6f1f96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.54
+      value: -1.41
       objectReference: {fileID: 0}
     - target: {fileID: 4399261572743249696, guid: f7af75beca6409e4db09b2129b6f1f96, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.83
+      value: 19.62
       objectReference: {fileID: 0}
     - target: {fileID: 4399261572743249696, guid: f7af75beca6409e4db09b2129b6f1f96, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2499,7 +2503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e980f70a5b0a4b45ac6e15c617d9ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToAct: 7
+  distanceToAct: 5
   defaultWidth: 0
   outlineSize: 6
 --- !u!114 &635668688
@@ -4023,7 +4027,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh772678
+  m_Name: pb_Mesh1126068
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6055,7 +6059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2606141559704397959, guid: 6d1835985c0e22e4aa3e5c729923c828, type: 3}
       propertyPath: weight
-      value: 0.209
+      value: 0.669
       objectReference: {fileID: 0}
     - target: {fileID: 2606141559704397959, guid: 6d1835985c0e22e4aa3e5c729923c828, type: 3}
       propertyPath: sharedProfile

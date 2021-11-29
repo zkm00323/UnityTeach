@@ -66,6 +66,9 @@ public class GameTimeManager : MonoBehaviour{
         TimeRegDic.Add(onDo, Instance.StartCoroutine(ItemEventCounter(spaceGameSec, onDo)));
     }
 
+    
+
+
     public static void UnRegisterTimeAciton(Action onDo){
         if(!TimeRegDic.ContainsKey(onDo)) return;
         Instance.StopCoroutine(TimeRegDic[onDo]);

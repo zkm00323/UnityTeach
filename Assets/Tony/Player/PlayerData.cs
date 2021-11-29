@@ -151,7 +151,7 @@ public class PlayerData{
 	private float _healthDownValue = 1;
 	public float _healthDownSpeed = 3f;
 	void UpdateHealthDown(){
-		if (LIFE.Instance.Hunger <= 0 || LIFE.Instance.Hygiene <=0)
+		if (LIFE.Instance.Hunger <= 0 || LIFE.Instance.Hygiene <=0 || LIFE.Instance.Energy <=0)
 		{
 			LIFE.Instance.Health -= _healthDownValue * Time.deltaTime * _healthDownSpeed;
 		}
@@ -162,7 +162,7 @@ public class PlayerData{
 	#region HungerDown
 	
 	private float _hungerDownValue = 1;
-	public float _hungerDownSpeed = 3f;
+	public float _hungerDownSpeed = 0.6f;
 	void UpdateHungerDown()
 	{
 		LIFE.Instance.Hunger -= _hungerDownValue * Time.deltaTime * _hungerDownSpeed;
@@ -174,7 +174,7 @@ public class PlayerData{
 	#region HygieneDown
 	
 	private float _HygieneDownValue = 1;
-	public float _HygieneDownSpeed = 3f;
+	public float _HygieneDownSpeed = 0.8f;
 	void UpdateHygieneDown()
 	{
 		LIFE.Instance.Hygiene -= _HygieneDownValue * Time.deltaTime * _HygieneDownSpeed;
@@ -189,6 +189,8 @@ public class PlayerData{
 	void UpdateEnergyDown()
 	{
 		//Energy is only down when player is running or working
+		//if PlayerMovement.mstate == Running
+		
 	}
     #endregion
 

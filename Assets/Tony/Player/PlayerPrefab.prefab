@@ -1138,7 +1138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f87f4730a30274793e3117127ee189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 3
+  walkSpeed: 2
+  runSpeed: 5.5
   _gravity: 0
   rotationSpeed: 650
 --- !u!82 &5302373869797567308
@@ -1152,7 +1153,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e70002263e94b554b86cfff2f0abeaa5, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: -0.48
   Loop: 1

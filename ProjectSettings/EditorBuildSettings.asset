@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tony/Scene/Bobo's.unity
     guid: 46a7d2d98a7756f48afe85dadab55229
+  - enabled: 1
+    path: Assets/Tony/Scene/MidTown.unity
+    guid: 9a5f58592c140b944b04424e49107cc0
+  - enabled: 1
+    path: Assets/Tony/Scene/y2kRestaurant.unity
+    guid: 037e04b6dbcfca941b58b326491a310e
   m_configObjects: {}
