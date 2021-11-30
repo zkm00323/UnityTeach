@@ -146,33 +146,6 @@ public class PlayerMovement : MonoBehaviour{
             }
 
             firstButtonPressed = true;
-/*
-            Debug.Log("walk");
-            
-
-            if (firstButtonPressed)
-            {
-                if (Time.time - timeOfFirstButton < 0.3f)
-                {
-                    animator.SetBool("isRunning", true);
-                    
-                    Debug.Log("run");
-                    //make it run
-
-                }
-                firstButtonPressed = false;
-
-              
-            }
-            else //還沒案第一個按鈕可是上下左右建案了
-            {
-                timeOfFirstButton = Time.time;
-                animator.SetBool("isWalking", true);
-                Debug.Log("walk");
-
-                firstButtonPressed = true;
-                
-            }*/
         }
         else
         {
@@ -199,15 +172,6 @@ public class PlayerMovement : MonoBehaviour{
             
 
 
-            
-            /*            if (firstButtonPressed) {
-
-
-
-                        }
-                        animator.SetBool("isWalking", false);
-                        animator.SetBool("isRunning", false);
-                        Debug.Log("stop");*/
 
             firstButtonPressed = false;
 
@@ -221,10 +185,7 @@ public class PlayerMovement : MonoBehaviour{
     {
         bool isWalking = animator.GetBool("isWalking");
         bool isRunning = animator.GetBool("isRunning");
-        /*if (isMovementPressed)
-        {
-            animator.SetBool("isWalking", true);
-        }*/
+        
 
     }
 
