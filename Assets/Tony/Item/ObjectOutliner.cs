@@ -13,7 +13,8 @@ public class ObjectOutliner : MonoBehaviour //attach to object you want to highl
     private bool alreadyNear = false;
     public float defaultWidth;
     public float outlineSize;
-    
+
+    public GameObject StartWorkButton;
 
 
 
@@ -34,6 +35,7 @@ public class ObjectOutliner : MonoBehaviour //attach to object you want to highl
                 alreadyNear = true;
                 //gameObject.GetComponent<MeshRenderer>().material.SetFloat("_OutlineWidth", outlineSize);
                 gameObject.GetComponent<OutlineAddOn>().OutlineWidth = outlineSize;
+                //enable the work button on top of the counter and allows player to click on it
             }
             
         }
@@ -41,6 +43,7 @@ public class ObjectOutliner : MonoBehaviour //attach to object you want to highl
         {
             alreadyNear = false;
             gameObject.GetComponent<OutlineAddOn>().OutlineWidth = 0;
+            //disable the work button
         }
     }
 

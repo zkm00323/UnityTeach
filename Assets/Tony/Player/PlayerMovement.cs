@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+//using UnityEngine.UIElements;
 using UnityEngine.UI;
 
 
@@ -77,11 +77,13 @@ public class PlayerMovement : MonoBehaviour{
                 break;
             case MotionState.Walking:
                 animator.SetBool("isWalking", true);
+                FindObjectOfType<AudioManager>().PlaySound("PlayerWalk");
                 //walkSpeed = 2f;
                 break;
             case MotionState.Running:
                 animator.SetBool("isWalking", true);
                 animator.SetBool("isRunning", true);
+                FindObjectOfType<AudioManager>().PlaySound("PlayerWalk");
                 //walkSpeed = 6f;
                 break;
         }
@@ -90,6 +92,8 @@ public class PlayerMovement : MonoBehaviour{
 
     void ArrowsKeyPressed()
     {
+        
+
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -109,8 +113,7 @@ public class PlayerMovement : MonoBehaviour{
     private void playerMoves()
     {
 
-
-
+        
 
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");

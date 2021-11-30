@@ -20,3 +20,4 @@ MonoBehaviour:
   M: {fileID: 0}
   Prefeb: {fileID: 0}
   hungerPoints: 26
+  energyPoints: 10

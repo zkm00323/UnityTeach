@@ -24,8 +24,12 @@ public class MoneyUI : MonoBehaviour
 
     public void AddMoney(int moneyToAdd)
     {
+        FindObjectOfType<AudioManager>().PlaySound("MoneyEarned"); //play the kaching sound
+
         PlayerData.Instance.money += moneyToAdd;
         moneyText.text = "coins: " + PlayerData.Instance.money.ToString();
+        FindObjectOfType<AudioManager>().PlaySound("MoneyEarned"); //play the kaching sound
+
 
     }
     public bool SubtractMoney(int moneyToSubtract)
