@@ -23,9 +23,7 @@ public class PlayerMovement : MonoBehaviour{
 
     private bool arrowsKeyPressed; //if any of the arrows keys are pressed
     
-    private bool firstButtonPressed;
-    private float timeOfFirstButton;
-    private bool reset;
+   
 
     enum MotionState { 
         Idle,
@@ -77,13 +75,13 @@ public class PlayerMovement : MonoBehaviour{
                 break;
             case MotionState.Walking:
                 animator.SetBool("isWalking", true);
-                FindObjectOfType<AudioManager>().PlaySound("PlayerWalk");
+                animator.SetBool("isRunning", false);
+
                 //walkSpeed = 2f;
                 break;
             case MotionState.Running:
                 animator.SetBool("isWalking", true);
                 animator.SetBool("isRunning", true);
-                FindObjectOfType<AudioManager>().PlaySound("PlayerWalk");
                 //walkSpeed = 6f;
                 break;
         }
@@ -122,6 +120,8 @@ public class PlayerMovement : MonoBehaviour{
 
         direction.y -= _gravity;
 
+        //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high
+
         //controller.Move(direction * Time.deltaTime * walkSpeed); //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high
         if (direction != Vector3.zero)
         {
@@ -131,50 +131,27 @@ public class PlayerMovement : MonoBehaviour{
 
 
         //walk
-        if (arrowsKeyPressed)
+        if (arrowsKeyPressed && !Input.GetKey(KeyCode.RightShift))
         {
-            if (hold)
-            {
-                transitState(MotionState.Running);
-                controller.Move(direction * Time.deltaTime * runSpeed); //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high
 
-            }
-            else {
-                transitState(MotionState.Walking);
-                controller.Move(direction * Time.deltaTime * walkSpeed); //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high
-
-            }
-
-            firstButtonPressed = true;
+            
+           
+         transitState(MotionState.Walking);
+         controller.Move(direction * Time.deltaTime * walkSpeed); //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high
+   
         }
+        else if (arrowsKeyPressed&& Input.GetKey(KeyCode.RightShift))
+        {
+
+            transitState(MotionState.Running);
+            controller.Move(direction * Time.deltaTime * runSpeed); //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high
+
+        }
+        
+
         else
         {
-
-            if (firstButtonPressed && !hold)
-            {
-                lastUnpressed = Time.time;
-                hold = true;
-                print("hold -> true");
-            }
-
-            if (firstButtonPressed && mState == MotionState.Running)
-            {
-                hold = false;
-            }
-            if (hold)
-            {
-                if (Time.time - lastUnpressed > pressSpan)
-                    hold = false;
-            }
-
-
             transitState(MotionState.Idle);
-            
-
-
-
-            firstButtonPressed = false;
-
         }
 
     }
@@ -197,13 +174,13 @@ public class PlayerMovement : MonoBehaviour{
     }
 
 
-    //make player run
     
 
-    
 
-    
-    
+
+
+
+
 
 
 }

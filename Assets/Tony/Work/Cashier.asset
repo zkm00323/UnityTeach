@@ -15,8 +15,8 @@ MonoBehaviour:
   Name: Kostco's Cashier
   OpenTime: 0
   CloseTime: 0
-  MinWorkHour: 0
-  MaxWorkHour: 0
+  MinWorkHour: 1
+  MaxWorkHour: 8
   RankList:
   - Name: 'Cashier at Kostco''s '
     Salary: 11

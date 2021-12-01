@@ -410,6 +410,7 @@ MonoBehaviour:
   distanceToAct: 2
   defaultWidth: 0
   outlineSize: 8
+  StartWorkButton: {fileID: 0}
 --- !u!114 &268391793
 MonoBehaviour:
   m_ObjectHideFlags: 0
