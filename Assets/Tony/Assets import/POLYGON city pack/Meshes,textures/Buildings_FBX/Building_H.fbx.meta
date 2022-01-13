@@ -1,96 +1,114 @@
 fileFormatVersion: 2
 guid: a00d442b1ceb04441ae014d15c5f7adc
-timeCreated: 1517349134
-licenseType: Store
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Fire_escape_leader
-    400000: //RootNode
-    400002: Fire_escape_leader
-    2300000: //RootNode
-    2300002: Fire_escape_leader
-    3300000: //RootNode
-    3300002: Fire_escape_leader
-    4300000: Building_H
-    4300002: Fire_escape_leader
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Fire_escape_leader
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Fire_escape_leader
+  - first:
+      23: 2300000
+    second: //RootNode
+  - first:
+      23: 2300002
+    second: Fire_escape_leader
+  - first:
+      33: 3300000
+    second: //RootNode
+  - first:
+      33: 3300002
+    second: Fire_escape_leader
+  - first:
+      43: 4300000
+    second: Building_H
+  - first:
+      43: 4300002
+    second: Fire_escape_leader
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Congregate
-    second: {fileID: 2100000, guid: 926f51a7e1b3084468174325c6d89cdf, type: 2}
+    second: {fileID: 2100000, guid: 470b9d05141c49948ae6dd164afe0a12, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door1
-    second: {fileID: 2100000, guid: c95ee2077f20d8e47b8fab61b778c057, type: 2}
+    second: {fileID: 2100000, guid: ca87f287053e39743949364fea61c94a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door2
-    second: {fileID: 2100000, guid: fbfa02d0499791549abc6517affba1d6, type: 2}
+    second: {fileID: 2100000, guid: b9b1022d0f836f444a40a295bb8fc56d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door3
-    second: {fileID: 2100000, guid: cdd970fe3920b1443977be5c53671bae, type: 2}
+    second: {fileID: 2100000, guid: ec8918d51624b7c4d9eea59449bf7cf8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Facade
-    second: {fileID: 2100000, guid: f6fc837ebf04fbf479e5a5804862c742, type: 2}
+    second: {fileID: 2100000, guid: 6a9e01d424ba6954aba05c0728f300da, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Fire_escape_03
-    second: {fileID: 2100000, guid: 2d406ea449e44ad4dbcbaddec52d3103, type: 2}
+    second: {fileID: 2100000, guid: 394e3555899d4364fa1dcc33ad9c0c3a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Fire_escape_04
-    second: {fileID: 2100000, guid: 2253b687d5605a74aaacd8c1b49065df, type: 2}
+    second: {fileID: 2100000, guid: 50fb7b81cd62d5349aaee2b8ff1f5ab5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: WindowFrames
-    second: {fileID: 2100000, guid: 7474e545f3b13bc428ef02623af4a4cd, type: 2}
+    second: {fileID: 2100000, guid: 19dc906a1582f734ebb699a921f3f27e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: fire_escape_01
-    second: {fileID: 2100000, guid: 0ea5251c4a513434183a7f6c3f910611, type: 2}
+    second: {fileID: 2100000, guid: da39ecf4e7633874b874460409eff8a6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: fire_escape_02
-    second: {fileID: 2100000, guid: ddfd6fac98d3d0441bb634f929dde1ed, type: 2}
+    second: {fileID: 2100000, guid: f471a0da278a9854ea8abb263f6c59b8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: roof1
-    second: {fileID: 2100000, guid: 2823d7843dc671c4aaae6e858a54ceb8, type: 2}
+    second: {fileID: 2100000, guid: b27b7d2d978659f4ab0cb5f6e604ccfd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: roof2
-    second: {fileID: 2100000, guid: 443ff262b397def4f9cbf643ee02afa0, type: 2}
+    second: {fileID: 2100000, guid: c5f06660b2848c3478f3a32593fcbfc1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: windows1
-    second: {fileID: 2100000, guid: 9d8bd55425fdd514ca2af7128f30482f, type: 2}
+    second: {fileID: 2100000, guid: d14e953a096427f44a94cf0519d6ade2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: windows2
-    second: {fileID: 2100000, guid: cb46ba16304836e47b2c8164944f17ac, type: 2}
+    second: {fileID: 2100000, guid: 58e5b85457685e847b241e20d6d44b81, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -104,6 +122,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -118,19 +137,31 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -138,10 +169,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -151,14 +185,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

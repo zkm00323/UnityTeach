@@ -1,81 +1,89 @@
 fileFormatVersion: 2
 guid: 304125dc564333d4598543ef0fa739ef
-timeCreated: 1517349032
-licenseType: Store
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Building_G
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      23: 2300000
+    second: //RootNode
+  - first:
+      33: 3300000
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: Building_G
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Congregate
-    second: {fileID: 2100000, guid: 926f51a7e1b3084468174325c6d89cdf, type: 2}
+    second: {fileID: 2100000, guid: 3da74880a866005479f7c6411e47a74a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door2
-    second: {fileID: 2100000, guid: fbfa02d0499791549abc6517affba1d6, type: 2}
+    second: {fileID: 2100000, guid: ba532323998c2c84b8289ca5af92662d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door_frame
-    second: {fileID: 2100000, guid: 3b1f12fb9a4242c45a96663d236097a3, type: 2}
+    second: {fileID: 2100000, guid: e3c4f1cf2795fe44bbbf9279d1598772, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: fa87ceaa8198f234ba739e41b431d6bb, type: 2}
+    second: {fileID: 2100000, guid: 79bc51cb21101f04c874cb9999595460, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.002
-    second: {fileID: 2100000, guid: 3101470bd23c6f944a48b64ed5585472, type: 2}
+    second: {fileID: 2100000, guid: 3aacdb9f7cd5cb140b80f6be7a788654, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Roof
-    second: {fileID: 2100000, guid: f86b91c362dbc2d48b268ba9fe7b2957, type: 2}
+    second: {fileID: 2100000, guid: 00158d0a8a0e2c642aa7f4f6949cb8a3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Window1
-    second: {fileID: 2100000, guid: 694fb58ed5a9fd94b99bd61a8f6ca5a9, type: 2}
+    second: {fileID: 2100000, guid: 56a4e0c7ba2752d42a2426731447fb71, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: WindowFrame
-    second: {fileID: 2100000, guid: ed40f7ead048d004a912abb820c9882b, type: 2}
+    second: {fileID: 2100000, guid: 74e14a972001656418b33bf74fe43823, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: door1
-    second: {fileID: 2100000, guid: c95ee2077f20d8e47b8fab61b778c057, type: 2}
+    second: {fileID: 2100000, guid: a74224997ecb0da4982e57b252f8aa8e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: facade
-    second: {fileID: 2100000, guid: f6fc837ebf04fbf479e5a5804862c742, type: 2}
+    second: {fileID: 2100000, guid: 594e7908db5a463448f664e289e7e2e5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: white
-    second: {fileID: 2100000, guid: e4b9944a89363ff42bddcc9af5235087, type: 2}
+    second: {fileID: 2100000, guid: 61c2cd77938fa644d8912146c7ef3922, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: windows2
-    second: {fileID: 2100000, guid: cb46ba16304836e47b2c8164944f17ac, type: 2}
+    second: {fileID: 2100000, guid: 21eec882bbb3f0f4fa39e51a6420b893, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -89,6 +97,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -103,19 +112,31 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -123,10 +144,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -136,14 +160,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

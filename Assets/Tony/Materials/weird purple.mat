@@ -60,9 +60,9 @@ Material:
     - _Cull: 0
     - _Cutoff: 0.5
     - _DstBlend: 0
-    - _FlatRimEdgeSmoothness: 0.5
+    - _FlatRimEdgeSmoothness: 0.439
     - _FlatRimLightAlign: 0
-    - _FlatRimSize: 0.5
+    - _FlatRimSize: 0.019
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.1
     - _Flatness: 0.617
@@ -83,7 +83,7 @@ Material:
     - _QueueOffset: 0
     - _RimEnabled: 0
     - _SelfShadingSize: 0.881
-    - _SelfShadingSizeExtra: 0.214
+    - _SelfShadingSizeExtra: 0.197
     - _ShadowEdgeSize: 0.228
     - _ShadowEdgeSizeExtra: 0.05
     - _SpecularEnabled: 0
