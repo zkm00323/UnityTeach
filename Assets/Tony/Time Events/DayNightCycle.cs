@@ -40,6 +40,9 @@ public class DayNightCycle : MonoBehaviour
 
     void SunRotates() {
         _Sun.transform.RotateAround(Vector3.zero, Vector3.right, rotationAngle);
+
+        //when GameTimeManager.Time - Time you want the event to happen < 1; 
+        //when GameTimeManager.Time > Time you want event to happen;
     }
 
     void SunIntensity()

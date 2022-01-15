@@ -42,6 +42,9 @@ public class HouseUICtrl : MonoBehaviour {
     public void Button_Leave()
     {
         HouseDoorCtrl.Exit();
+		//allow player to leave house without walking to door
+		
+		
     }
 
 	public void Button_SetType(PlaceableItemType type){

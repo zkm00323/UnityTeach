@@ -36,6 +36,8 @@ public class ObjectOutliner : MonoBehaviour //attach to object you want to highl
                 //gameObject.GetComponent<MeshRenderer>().material.SetFloat("_OutlineWidth", outlineSize);
                 gameObject.GetComponent<OutlineAddOn>().OutlineWidth = outlineSize;
                 //enable the work button on top of the counter and allows player to click on it
+
+                //do a pop up prompting player to use the object something like 'click to use the chair' 
             }
             
         }

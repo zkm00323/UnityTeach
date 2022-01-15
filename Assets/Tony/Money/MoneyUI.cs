@@ -13,7 +13,7 @@ public class MoneyUI : MonoBehaviour
     public TextMeshProUGUI moneyText; //reference to the UI money display
     void Start(){
         playerMoney = this;
-        moneyText.text = "coins: "+ PlayerData.Instance.money.ToString();
+        moneyText.text = "$$: "+ PlayerData.Instance.money.ToString();
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class MoneyUI : MonoBehaviour
         FindObjectOfType<AudioManager>().PlaySound("MoneyEarned"); //play the kaching sound
 
         PlayerData.Instance.money += moneyToAdd;
-        moneyText.text = "coins: " + PlayerData.Instance.money.ToString();
+        moneyText.text = "$$: " + PlayerData.Instance.money.ToString();
         FindObjectOfType<AudioManager>().PlaySound("MoneyEarned"); //play the kaching sound
 
 
@@ -39,7 +39,7 @@ public class MoneyUI : MonoBehaviour
             return false;
         }
         PlayerData.Instance.money -= moneyToSubtract;
-        moneyText.text = "coins: " + PlayerData.Instance.money.ToString();
+        moneyText.text = "$$: " + PlayerData.Instance.money.ToString();
 
         return true;
     }

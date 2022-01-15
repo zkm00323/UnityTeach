@@ -7,7 +7,8 @@ public class GenItemInScene : MonoBehaviour{
 
 	public GameObject GenObj;
 	public Transform PosTrans;
-	public float RefreshGameSec = 60; //60 sec in game = 1 sec in real life
+	private float RefreshGameSec = 60; //60 sec in game = 1 sec in real life
+	public float hourInterval=1; //generate item at this number of hour
 
 	public static GameObject LastObj;
 	
@@ -20,7 +21,7 @@ public class GenItemInScene : MonoBehaviour{
 	}
 
 	private void Start(){
-		GameTimeManager.RegisterTimeAciton(RefreshGameSec*60, OnTimeChange); //60 minutes in game gen an new item
+		GameTimeManager.RegisterTimeAciton(RefreshGameSec*60*hourInterval, OnTimeChange); //60 minutes in game gen an new item
 		Gen();
 
 	}

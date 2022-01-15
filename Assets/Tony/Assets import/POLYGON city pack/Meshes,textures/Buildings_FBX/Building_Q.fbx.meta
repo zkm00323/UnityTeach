@@ -1,86 +1,94 @@
 fileFormatVersion: 2
 guid: ae99bed506348de4d83879e6cc70874e
-timeCreated: 1517349141
-licenseType: Store
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Building_Q
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      23: 2300000
+    second: //RootNode
+  - first:
+      33: 3300000
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: Building_Q
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Anger stone 1
-    second: {fileID: 2100000, guid: b8f40456ef0dc4b4b89be9b96358c040, type: 2}
+    second: {fileID: 2100000, guid: 42a651c40a738de4992fa8552724d1b8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Anger stone 2
-    second: {fileID: 2100000, guid: 368f63201c8786c4c9a9f8e15e4e4818, type: 2}
+    second: {fileID: 2100000, guid: e253dfffbe4122c48bb81340dc9046c4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Facade 1
-    second: {fileID: 2100000, guid: 13759543c997bfb4baed60d723d82cd7, type: 2}
+    second: {fileID: 2100000, guid: 609c6029d84c9c546acd0afdd4bf7cf4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Window frames
-    second: {fileID: 2100000, guid: 9e2daa9517bae0f47b3d6d70aa4bb4c5, type: 2}
+    second: {fileID: 2100000, guid: 3c4b8cef0edaf054ea743e7abd41f755, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Windows 1
-    second: {fileID: 2100000, guid: 3f830caa1eaa1d244b5c9a0853bcadcc, type: 2}
+    second: {fileID: 2100000, guid: 45aff5d9987010649ac49a5f6f201b82, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: door 1
-    second: {fileID: 2100000, guid: 41e7faed0dc1d1b42a3763e973687756, type: 2}
+    second: {fileID: 2100000, guid: 03f3a5cfde016694d868bc4ad83fec80, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: door 2
-    second: {fileID: 2100000, guid: 89ba04a87c90f8043945861050b46827, type: 2}
+    second: {fileID: 2100000, guid: 4b84bfa31fe09b642aa729102ac79c7f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: facade 2
-    second: {fileID: 2100000, guid: faa3207c9e680f145a4c0f97f9e9a3ef, type: 2}
+    second: {fileID: 2100000, guid: d151b18a8d3d9fa45b6f04c36ccb4fa3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: railing
-    second: {fileID: 2100000, guid: fa56b95c76f072a4aadeec1f23e8fca6, type: 2}
+    second: {fileID: 2100000, guid: 612455dc0570b8e409b4f5825da12121, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: roof
-    second: {fileID: 2100000, guid: f86b91c362dbc2d48b268ba9fe7b2957, type: 2}
+    second: {fileID: 2100000, guid: ed23f872f773caa408a75b53db5a7aaf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: stone
-    second: {fileID: 2100000, guid: 0f62e1f21f8964e4d88427b0e9427f20, type: 2}
+    second: {fileID: 2100000, guid: 69aa9a8745e313041b9a295136dc5efe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: white
-    second: {fileID: 2100000, guid: e4b9944a89363ff42bddcc9af5235087, type: 2}
+    second: {fileID: 2100000, guid: 48af21ef20b2d6d42a5368f829d5aba0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: windows 2
-    second: {fileID: 2100000, guid: 955ca7696ff54b8459b4e40d37c73e22, type: 2}
+    second: {fileID: 2100000, guid: 74fd590bb1898ec47b959ad711fa5b60, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -94,6 +102,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -108,19 +117,31 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -128,10 +149,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -141,14 +165,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

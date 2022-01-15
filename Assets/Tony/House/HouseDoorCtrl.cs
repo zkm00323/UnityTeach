@@ -4,21 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class HouseDoorCtrl : MonoBehaviour{
+public class HouseDoorCtrl : SceneExit{
 
-    private static Vector3 LastExitPos;
+    //private static Vector3 LastExitPos;
     public static HouseSO LastInfo;
     
     public HouseSO Info;
-    public Transform ExitPos;
+    //public Transform ExitPos;
 
-    public string houseScene;
+    //public string houseScene;
 
     private void OnApplicationQuit()
     {
         //Info.PlayerLivesHere = false; //reset player's housing state 
     }
-    private void OnTriggerEnter(Collider other){
+    public override void OnTriggerEnter(Collider other){ //overrides base class ontrigger enter
         if(Info.PlayerLivesHere){
             Enter();
             return;
@@ -48,7 +48,7 @@ public class HouseDoorCtrl : MonoBehaviour{
 
     void OnPay(){
         if(PlayerData.Instance.money < Info.Rent)
-            UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"Gotta earn more to pay rent", "OK", EndLease));
+            UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"Not enough $$ to pay rent", "OK", EndLease));
         else{
             Info.PlayerLivesHere = true;
             Info.LastRentTime = GameTimeManager.Time;
@@ -65,16 +65,18 @@ public class HouseDoorCtrl : MonoBehaviour{
     }
     
     void Enter(){
-        LastExitPos = ExitPos.position;
+        //LastExitPos = ExitPos.position;
         LastInfo = Info;
-        SceneCtrl.Instance.ChangeScene(houseScene);
+        SceneCtrl.Instance.ChangeScene(sceneToLoad);
+        SceneChangeDelay();
     }
 
     public static void Exit(){
         FurnitureSave();
-        SceneCtrl.Instance.ChangeScene(SceneNameDefine.Scene.MAIN_SCENE);
-        PlayerMovement.Player.GetComponent<CharacterController>()
-                .Move(LastExitPos-PlayerMovement.Player.transform.position);
+        //SceneCtrl.Instance.ChangeScene(SceneNameDefine.Scene.MAIN_SCENE);
+        
+        /*PlayerMovement.Player.GetComponent<CharacterController>()
+                .Move(LastExitPos-PlayerMovement.Player.transform.position);*/
     }
 
     static void FurnitureSave(){ //家具位置擺放存檔

@@ -10,7 +10,7 @@ public class SceneExit : MonoBehaviour
 
     private float delayTime = 1f;
 
-    private void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider other)
     {
       if (other.gameObject.tag.Equals("Player"))
         {
@@ -21,7 +21,7 @@ public class SceneExit : MonoBehaviour
 
 
     }
-    void SceneChangeDelay()
+    public void SceneChangeDelay()
     {
         SceneCtrl.Instance.ChangeScene(sceneToLoad);
         GameCtrl.Instance.EnterDoor(previousScene, sceneToLoad);
