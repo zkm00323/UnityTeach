@@ -38,4 +38,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tony/Scene/HouseScene/House2.unity
     guid: f218240065d046b4c9b85b9b1e940c96
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
