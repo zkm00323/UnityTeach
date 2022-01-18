@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9a7410bc4f5e2c4b9504e9b094f9259, type: 3}
   m_Name: MAINScene
   m_EditorClassIdentifier: 
-  ItemDataList: []
+  ItemDataList:
+  - Pos: {x: 2, y: 0.4, z: 0}
+    Rot: {x: -0, y: 44.999996, z: -0}
+    Item: {fileID: 11400000, guid: eedda4fe9f77d164486cc844e1b1061c, type: 2}
