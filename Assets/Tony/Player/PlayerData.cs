@@ -190,13 +190,18 @@ public class PlayerData{
 	{
 		//Energy is only down when player is running or working
 		//if PlayerMovement.mstate == Running
-		
+		if (GameObject.Find("Player").GetComponent<PlayerMovement>().arrowsKeyPressed && Input.GetKey(KeyCode.RightShift))
+		{			
+			LIFE.Instance.Energy -= _EnergyDownValue * Time.deltaTime * _EnergyDownSpeed;
+		}
+
+
 	}
-    #endregion
+	#endregion
 
-    #region Inventory
+	#region Inventory
 
-    public List<ItemData> ItemList = new List<ItemData>();//背包數據存放點
+	public List<ItemData> ItemList = new List<ItemData>();//背包數據存放點
 	
 
 	public void AddItem(ItemData data){ //添加道具入口

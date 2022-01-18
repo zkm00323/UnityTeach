@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour //attach to foot?
 {//Ground Check
-    private bool onGround;
-    private void OnCollisionEnter(Collision collsion)
+    public bool onGround;
+
+    private void OnTriggerStay(Collider other)
     {
-        onGround = true;
-        FindObjectOfType<AudioManager>().PlaySound("PlayerWalk");
-        Debug.LogError("feet touches ground!");
-
-
-
+        if (other == null)
+            onGround = false;
+        else
+            onGround = true;
+        
+        //Debug.Log("Colliding Object: " + other.name);
     }
-    private void OnCollisionExit(Collision collision)
+
+    private void OnTriggerExit(Collider other)
     {
         onGround = false;
     }
-
-    
 }

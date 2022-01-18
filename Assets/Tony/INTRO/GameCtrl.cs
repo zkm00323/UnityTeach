@@ -45,7 +45,7 @@ public class GameCtrl : MonoBehaviour {
         /*PlayerMovement.Player.GetComponent<CharacterController>()
         .Move(PlayerMovement.Player.transform.position-entrance.transform.position);*/
         
-        Debug.Log($"Entrance pos: {entrance.transform.position}");
+        //Debug.Log($"Entrance pos: {entrance.transform.position}");
 
         PlayerMovement.Player.MoveTo(entrance.transform.position);
         

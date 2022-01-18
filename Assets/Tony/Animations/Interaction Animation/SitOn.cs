@@ -1,53 +1,82 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class SitOn : MonoBehaviour //attach on objects like chairs etc
 {
-    public GameObject player;
+    private GameObject player;
+    
     private Animator anim;
-    bool isWalkingTowards = false;
     bool sittingOn = false;
+    public bool OnClick;
+    public Transform sitPosition;
+    public float distance;
 
     private void OnMouseDown()
     {
-        if (!sittingOn)
+        SitOn[] array = FindObjectsOfType<SitOn>();
+        foreach(SitOn s in array)
         {
-            anim.SetTrigger("isWalking");
-            isWalkingTowards = true;
+            s.OnClick = false;
+            s.transform.GetComponent<BoxCollider>().enabled = true;
         }
-        
+        OnClick = true;
+        if (FindObjectOfType<HouseUICtrl>())
+        {
+            if (FindObjectOfType<HouseUICtrl>().isDecoreting)
+            {
+                OnClick = false;
+            }
+        }
+
     }
 
 
 
     void Start()
     {
-        anim = player.GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        anim = player.transform.GetChild(0).GetComponent<Animator>(); //use transform instead of gameObject to get more precise component
     }
+
+   
 
     // Update is called once per frame
     void Update()
     {
-        if (isWalkingTowards)
+        if (Vector3.Distance(player.transform.position, this.transform.position) < distance)
         {
-            Vector3 targetDir;
-            targetDir = new Vector3(transform.position.x - player.transform.position.x, 0f, transform.position.z - player.transform.position.z);
-
-            Quaternion rot = Quaternion.LookRotation(targetDir);
-            player.transform.rotation = Quaternion.Slerp(player.transform.rotation, rot, 0.05f);
-            player.transform.Translate(Vector3.forward * 0.01f);
-
-            if(Vector3.Distance(player.transform.position, this.transform.position) < 0.7)
+            if (OnClick)
             {
-                anim.SetTrigger("isSitting");
+                player.GetComponent<CharacterController>().enabled = false;
+                player.transform.position = new Vector3(sitPosition.position.x, sitPosition.position.y, sitPosition.position.z);
+                player.GetComponent<CharacterController>().enabled = true;
 
-                //turn player around to align forward vector with object's vector aka they're facing same direction
+                player.GetComponent<Rigidbody>().useGravity = false;
+                player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                GetComponent<Rigidbody>().isKinematic = true; //so gravity won't affect the chair
+                GetComponent<BoxCollider>().enabled = false; //so it won't collide with player's collider
 
-                player.transform.rotation = this.transform.rotation; //immediate snaps rotation
-                isWalkingTowards = false;
+                player.transform.rotation = transform.rotation; //immediate snaps rotation
                 sittingOn = true;
+                //turn player around to align forward vector with object's vector aka they're facing same direction                
             }
+        }
+        else
+        {
+            sittingOn = false;
+            //Debug.Log(Vector3.Distance(player.transform.position, this.transform.position));
+            OnClick = false;
+            GetComponent<Rigidbody>().isKinematic = false; //so gravity won't affect the chair
+            GetComponent<BoxCollider>().enabled = true; //so it won't collide with player's collider
+            player.GetComponent<Rigidbody>().useGravity = true;                                
+        }
+
+        if (player.GetComponent<PlayerMovement>().arrowsKeyPressed)
+            OnClick = false;
+
+        if (player.transform.position.x == sitPosition.position.x && player.transform.position.z == sitPosition.position.z && sittingOn)
+        {
+                player.GetComponent<PlayerMovement>().transitState(PlayerMovement.MotionState.Sitting);
         }
     }
 }

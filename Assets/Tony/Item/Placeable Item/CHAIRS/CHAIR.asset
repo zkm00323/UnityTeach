@@ -18,9 +18,6 @@ MonoBehaviour:
   Price: 15
   ItemImage: {fileID: 0}
   M: {fileID: 0}
-  Prefeb: {fileID: 1113747442478431240, guid: 849e729f5ddeb0048af0fdebb3c1eb33, type: 3}
-  Object: {fileID: 2251099591706488179, guid: 1a4a3890afac0fe4b8279c356145394a, type: 3}
+  Prefeb: {fileID: 4131233382544165021, guid: c08049a28d92a6d4fad468b908e5e151, type: 3}
+  Object: {fileID: 4131233382544165021, guid: c08049a28d92a6d4fad468b908e5e151, type: 3}
   Type: 0
-  hygienePoints: 0
-  energyPoints: 5
-  moodPoints: 0

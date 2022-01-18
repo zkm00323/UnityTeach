@@ -18,6 +18,6 @@ MonoBehaviour:
   Price: 55
   ItemImage: {fileID: 0}
   M: {fileID: 0}
-  Prefeb: {fileID: 0}
-  Object: {fileID: 6631022160642173191, guid: 81f9af3e068ad4645939364bc8cef0ab, type: 3}
+  Prefeb: {fileID: 1915609888355557010, guid: 81f9af3e068ad4645939364bc8cef0ab, type: 3}
+  Object: {fileID: 1915609888355557010, guid: 81f9af3e068ad4645939364bc8cef0ab, type: 3}
   Type: 0

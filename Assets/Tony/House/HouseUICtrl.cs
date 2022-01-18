@@ -10,6 +10,7 @@ public class HouseUICtrl : MonoBehaviour {
 	public Transform DropPoint;
 	public Button Decorate;
 	public GameObject panels;
+	public bool isDecoreting;
 
 	private PlaceableItemType Type = PlaceableItemType.Table;
 	public Dictionary<GameObject, GameObject> FurnitureObjDic = new Dictionary<GameObject, GameObject>(); //實體家具和家具數據prefab
@@ -30,14 +31,15 @@ public class HouseUICtrl : MonoBehaviour {
 	public void Button_Decorate()
 	{
 		panels.gameObject.SetActive(true);
+		isDecoreting = true;
 		//pause player data// set player to inactive
-
 	}
 
 	public void Button_Finish()
     {
 		panels.gameObject.SetActive(false);
-    }
+		isDecoreting = false;
+	}
 
     public void Button_Leave()
     {

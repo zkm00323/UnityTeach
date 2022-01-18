@@ -33,14 +33,17 @@ public class SceneCtrl{
 		}
 	}
 	IEnumerator WhenSceneChanges(string sceneName){
-		//存檔
+		//存檔 save scene data
 		Save(Resources.Load<SceneData>($"SceneData/{SceneManager.GetActiveScene().name}"));
-		//換場景
+		Debug.Log(SceneManager.GetActiveScene().name);
+		Debug.Log("Scene Data Saved");
+		//換場景 scene switch
 		yield return SceneManager.LoadSceneAsync(sceneName);
 		
-		//讀檔
+		//讀檔 read saved data
 		var SceneData = Resources.Load<SceneData>($"SceneData/{sceneName}");
-		//生成
+		Debug.Log("Read scene data");
+		//生成 generate items in location
 		if(SceneData != null){
 			foreach(var itemSaveData in SceneData.ItemDataList){
 				PickUpItem.Gen(itemSaveData);

@@ -13,11 +13,11 @@ public class ChairAction : ItemMono
 
     public override void OnPointerEnter()
     {
-        GetComponent<MeshRenderer>().material = _highlightMaterial;
+        GetComponentInChildren<MeshRenderer>().material = _highlightMaterial;
     }
 
     public override void OnPointerExit()
     {
-        GetComponent<MeshRenderer>().material = _originalMaterial;
+        GetComponentInChildren<MeshRenderer>().material = _originalMaterial;
     }
 }

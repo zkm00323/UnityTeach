@@ -18,34 +18,35 @@ public class PlayerMovement : MonoBehaviour{
     public float rotationSpeed;
 
     private CharacterController controller;
-    private Animator animator; //for later animation use
+    public Animator animator; //for later animation use
                                // Start is called before the first frame update
 
-    private bool arrowsKeyPressed; //if any of the arrows keys are pressed
-    
-   
+    public bool arrowsKeyPressed; //if any of the arrows keys are pressed
+    private bool OnGround;
 
-    enum MotionState { 
+    public enum MotionState { 
         Idle,
         Walking,
-        Running
+        Running,
+        Sitting
     }
 
    
 
-    private MotionState mState = MotionState.Idle;
+    public MotionState mState = MotionState.Idle;
     private float lastUnpressed;
     private float pressSpan = 1;
     private bool hold;
 
     private void Awake(){
         Player = this;
+
     }
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        animator = GetComponent<Animator>();
+        animator = transform.GetChild(0).GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -55,34 +56,39 @@ public class PlayerMovement : MonoBehaviour{
 
         playerMoves();
         PlayerData.Instance.Update();
-        handleAnimation();
-        
-
+        OnGround = transform.Find("OnGroundCheck").GetComponent<GroundCheck>().onGround;
     }
 
 
-    void transitState(MotionState state) {
+    public void transitState(MotionState state) {
         if (mState == state)
             return;
 
         mState = state;
-        Debug.Log($"State transite to {mState}");
+        //Debug.Log($"State transite to {mState}");
         switch (state)
         {
             case MotionState.Idle:
-                animator.SetBool("isRunning", false);
                 animator.SetBool("isWalking", false);
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isSitting", false);
                 break;
             case MotionState.Walking:
                 animator.SetBool("isWalking", true);
                 animator.SetBool("isRunning", false);
-
+                animator.SetBool("isSitting", false);
                 //walkSpeed = 2f;
                 break;
             case MotionState.Running:
-                animator.SetBool("isWalking", true);
+                animator.SetBool("isWalking", false);
                 animator.SetBool("isRunning", true);
+                animator.SetBool("isSitting", false);
                 //walkSpeed = 6f;
+                break;
+            case MotionState.Sitting:
+                animator.SetBool("isWalking", false);
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isSitting", true);
                 break;
         }
     }
@@ -90,23 +96,10 @@ public class PlayerMovement : MonoBehaviour{
 
     void ArrowsKeyPressed()
     {
-        
-
-
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            arrowsKeyPressed = true;
-        }
-
-
-        else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
-        {
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
             arrowsKeyPressed = true;            
-        }
-        if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
-        {
+        else
             arrowsKeyPressed = false;
-        }
     }
     private void playerMoves()
     {
@@ -117,13 +110,11 @@ public class PlayerMovement : MonoBehaviour{
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 direction = new Vector3(horizontalInput, 0, verticalInput);
         direction.Normalize();
-
-        direction.y -= _gravity;
-
+        
         //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high
 
         //controller.Move(direction * Time.deltaTime * walkSpeed); //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high
-        if (direction != Vector3.zero)
+        if (direction.magnitude > 0.05f)
         {
             Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
@@ -132,55 +123,38 @@ public class PlayerMovement : MonoBehaviour{
 
         //walk
         if (arrowsKeyPressed && !Input.GetKey(KeyCode.RightShift))
-        {
-
-            
-           
-         transitState(MotionState.Walking);
-         controller.Move(direction * Time.deltaTime * walkSpeed); //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high
-   
+        {                     
+            transitState(MotionState.Walking);
+            controller.Move(direction * Time.deltaTime * walkSpeed); //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high   
         }
-        else if (arrowsKeyPressed&& Input.GetKey(KeyCode.RightShift))
+        else if (arrowsKeyPressed && Input.GetKey(KeyCode.RightShift))
         {
-
             transitState(MotionState.Running);
             controller.Move(direction * Time.deltaTime * runSpeed); //multiple by Time.deltaTime so it moves once/second. In update it moves once every frame and frame/second can be very high
-
-        }
-        
-
-        else
+        }       
+        else if (horizontalInput == 0 && verticalInput == 0)
         {
             transitState(MotionState.Idle);
+        }        
+
+        if (!OnGround)
+        {
+            //Debug.Log("Not Ground");
+            direction.y += _gravity * Time.deltaTime * 100;           
+            controller.Move(direction * Time.deltaTime);
         }
-
-    }
-
-   
-
-    void handleAnimation()
-    {
-        bool isWalking = animator.GetBool("isWalking");
-        bool isRunning = animator.GetBool("isRunning");
-        
-
+        else
+        {
+            direction.y = 0;
+            controller.Move(direction * Time.deltaTime);
+        }
     }
 
     public void MoveTo(Vector3 targetPoint) //simply move to a point
     {
-        Vector3 moveVector = targetPoint - Player.transform.position;
-        controller.Move(moveVector);
-
+        GetComponent<CharacterController>().enabled = false;
+        transform.position = targetPoint;
+        FindObjectOfType<GroundCheck>().onGround = false;
+        GetComponent<CharacterController>().enabled = true;
     }
-
-
-    
-
-
-
-
-
-
-
-
 }

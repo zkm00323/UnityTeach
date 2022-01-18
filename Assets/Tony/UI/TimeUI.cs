@@ -21,6 +21,6 @@ public class TimeUI : MonoBehaviour
     
     private void UpdateTime(){ //Time is a property in GameTimeManager
         timeText.text = GameTimeManager.Time.ToString("HH:mm tt", CultureInfo.CreateSpecificCulture("en-US"));
-        Debug.Log(GameTimeManager.Time);
+        //Debug.Log(GameTimeManager.Time);
     }
 }

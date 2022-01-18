@@ -9636,7 +9636,6 @@ MonoBehaviour:
   sceneToLoad: House1
   previousScene: NewGhetto
   Info: {fileID: 11400000, guid: ece2474f3969bc44cb65a6cd16424210, type: 2}
-  ExitPos: {fileID: 1037170795}
 --- !u!23 &748489828
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11990,7 +11989,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh1012214
+  m_Name: pb_Mesh60404
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15448,7 +15447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 1
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineColor: {r: 1, g: 0.9179416, b: 0.22075468, a: 1}
   outlineWidth: 0
   precomputeOutline: 0
   bakeKeys: []
@@ -15475,7 +15474,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh1012054
+  m_Name: pb_Mesh60240
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28231,7 +28230,6 @@ MonoBehaviour:
   sceneToLoad: House2
   previousScene: NewGhetto
   Info: {fileID: 11400000, guid: a97f4311421baf54b986851db9409259, type: 2}
-  ExitPos: {fileID: 359487550}
 --- !u!23 &2082829962
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28486,7 +28484,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh1012066
+  m_Name: pb_Mesh60252
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

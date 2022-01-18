@@ -23,8 +23,8 @@ public class SceneExit : MonoBehaviour
     }
     public void SceneChangeDelay()
     {
-        SceneCtrl.Instance.ChangeScene(sceneToLoad);
-        GameCtrl.Instance.EnterDoor(previousScene, sceneToLoad);
+        SceneCtrl.Instance.ChangeScene(sceneToLoad); //switch to new scene
+        GameCtrl.Instance.EnterDoor(previousScene, sceneToLoad); //make sure player is transported to right location in new scene
     }
 
 

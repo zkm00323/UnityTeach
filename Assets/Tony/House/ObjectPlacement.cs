@@ -14,8 +14,17 @@ public class ObjectPlacement : MonoBehaviour
 
     #region Dragging furnitures to place
     private void OnMouseDown() {
-        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        mOffset = gameObject.transform.position - GetMouseWorldPos();
+        if (FindObjectOfType<HouseUICtrl>())
+        {
+            if (FindObjectOfType<HouseUICtrl>().isDecoreting)
+            {
+                if (!GetComponent<SitOn>().OnClick)
+                {
+                    mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+                    mOffset = gameObject.transform.position - GetMouseWorldPos();
+                }
+            }            
+        }        
     }
     private Vector3 GetMouseWorldPos()
     {
@@ -26,7 +35,22 @@ public class ObjectPlacement : MonoBehaviour
     }
     private void OnMouseDrag()
     {
-        transform.position = GetMouseWorldPos() + mOffset;
+        if (FindObjectOfType<HouseUICtrl>())
+        {
+            if (FindObjectOfType<HouseUICtrl>().isDecoreting)
+            {
+                if (!GetComponent<SitOn>().OnClick)
+                {
+                    transform.position = GetMouseWorldPos() + mOffset;
+                    GetComponent<Rigidbody>().isKinematic = true;
+                }
+            }
+        }
+    }
+
+    private void OnMouseUp()
+    {
+        GetComponent<Rigidbody>().isKinematic = false;
     }
     #endregion
 }

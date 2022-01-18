@@ -19,6 +19,7 @@ public class PickUpItem : ItemMono{
 		PlayerData.Instance.AddItem(ItemName.GetGetData()); //給玩家背包填入新的道具
 		Destroy(gameObject); 
 		AllItemInScene.Remove(this);
+		Debug.Log("Item REMOVED from scene!!!");
 	}
 
 	#region Data
@@ -26,6 +27,7 @@ public class PickUpItem : ItemMono{
 	private void AwakeSetData(){
 		if(AllItemInScene == null) AllItemInScene = new List<PickUpItem>();
 		AllItemInScene.Add(this); //把物件個別加進清單(把這個class加到每個要被存取的物件上
+		Debug.Log("Item added to pick up item list!!");
 	}
 
 	public ItemSaveData GetSaveData(){
