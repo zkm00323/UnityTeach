@@ -5,15 +5,15 @@ using System;
 
 public class TimeChecker : MonoBehaviour
 {
-    public static Action<int> morningEvents = delegate { };
+    public static Action<int> OnSevenAM = delegate { };
 
     //TimeChecker.morningEvents += listeners???
 
     public void CheckTime()
     {
-        if (GameTimeManager.Time.Hour == 10)
+        if (GameTimeManager.Time.Hour == 7)
         {
-            ///ningEvents();
+            //time trigger
         }
     }
 

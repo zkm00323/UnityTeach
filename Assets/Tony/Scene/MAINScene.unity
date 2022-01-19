@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 78482126}
   - component: {fileID: 78482125}
   m_Layer: 0
-  m_Name: SunLight
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1185,7 +1185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1513124232}
   m_Layer: 0
-  m_Name: fromMAINScene
+  m_Name: fromNewGhetto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

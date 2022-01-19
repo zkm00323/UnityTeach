@@ -1,10 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.PlayerLoop;
 
 public class GameTimeManager : MonoBehaviour{
+
 
     private static GameTimeManager Instance;
     //60 sec in game= 1 sec in REAL LIFE
@@ -15,7 +16,7 @@ public class GameTimeManager : MonoBehaviour{
     private float TimeSpeed = 1;
 
     public static DateTime Time{ private set; get; } //prperty of class/struct DateTime
-    
+    public static DateTime RealTime;
     public static void AddTime(double hour){
         Time = Time.AddHours(hour);
         foreach(var dic in TimeRegDic){
@@ -29,7 +30,11 @@ public class GameTimeManager : MonoBehaviour{
     
     private void Awake(){
         Instance = this;
+
         Time = new DateTime(1,1,1,7,00,0); //first year, month, day, 7AM 0 seconds
+        //我想要遊戲裡的七點零一分太陽出來 
+        //七點零一 檢調 遊戲的現在時間 小於一
+
     }
     
 
