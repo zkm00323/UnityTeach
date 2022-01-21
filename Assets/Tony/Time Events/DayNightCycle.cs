@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class DayNightCycle : MonoBehaviour
+public class DayNightCycle : MonoBehaviour //attach on sun in intro scene and disable suns in all the scenes
 {
 
     public DateTime sunOutTime;
@@ -12,6 +12,7 @@ public class DayNightCycle : MonoBehaviour
     public Material morningSkybox;
     public Material noonSkybox;
     public Material nightSkybox;
+    
 
 
 
@@ -40,6 +41,11 @@ public class DayNightCycle : MonoBehaviour
     [Header("Other Lighting Settings")]
     public AnimationCurve lightingIntensityMultiplier;
     public AnimationCurve reflectionsIntensityMultiplier;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void Start()
     {
@@ -85,7 +91,7 @@ public class DayNightCycle : MonoBehaviour
         {
            if( GetDifference(GameTimeManager.Time, sunOutTime)== 7) //at 7:07AM sun comes out
             {
-                GetComponent<Light>().intensity = 2f;
+                GetComponent<Light>().intensity = 1.5f;
                 Debug.Log("Sun comes out");
                 
                 RenderSettings.skybox = morningSkybox;
@@ -101,7 +107,7 @@ public class DayNightCycle : MonoBehaviour
         {
             if (GetDifference(GameTimeManager.Time, noonTime ) == 1) //at 12:01
             {
-                GetComponent<Light>().intensity = 1.5f;
+                GetComponent<Light>().intensity = 2f;
                 RenderSettings.skybox = noonSkybox;
 
             }

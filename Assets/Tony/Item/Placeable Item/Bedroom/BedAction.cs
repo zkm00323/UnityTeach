@@ -9,6 +9,7 @@ public class BedAction : ItemMono
     public override void OnClick()
     {
         PlayerData.LIFE.Instance.Energy += energyPoints;
+        //do sleep * hour --> hours + a certain amount
     }
 
     public override void OnPointerEnter()

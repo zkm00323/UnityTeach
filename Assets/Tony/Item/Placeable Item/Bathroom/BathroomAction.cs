@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BathroomAction : ItemMono
+public class BathroomAction : MonoBehaviour
 {
-    public int hygienePoints;
+    /*public int hygienePoints;
 
     public override void OnClick()
     {
@@ -19,5 +19,5 @@ public class BathroomAction : ItemMono
     public override void OnPointerExit()
     {
         GetComponent<MeshRenderer>().material = _originalMaterial;
-    }
+    }*/
 }

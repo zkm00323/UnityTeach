@@ -18,9 +18,10 @@ public class HygieneItemMono : ItemMono
 		AwakeColorChange();
 	}
 
+	
 	#region ColorChange
 	public Material defaultColor;
-	public Material highlight;
+	public Material highlight; 
 
 	private void AwakeColorChange()
 	{
@@ -38,6 +39,6 @@ public class HygieneItemMono : ItemMono
 	public override void OnPointerExit()
 	{
 		GetComponent<MeshRenderer>().material = defaultColor;
-	}
+	} 
 
 }

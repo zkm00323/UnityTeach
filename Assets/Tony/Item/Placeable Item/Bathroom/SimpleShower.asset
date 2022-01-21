@@ -17,7 +17,6 @@ MonoBehaviour:
   Desc: A simple shower room
   Price: 60
   ItemImage: {fileID: 0}
-  M: {fileID: 0}
-  Prefeb: {fileID: 0}
+  Prefeb: {fileID: 5717549029616559202, guid: b2bedabd87c866743855bae84d940b18, type: 3}
   Object: {fileID: 5717549029616559202, guid: b2bedabd87c866743855bae84d940b18, type: 3}
   Type: 7

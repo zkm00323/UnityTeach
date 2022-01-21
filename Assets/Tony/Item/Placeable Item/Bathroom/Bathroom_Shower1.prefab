@@ -13,6 +13,11 @@ GameObject:
   - component: {fileID: 6077657160236598711}
   - component: {fileID: 1657343441428099754}
   - component: {fileID: -236608455868445266}
+  - component: {fileID: 1370988021}
+  - component: {fileID: 1370988020}
+  - component: {fileID: 1370988019}
+  - component: {fileID: 1370988018}
+  - component: {fileID: 5809190191834781324}
   m_Layer: 0
   m_Name: Bathroom_Shower1
   m_TagString: Untagged
@@ -27,13 +32,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5717549029616559202}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &8339782182240514429
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -61,9 +66,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5243988174349660497, guid: 308f52ebfeed90f448b10fe6d877e6f0, type: 3}
-  - {fileID: -3748621807466058688, guid: 308f52ebfeed90f448b10fe6d877e6f0, type: 3}
-  - {fileID: 6856601759615805375, guid: 308f52ebfeed90f448b10fe6d877e6f0, type: 3}
+  - {fileID: 2100000, guid: a90e8cea1c977cc4ea2a8b6868f40328, type: 2}
+  - {fileID: 2100000, guid: f8cc87e4e83eb0c4fb5438257e7b681d, type: 2}
+  - {fileID: 2100000, guid: 767195068b2a68c4b8034bb15be0a673, type: 2}
   - {fileID: -4973734387028869240, guid: 308f52ebfeed90f448b10fe6d877e6f0, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -98,9 +103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64dd8f2b731606d498e73855e8293029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _originalMaterial: {fileID: 2100000, guid: f93baf90a062763439a4ff18a978a2f2, type: 2}
-  _highlightMaterial: {fileID: 2002985388980897473, guid: 45add7e63ad218340aa6c4a0941d5a27, type: 3}
-  hygienePoints: 10
 --- !u!114 &-236608455868445266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,3 +115,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a768c957fde1b42acd1b3a0473af18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1370988021
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717549029616559202}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1370988020
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717549029616559202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.018958502, y: 0.018928384, z: 0.03548112}
+  m_Center: {x: -0.0012373844, y: 0.00078328804, z: 0.01679044}
+--- !u!114 &1370988019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717549029616559202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e980f70a5b0a4b45ac6e15c617d9ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceToAct: 2
+  defaultWidth: 0
+  outlineSize: 7
+  StartWorkButton: {fileID: 0}
+--- !u!114 &1370988018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717549029616559202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &5809190191834781324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717549029616559202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172ab3d3b571d2542b7d483740fde765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _originalMaterial: {fileID: 0}
+  _highlightMaterial: {fileID: 0}
+  hygienePoints: 0
+  Info: {fileID: 0}
+  defaultColor: {fileID: 0}
+  highlight: {fileID: 2100000, guid: b839709b9c206d14b951a05dfd152408, type: 2}
