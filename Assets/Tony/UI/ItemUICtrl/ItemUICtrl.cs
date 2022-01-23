@@ -4,14 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class ItemUICtrl : MonoBehaviour /*,IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler*/
 {
 
     public static ItemUICtrl Selecting = null;
     
-    public Text ItemName;
-    public Text ItemCount;
+    public TextMeshProUGUI ItemName;
+    public TextMeshProUGUI ItemCount;
     public Image ItemImage;
     public GameObject SelectionOutline;
 

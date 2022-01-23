@@ -13,7 +13,7 @@ public class PickUpSelectedItem : PickUpItem
 				ItemName.OnClick();
 			}
 		));
-		Destroy(gameObject);
+		Destroy(gameObject); //destroy if player select eating
 		AllItemInScene.Remove(this);
 	}
 

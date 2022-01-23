@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UICtrl : MonoBehaviour //attach to canvas on introscene 
 {
@@ -99,7 +100,7 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 	public Zoomer Inventory;
 	public GameObject ItemUI_O;
 	public Transform Bag_T;
-	public Text Desc;
+	public TextMeshProUGUI Desc;
 	private void UpdateInventory(){
 		if(Input.GetKeyDown(InventoryKey)){ //Input開關背包UI
 			if(Inventory.gameObject.activeSelf){
@@ -138,9 +139,12 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 			var ctrl = o.GetComponent<ItemUICtrl>();
 			ctrl.Setup(data, () => {
 				if (ItemUICtrl.Selecting != null) ItemUICtrl.Selecting.UnSelect();
+				//set item zoom in box to default false and turn it active when mouse hover over it
 				Instance.Desc.text = data.Info.Desc;
 				ctrl.SelectionOutline.SetActive(true);
 				ItemUICtrl.Selecting = ctrl;
+
+				//active the zoom in box when mouse hover over--> tap again to eat it
 				data.Info.OnClick();
 			});
 			ItemUIList.Add(o); //add the item into the UI display
