@@ -18,7 +18,7 @@ MonoBehaviour:
   MinWorkHour: 1
   MaxWorkHour: 8
   RankList:
-  - Name: "\u8D85\u7D1A\u6D17\u7897\u5DE5"
+  - Name: Super Dishwasher
     Salary: 13
     WorkHourNeed: 0
     MinSocialScore: 0

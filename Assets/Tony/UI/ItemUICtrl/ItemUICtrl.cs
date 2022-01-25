@@ -6,10 +6,11 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class ItemUICtrl : MonoBehaviour /*,IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler*/
+public class ItemUICtrl : MonoBehaviour,  IPointerEnterHandler, IPointerExitHandler
 {
 
     public static ItemUICtrl Selecting = null;
+    public bool isMouseOver = false;
     
     public TextMeshProUGUI ItemName;
     public TextMeshProUGUI ItemCount;
@@ -39,5 +40,27 @@ public class ItemUICtrl : MonoBehaviour /*,IPointerClickHandler, IPointerEnterHa
         SelectionOutline.SetActive(false);
         UICtrl.Instance.Desc.text = "";
     }
-    
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        OnPointerEnter();
+    }
+
+    public virtual void OnPointerEnter()
+    {
+        isMouseOver = true;
+
+
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        OnPointerExit();
+    }
+
+    public virtual void OnPointerExit()
+    {
+        isMouseOver = false;
+
+    }
 }

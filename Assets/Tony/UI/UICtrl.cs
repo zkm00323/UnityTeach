@@ -98,6 +98,7 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 	#region Inventory
 
 	public Zoomer Inventory;
+	public GameObject descriptionPanel;
 	public GameObject ItemUI_O;
 	public Transform Bag_T;
 	public TextMeshProUGUI Desc;
@@ -125,6 +126,9 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 		else
 		{
 			Inventory.ZoomIn();
+			descriptionPanel.SetActive(false);
+
+
 		}
 	}
 
@@ -138,11 +142,17 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 			var o = Instantiate(ItemUI_O, Bag_T);
 			var ctrl = o.GetComponent<ItemUICtrl>();
 			ctrl.Setup(data, () => {
+
 				if (ItemUICtrl.Selecting != null) ItemUICtrl.Selecting.UnSelect();
 				//set item zoom in box to default false and turn it active when mouse hover over it
+
+				if (ctrl.isMouseOver) descriptionPanel.SetActive(true);
+
 				Instance.Desc.text = data.Info.Desc;
 				ctrl.SelectionOutline.SetActive(true);
 				ItemUICtrl.Selecting = ctrl;
+
+				
 
 				//active the zoom in box when mouse hover over--> tap again to eat it
 				data.Info.OnClick();

@@ -42,6 +42,8 @@ public class HouseDoorCtrl : SceneExit{
         ));
     }
 
+
+
     void RentForMonth(){
         UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"Pay rent![{Info.Rent}]", "Confirm","Cancel", OnPay, EndLease));
     }

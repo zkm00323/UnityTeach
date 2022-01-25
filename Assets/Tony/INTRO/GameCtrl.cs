@@ -6,12 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class GameCtrl : MonoBehaviour {
     public static GameCtrl Instance;
+    [SerializeField] Texture2D crosshair;
+
 
     private void Awake(){
         if (Instance == null){
             DontDestroyOnLoad(gameObject);
             Instance = this;
         }
+
+        
+        
+        Vector2 cursorOffset = new Vector2(crosshair.width / 2, crosshair.height / 2);
+        Cursor.SetCursor(crosshair, cursorOffset, CursorMode.ForceSoftware);
+
+
     }
 
     private void Start(){
