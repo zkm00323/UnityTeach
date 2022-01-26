@@ -22,7 +22,7 @@ public class CollectionGoal : Goal
         {
             Increment(1); //increment is from base goal class 
             Debug.Log("Found 1 item");
-            if (this.completed)
+            if (this.completed) //don't complete the quest until player return item to quest giver
             {
                 EventController.OnItemFound -= ItemFound;
             }

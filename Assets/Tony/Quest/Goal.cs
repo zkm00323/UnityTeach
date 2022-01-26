@@ -18,7 +18,7 @@ public class Goal //doesn't need to be attached to any objct
         {
             this.completed = true;
             Debug.Log("Goal completed!");
-            quest.Complete(); //complete the quest
+            quest.Complete(); //don't complete the quest yet! until player return item to quest giver
         }
         EventController.QuestProgressChanged(quest); //pass the quest to the handler QuestProgressChanged
     }

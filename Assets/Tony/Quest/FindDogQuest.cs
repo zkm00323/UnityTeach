@@ -16,8 +16,10 @@ public class FindDogQuest : Quest //derive from mono object quest
     }
 
 
+
         public override void Complete()
     {
+        if (QuestGiver.itemturned)
         base.Complete(); //but can do anything other than what's in the base class complete()
 
         //If you override the event in the derived classes, you need to make sure to still call the QuestCompleted handler if you don’t call the base Complete method

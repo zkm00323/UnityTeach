@@ -344,6 +344,11 @@ public class PopupInfoData{
 		Single = true;
 	}
 
+	public PopupInfoData(string desc)
+    {
+		Desc = desc;
+    }
+
 
 }
 

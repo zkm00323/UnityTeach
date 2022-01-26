@@ -19,5 +19,16 @@ public class QuestGiver : MonoBehaviour //attach to quest giver can be a button,
     {
         quest =questController.AssignQuest(questName);
         GetComponent<UnityEngine.UI.Button>().image.color = Color.green;
+        //bool isItemTurnedIn: false
+        //instantiate the quest item in scene
+    }
+
+    public static bool itemturned = false;
+    public bool ReturnToQuestGiver(bool itemturned)
+    {
+        //if item found
+        //if player return to quest giver
+        //bool isItemTurnedIn: true
+        return itemturned;
     }
 }

@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
-public class HouseDoorCtrl : SceneExit{
+public class HouseDoorCtrl : SceneExit, IPointerClickHandler{
 
     //private static Vector3 LastExitPos;
     public static HouseSO LastInfo;
@@ -38,6 +39,33 @@ public class HouseDoorCtrl : SceneExit{
             },
             () => {
                
+            }
+        ));
+
+    }
+
+    public void OnPointerClick(PointerEventData pointerEventData)
+    {
+        if (Info.PlayerLivesHere)
+        {
+            Enter();
+            return;
+        }
+        UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"Rent:{Info.Rent}\n SocialScoreNeeded:{Info.SocialScoreNeeded}", "Rent House", "Cancel",
+            () => {
+                if (PlayerData.Instance.money < Info.Rent)
+                    UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"You don't have enough to pay rent!!", "Confirm", () => { EndLease(); }));
+                else
+                    UICtrl.Instance.PopupInfoSetup(new PopupInfoData($"Succesful!", "OK", () => {
+
+                        Info.PlayerLivesHere = true;
+                        Info.LastRentTime = GameTimeManager.Time;
+                        GameTimeManager.RegisterTimeAciton(60 * 60, RentForMonth);
+                        MoneyUI.playerMoney.SubtractMoney(Info.Rent);
+                    }));
+            },
+            () => {
+
             }
         ));
     }

@@ -103,6 +103,7 @@ public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler
 
     public void Choice2()
     {
+        //call QuestGiver and assign quest
 
     }
 

@@ -70,10 +70,7 @@ public class DayNightCycle : MonoBehaviour //attach on sun in intro scene and di
 
     public int GetDifference(DateTime now, DateTime timeOfEvent)
     {
-        //when GameTimeManager.Time - Time you want the event to happen < 1; 
-        //when GameTimeManager.Time > Time you want event to happen;
-        //difference = GameTimeManager.Time.Subtract(DateTime(1, 1, 1, 7, 00, 0)); //first year, month, day, 7AM 0 seconds
-        //return 
+        
 
 
         timeDiff= (now - timeOfEvent).Minutes;
@@ -87,39 +84,36 @@ public class DayNightCycle : MonoBehaviour //attach on sun in intro scene and di
 
     public void SunOut()
     {
-        if (GameTimeManager.Time.Hour == 7)
+        if (GameTimeManager.Time.Hour >= 6 && GameTimeManager.Time.Hour <12)
         {
-           if( GetDifference(GameTimeManager.Time, sunOutTime)== 7) //at 7:07AM sun comes out
-            {
-                GetComponent<Light>().intensity = 1.5f;
+           //if( GetDifference(GameTimeManager.Time, sunOutTime)== 7) //at 6:07AM sun comes out
+            //{
+                GetComponent<Light>().intensity = 1.0f;
                 Debug.Log("Sun comes out");
                 
                 RenderSettings.skybox = morningSkybox;
 
 
-            }
+            //}
         }
     }
 
     public void Noon()
     {
-        if (GameTimeManager.Time.Hour == 12)
+        if (GameTimeManager.Time.Hour >=12 && GameTimeManager.Time.Hour<18)
         {
-            if (GetDifference(GameTimeManager.Time, noonTime ) == 1) //at 12:01
-            {
-                GetComponent<Light>().intensity = 2f;
+                GetComponent<Light>().intensity = 1.0f;
                 RenderSettings.skybox = noonSkybox;
-
-            }
 
         }
     }
 
     public void SunDown()
     {
-        if(GameTimeManager.Time.Hour == 6)
+        if(GameTimeManager.Time.Hour >= 18 || GameTimeManager.Time.Hour<6)
         {
-            //if (GetDifference(GameTimeManager.Time, timeofEvent) == 1)
+            GetComponent<Light>().intensity = 0.8f;
+            RenderSettings.skybox = nightSkybox;
         }
     }
 

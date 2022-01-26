@@ -256,6 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2035441836146534708}
   - component: {fileID: 6413120740950862660}
+  - component: {fileID: 483753207}
   m_Layer: 0
   m_Name: body before subdiv.001
   m_TagString: Player
@@ -296,7 +297,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 02ae257f23e0d854cb04393672207e52, type: 2}
+  - {fileID: 2100000, guid: 23fccfbae46ffa048bc37212574acacb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -367,9 +368,48 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 7888843677442743547}
   m_AABB:
-    m_Center: {x: 0.026550502, y: 0.018996686, z: -0.010243297}
-    m_Extent: {x: 0.4362125, y: 0.7274995, z: 0.27310446}
+    m_Center: {x: 0.003991887, y: 0.045994997, z: -0.010243297}
+    m_Extent: {x: 0.33012903, y: 0.7005012, z: 0.27310446}
   m_DirtyAABB: 0
+--- !u!114 &483753207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2267858289935407881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef3ab0404d6c40319cedaf900bc0847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectForPainting: {fileID: 2267858289935407881}
+  Material:
+    shaderTextureName: _BaseMap
+    defaultTextureWidth: 1024
+    defaultTextureHeight: 1024
+    SourceMaterial: {fileID: 2100000, guid: 23fccfbae46ffa048bc37212574acacb, type: 2}
+  ShouldOverrideCamera: 0
+  CopySourceTextureToPaintTexture: 1
+  paintModeType: 0
+  filterMode: 0
+  brush:
+    name: Brush 1
+    material: {fileID: 0}
+    filterMode: 0
+    color: {r: 1, g: 0, b: 0, a: 1}
+    sourceTexture: {fileID: 0}
+    renderTexture: {fileID: 0}
+    size: 0.3
+    renderAngle: 0
+    hardness: 0.9
+    preview: 0
+  paintTool: 0
+  overrideCamera: {fileID: 0}
+  useSourceTextureAsBackground: 1
+  useNeighborsVerticesForRaycasts: 1
+  trianglesContainer: {fileID: 11400000, guid: 12ce4eaf71803294497b2b36d9a61272, type: 2}
+  triangles: []
 --- !u!1 &2454945295697707132
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +698,7 @@ SphereCollider:
   m_GameObject: {fileID: 3447994768347800955}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.06
   m_Center: {x: 0, y: 0.04, z: 0}
@@ -1077,11 +1117,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6609357213441823943}
   - component: {fileID: 961812685465341629}
-  - component: {fileID: 6643827749934590674}
-  - component: {fileID: 6643827749934590675}
+  - component: {fileID: 1951118424}
   m_Layer: 0
   m_Name: PlayerPrefab
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1115,31 +1154,13 @@ Animator:
   m_Controller: {fileID: 9100000, guid: ec5aa27d28c5910498392a3d81cba13d, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!143 &6643827749934590674
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832997089347227261}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1.65
-  m_Radius: 0.4
-  m_SlopeLimit: 45
-  m_StepOffset: 0.4
-  m_SkinWidth: 0.04
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.81, z: 0}
---- !u!114 &6643827749934590675
+--- !u!114 &1951118424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1148,13 +1169,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5832997089347227261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85f87f4730a30274793e3117127ee189, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e87604a42b0e3b4a9cb1b3f3685bb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2
-  runSpeed: 5.5
-  _gravity: 0
-  rotationSpeed: 650
 --- !u!1 &5837305217049337381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,7 +1462,6 @@ GameObject:
   - component: {fileID: 2699512763199769908}
   - component: {fileID: 6643827750321682792}
   - component: {fileID: 1556695915}
-  - component: {fileID: 1951118424}
   m_Layer: 0
   m_Name: mixamorig:LeftFoot
   m_TagString: Untagged
@@ -1477,7 +1493,7 @@ SphereCollider:
   m_GameObject: {fileID: 7486779601669869774}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.06
   m_Center: {x: 0, y: 0.04, z: -0.03}
@@ -1493,22 +1509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0344fa6ffc3dc1042a70beb76da1e4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &1951118424
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7486779601669869774}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  onGround: 0
 --- !u!1 &7533058163385893696
 GameObject:
   m_ObjectHideFlags: 0
