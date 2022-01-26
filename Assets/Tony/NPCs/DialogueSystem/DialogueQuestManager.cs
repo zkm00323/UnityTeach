@@ -5,8 +5,11 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler
+public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler //attach on NPC with quests
 {
+
+    public QuestGiver questGiver;
+
     private Queue<string> sentences; //first in first out
     public NPCDialogue dialogue;
 
@@ -29,6 +32,8 @@ public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        //find dialogueUI UI first in scene and set it active
+        //dialogueUI = FindObjectWithName("xxxx")
         dialogueUI.SetActive(true);
         foreach (GameObject buttons in playerChoices)
         {

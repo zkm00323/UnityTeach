@@ -18,7 +18,7 @@ public class SceneExit : MonoBehaviour
 
 
         }
-
+      //pop up window asking player if he wants to go in--> if enter then invoke scene change
 
     }
     public void SceneChangeDelay()

@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-public class DialogueManager : MonoBehaviour, IPointerClickHandler //quest manager without quests but responses from NPCs
+public class DialogueManager : MonoBehaviour, IPointerClickHandler //dialogue manager with choices triggering different responses from NPC
 {
-    public QuestGiver questGiver;
     public NPCDialogue dialogue;
     //create different dialogue object based on relationship level
     bool isTalking = false;

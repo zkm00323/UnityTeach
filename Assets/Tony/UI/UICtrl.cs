@@ -11,17 +11,17 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 
 
 
-	
 
 
-	[Header("Craft")] 
+
+	[Header("Craft")]
 	public CraftingWindow CraftingCtrl;
 	public void Button_CraftWindow() //allows to open on UI
-    {
+	{
 		CraftingCtrl.OpenCraftWindow();
-    }
+	}
 
-	
+
 
 	public void Button_OpenQuestWindow()
 	{
@@ -36,12 +36,12 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 	public CustomBarUICtrl EnergyBar;
 
 	public KeyCode InventoryKey;
-	private void Awake(){
+	private void Awake() {
 		Instance = this;
 	}
 
-	private void Update(){
-		UpdateInventory(); 
+	private void Update() {
+		UpdateInventory();
 		DisplaySkillsUI();
 		//CraftingCtrl.DoUpdate();
 	}
@@ -52,20 +52,20 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 	public PlayerSkillsUI skillsUI;
 	public Zoomer SkillZoomer;
 	public KeyCode SkillsKey; //C
-	
+
 
 
 
 	public void DisplaySkillsUI() //DOES NOT WORK
 	{
 		//skillsUI.SetUp();
-		
+
 		if (Input.GetKeyDown(SkillsKey))
 		{
 			if (SkillZoomer.gameObject.activeSelf)
 			{
 				SkillZoomer.ZoomOut();
-				
+
 			}
 			else
 			{
@@ -77,7 +77,7 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 	}
 
 	public void Button_DisplaySkill()
-    {
+	{
 		if (SkillZoomer.gameObject.activeSelf)
 		{
 			SkillZoomer.ZoomOut();
@@ -102,21 +102,21 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 	public GameObject ItemUI_O;
 	public Transform Bag_T;
 	public TextMeshProUGUI Desc;
-	private void UpdateInventory(){
-		if(Input.GetKeyDown(InventoryKey)){ //Input開關背包UI
-			if(Inventory.gameObject.activeSelf){
+	private void UpdateInventory() {
+		if (Input.GetKeyDown(InventoryKey)) { //Input開關背包UI
+			if (Inventory.gameObject.activeSelf) {
 				Inventory.ZoomOut();
-				if(ItemUICtrl.Selecting!=null)
+				if (ItemUICtrl.Selecting != null)
 					ItemUICtrl.Selecting.UnSelect();
 			}
-			else{
+			else {
 				Inventory.ZoomIn();
 			}
 		}
 	}
 
 	public void Button_Inventory() //allows you to open/close inventory on UI
-    {
+	{
 		if (Inventory.gameObject.activeSelf)
 		{
 			Inventory.ZoomOut();
@@ -126,9 +126,6 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 		else
 		{
 			Inventory.ZoomIn();
-			descriptionPanel.SetActive(false);
-
-
 		}
 	}
 
@@ -146,9 +143,8 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 				if (ItemUICtrl.Selecting != null) ItemUICtrl.Selecting.UnSelect();
 				//set item zoom in box to default false and turn it active when mouse hover over it
 
-				if (ctrl.isMouseOver) descriptionPanel.SetActive(true);
 
-				Instance.Desc.text = data.Info.Desc;
+				//Instance.Desc.text = data.Info.Desc;
 				ctrl.SelectionOutline.SetActive(true);
 				ItemUICtrl.Selecting = ctrl;
 
@@ -160,7 +156,7 @@ public class UICtrl : MonoBehaviour //attach to canvas on introscene
 			ItemUIList.Add(o); //add the item into the UI display
 		}
 
-		Desc.text = "";
+		//Desc.text = "";
 	}
 
 	#endregion

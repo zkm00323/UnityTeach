@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class ItemUICtrl : MonoBehaviour,  IPointerEnterHandler, IPointerExitHandler
+public class ItemUICtrl : MonoBehaviour
 {
 
     public static ItemUICtrl Selecting = null;
@@ -41,26 +41,23 @@ public class ItemUICtrl : MonoBehaviour,  IPointerEnterHandler, IPointerExitHand
         UICtrl.Instance.Desc.text = "";
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        OnPointerEnter();
-    }
+
 
     public virtual void OnPointerEnter()
     {
         isMouseOver = true;
+        FindObjectOfType<UICtrl>().descriptionPanel.SetActive(true); //or just UICtrl.Instance.descriptionPanel
+        UICtrl.Instance.Desc.text = Data.Info.Desc;
+
 
 
     }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        OnPointerExit();
-    }
+
 
     public virtual void OnPointerExit()
     {
         isMouseOver = false;
-
+        FindObjectOfType<UICtrl>().descriptionPanel.SetActive(false);
     }
 }
