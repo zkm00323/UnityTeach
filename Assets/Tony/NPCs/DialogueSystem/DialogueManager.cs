@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,12 +6,15 @@ using UnityEngine.EventSystems;
 public class DialogueManager : MonoBehaviour, IPointerClickHandler //dialogue manager with choices triggering different responses from NPC
 {
     public NPCDialogue dialogue;
+
+
     //create different dialogue object based on relationship level
     bool isTalking = false;
     float distance;
     float currentResponseTracker = 0;
     public GameObject player;
     public GameObject dialogueUI; //make it a bark above npc's head
+    //dialogueUI = FindObject("Name");
     
     //public Button[] playerResponseButton;
     public List<GameObject> ResponseButtons = new List<GameObject>();

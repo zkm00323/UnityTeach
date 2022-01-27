@@ -148,8 +148,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1964490058}
     - target: {fileID: 1937530107, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
+      propertyPath: currentDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 74bdf4bcae566d241a30f414bd5c6727, type: 2}
+    - target: {fileID: 1937530107, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
       propertyPath: playerChoices.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937530107, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
+      propertyPath: dialogueSOList.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1937530107, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
       propertyPath: playerChoices.Array.data[0]
@@ -687,7 +695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8801813956271192700, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8801813956271192701, guid: 872ad1fec6dd610409a8895f1ce8b640, type: 3}
       propertyPath: m_Pivot.x

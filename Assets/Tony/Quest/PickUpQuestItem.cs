@@ -15,11 +15,14 @@ public class PickUpQuestItem : ItemMono
     void Start()
     {
         //QuestItemID = 100;
+        //if quest is in active assigned quest list
+        //instantiate in scene
+
+
     }
 
     public override void OnClick()
     {
-        //if quest is in active assigned quest list
         //if thisQuestName matches questName in the assigned quest name;
         //currentQuest = GetComponent<QuestController>().assignedQuests;
 

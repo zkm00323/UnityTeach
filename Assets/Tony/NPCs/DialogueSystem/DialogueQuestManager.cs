@@ -13,6 +13,10 @@ public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler //attach
     private Queue<string> sentences; //first in first out
     public NPCDialogue dialogue;
 
+    [SerializeField]
+    private List<NPCDialogue> DialogueSOList = new List<NPCDialogue>();
+
+
     public GameObject dialogueUI; //make it a bark above npc's head
     [SerializeField] private List<GameObject> playerChoices = new List<GameObject>();
 
@@ -40,7 +44,6 @@ public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler //attach
             buttons.gameObject.SetActive(false);
         }
         StartDialogue(dialogue);
-
 
 
     }
@@ -84,6 +87,7 @@ public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler //attach
         Debug.Log("End of convo");
         
         DisplayChoices();
+        dialogue.hasVisited = true;
 
     }
     public void DisplayChoices()
@@ -122,6 +126,16 @@ public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler //attach
         dialogueUI.SetActive(false);
     }
 
+
+    /*
+            foreach(NPCDialogue dialogue in DialogueSOList)
+        {
+            if (!dialogue.hasVisited)
+            {
+                StartDialogue(dialogue);
+            }
+        }
+    */
    
 
 }

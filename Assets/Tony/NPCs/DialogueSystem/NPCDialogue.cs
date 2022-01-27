@@ -14,8 +14,14 @@ public class NPCDialogue : ScriptableObject
 
     public List<string> playerDialogue = new List<string>();
 
-    
-   
+    public bool hasVisited;
 
+
+    //To keep track of dialogue progress
+    //private Dictionary<NPCDialogue, bool> DialogueDatabase = new Dictionary<NPCDialogue, bool>();
+    //if this dialogue is completed--> take it off database
+    //OR
+    //private static int [] progress = new int[30]; //contains number 0 to 30
+    
 
 }
