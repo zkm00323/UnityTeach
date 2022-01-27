@@ -136,6 +136,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1937530107, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937530107, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
       propertyPath: nameText
       value: 
       objectReference: {fileID: 1133283078}
@@ -156,6 +160,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1937530107, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
+      propertyPath: DialogueSOList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937530107, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
       propertyPath: dialogueSOList.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -171,6 +179,14 @@ PrefabInstance:
       propertyPath: playerChoices.Array.data[2]
       value: 
       objectReference: {fileID: 1599367772}
+    - target: {fileID: 1937530107, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
+      propertyPath: DialogueSOList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 74bdf4bcae566d241a30f414bd5c6727, type: 2}
+    - target: {fileID: 1937530107, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
+      propertyPath: DialogueSOList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 492114810a8e6a64a92263473e2d6006, type: 2}
     - target: {fileID: 354717245295240260, guid: e595a709957c2ad4c86c646afe55d353, type: 3}
       propertyPath: m_RootOrder
       value: 4

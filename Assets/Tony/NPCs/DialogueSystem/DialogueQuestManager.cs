@@ -8,13 +8,15 @@ using UnityEngine.EventSystems;
 public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler //attach on NPC with quests
 {
 
+    public NPCDialogue dialogue;
+    [SerializeField]
+    private List<NPCDialogue> DialogueSOList = new List<NPCDialogue>();
+
+
     public QuestGiver questGiver;
 
     private Queue<string> sentences; //first in first out
-    public NPCDialogue dialogue;
 
-    [SerializeField]
-    private List<NPCDialogue> DialogueSOList = new List<NPCDialogue>();
 
 
     public GameObject dialogueUI; //make it a bark above npc's head
@@ -27,7 +29,6 @@ public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler //attach
 
     void Start()
     {
-        sentences= new Queue<string>(dialogue.npcDialogue);
         foreach(GameObject buttons in playerChoices)
         {
             buttons.gameObject.SetActive(false);
@@ -43,13 +44,31 @@ public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler //attach
         {
             buttons.gameObject.SetActive(false);
         }
-        StartDialogue(dialogue);
+        //StartDialogue(dialogue);
+        
+
+ 
+
+        foreach (NPCDialogue i in DialogueSOList)
+        {
+            if (i.hasVisited==false)
+            {
+                dialogue = i;
+                StartDialogue(i);
+
+                break;
+            }
+            
+
+        }
 
 
     }
 
     public void StartDialogue(NPCDialogue dialogue)
     {
+        sentences = new Queue<string>(dialogue.npcDialogue);
+
         Debug.Log("Starging conversation with NPC ");
         nameText.text = dialogue.NPCname;
         
@@ -63,6 +82,7 @@ public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler //attach
         for (int i=0; i<dialogue.npcDialogue.Count; i++)
         {
             sentences.Enqueue(dialogue.npcDialogue[i]);
+            Debug.Log("displaying dologues in npcDialogue"); //DIDN"T RUN
         }
 
 
@@ -81,6 +101,7 @@ public class DialogueQuestManager : MonoBehaviour, IPointerClickHandler //attach
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
 
+        Debug.Log("Displaying next sentence");
     }
     void EndDialogue()
     {

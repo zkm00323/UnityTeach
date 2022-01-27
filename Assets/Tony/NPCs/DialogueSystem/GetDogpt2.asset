@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 309e8d5c58a31634fad712b096d0a9e7, type: 3}
-  m_Name: GetDogDialogue
+  m_Name: GetDogpt2
   m_EditorClassIdentifier: 
   NPCname: Danny
   npcDialogue:
-  - "Hey\t"
-  - So what brings you to town
-  - 'So could you do me a favor? I lost my dog Vampire. Help me get him. '
+  - I need my puppy back to me...
   playerDialogue:
-  - Yeah..well.. my hands are kind of tight right now...
-  - 'You can count on me. '
-  - I'll consider.
-  hasVisited: 1
+  - working on it
+  hasVisited: 0
