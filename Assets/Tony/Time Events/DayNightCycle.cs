@@ -89,7 +89,7 @@ public class DayNightCycle : MonoBehaviour //attach on sun in intro scene and di
            //if( GetDifference(GameTimeManager.Time, sunOutTime)== 7) //at 6:07AM sun comes out
             //{
                 GetComponent<Light>().intensity = 1.0f;
-                Debug.Log("Sun comes out");
+                //Debug.Log("Sun comes out");
                 
                 RenderSettings.skybox = morningSkybox;
 

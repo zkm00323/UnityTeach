@@ -109,9 +109,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d365233a75184041908f241ad95a453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 74bdf4bcae566d241a30f414bd5c6727, type: 2}
-  dialogueUI: {fileID: 0}
+  dialogue: {fileID: 0}
+  questGiver: {fileID: 0}
+  DialogueSOList:
+  - {fileID: 11400000, guid: 74bdf4bcae566d241a30f414bd5c6727, type: 2}
+  - {fileID: 11400000, guid: 492114810a8e6a64a92263473e2d6006, type: 2}
   playerChoices:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   nameText: {fileID: 0}

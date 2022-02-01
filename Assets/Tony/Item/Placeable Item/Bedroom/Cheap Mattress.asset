@@ -17,7 +17,6 @@ MonoBehaviour:
   Desc: a cheap spring mattress. Doesn't really soothe that backpain
   Price: 40
   ItemImage: {fileID: 0}
-  M: {fileID: 0}
   Prefeb: {fileID: 7128831529420482686, guid: babf66c88d14e624daf6339ff8988d56, type: 3}
-  Object: {fileID: 0}
+  Object: {fileID: 372820188678349062, guid: d70626e6e5b1fc84fb14ee39db5c6fa1, type: 3}
   Type: 2
