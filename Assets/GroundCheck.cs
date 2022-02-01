@@ -6,7 +6,7 @@ public class GroundCheck : MonoBehaviour //attach to foot?
 {//Ground Check
     public bool onGround;
 
-    /*private void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other == null)
             onGround = false;
@@ -14,10 +14,10 @@ public class GroundCheck : MonoBehaviour //attach to foot?
             onGround = true;
         
         //Debug.Log("Colliding Object: " + other.name);
-    }*/
+    }
 
     private void OnTriggerExit(Collider other)
     {
-        onGround = false ;
+        onGround = false;
     }
 }
